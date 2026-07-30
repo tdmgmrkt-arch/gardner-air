@@ -1,26 +1,144 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/*
+  Gardner Air — Design System
+  Typography:
+  - Inter (400/500/600): body text, UI labels, navigation
+  - DM Sans (600/700/800): display headlines — geometric authority at heavy weights
+  - Fraunces (300/400 italic): editorial serif accent — hero accent line + pull quotes ONLY
+  Rationale: Inter provides corporate legibility; DM Sans at heavy weight gives headlines
+  precision-engineering authority; Fraunces italic in exactly 1–2 places gives the site
+  an editorial layer that separates it from template output.
+*/
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Brand palette */
+  --color-ga-red:        #D42027;
+  --color-ga-red-dark:   #B01C22;
+  --color-ga-black:      #111318;
+  --color-ga-charcoal:   #26292F;   /* primary dark section bg */
+  --color-ga-charcoal-2: #2E3239;   /* secondary dark bg — one tick lighter */
+  --color-ga-charcoal-footer: #1E2126; /* footer — grounded, still warm */
+  --color-ga-gray-600:   #6B7280;
+  --color-ga-gray-100:   #F4F5F6;
+  --color-ga-gray-50:    #FAFAFA;
+  --color-ga-steel:      #2D3748;
+  --color-white:         #FFFFFF;
+
+  /* Spacing / sizing tokens */
+  --section-y:           5rem;
+  --section-y-mobile:    3rem;
+  --container-max:       1280px;
+
+  /* Radius */
+  --radius-card:         0.375rem;
+  --radius-btn:          0.25rem;
+
+  /* Font assignments */
+  --font-sans:     var(--font-inter);
+  --font-display:  var(--font-dm-sans);
+  --font-serif:    var(--font-fraunces);
+  --font-mono:     var(--font-jetbrains-mono), ui-monospace, monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: var(--color-ga-black);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  line-height: 1.6;
 }
+
+/* --------------------------------------------------------------------------
+   Scroll-reveal animation — single-shot fade+rise
+   Applied via intersection observer in client components, or via CSS-only
+   approach: elements start at translate-y-6 opacity-0 and transition in.
+   -------------------------------------------------------------------------- */
+@keyframes fadeRise {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-rise {
+  animation: fadeRise 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-fade-rise-delay-1 {
+  animation: fadeRise 0.6s 0.12s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-fade-rise-delay-2 {
+  animation: fadeRise 0.6s 0.24s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-fade-rise-delay-3 {
+  animation: fadeRise 0.6s 0.36s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* --------------------------------------------------------------------------
+   Marquee — slow, pausable
+   -------------------------------------------------------------------------- */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 65s linear infinite;
+}
+
+.animate-marquee:hover,
+.marquee-track:hover .animate-marquee {
+  animation-play-state: paused;
+}
+
+/* --------------------------------------------------------------------------
+   Button arrow micro-interaction — pure CSS, no JS required
+   -------------------------------------------------------------------------- */
+.btn-arrow-slide .arrow-icon {
+  transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.btn-arrow-slide:hover .arrow-icon {
+  transform: translateX(4px);
+}
+
+/* --------------------------------------------------------------------------
+   Tabular numerics for stats
+   -------------------------------------------------------------------------- */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+/* --------------------------------------------------------------------------
+   Hero ken-burns — imperceptibly slow zoom, 30s cycle
+   Adds the one restrained motion detail that reads as premium.
+   -------------------------------------------------------------------------- */
+@keyframes heroPan {
+  from { transform: scale(1.0); }
+  to   { transform: scale(1.06); }
+}
+
+/* h-13 utility (3.25rem / 52px) — used for hero CTA buttons */
+.h-13 {
+  height: 3.25rem;
+}
+
+/* Remove dark-mode override — Gardner Air is light-only */

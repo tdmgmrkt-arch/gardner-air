@@ -39,3 +39,20 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# agency internal
+/CLIENT.md
+/ACTIVE_WORK.md
+/brand-assets/
+
+# playwright mcp artifacts
+/.playwright-mcp/
+
+# root-level screenshot/scratch images (site images live in /public)
+/chs-*.png
+/ba-*.png
+/pm-*.png
+/building-automation-*.png
+/installation-*.png
+/preventative-maintenance-*.png
+
