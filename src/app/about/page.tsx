@@ -393,10 +393,10 @@ export default function AboutPage() {
               </div>
 
               <div className="flex flex-col gap-5">
-                <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
+                <div className="relative aspect-square rounded-2xl overflow-hidden">
                   <Image
-                    src="/Gardner-Air-HVAC-equipment-boiler-room-1030x644.webp"
-                    alt="Gardner Air commercial HVAC boiler room equipment maintained across Southern California"
+                    src="/TEAM/gardner-team-photo.webp"
+                    alt="Gardner Air team of commercial HVAC technicians and office staff serving Southern California"
                     fill
                     sizes="(max-width: 1024px) 100vw, 45vw"
                     className="object-cover"

@@ -418,9 +418,9 @@ export default function BuildingAutomationPage() {
               </div>
 
               <div className="flex flex-col gap-5">
-                <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
+                <div className="relative aspect-square rounded-2xl overflow-hidden">
                   <Image
-                    src="/Gardner-Air-HVAC-equipment-electrical-panel.webp"
+                    src="/building-automation.webp"
                     alt="Gardner Air technician configuring a commercial HVAC building automation control panel in Southern California"
                     fill
                     sizes="(max-width: 1024px) 100vw, 45vw"

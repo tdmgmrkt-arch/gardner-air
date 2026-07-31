@@ -509,9 +509,9 @@ export default function CommercialHvacServicesPage() {
               </div>
 
               <div className="flex flex-col gap-5">
-                <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
+                <div className="relative aspect-[3/2] rounded-2xl overflow-hidden">
                   <Image
-                    src="/Gardner-Air-line-of-trucks-1030x644.webp"
+                    src="/gardner-air-fleet.webp"
                     alt="Gardner Air fleet of service trucks ready for commercial HVAC calls across Southern California"
                     fill
                     sizes="(max-width: 1024px) 100vw, 45vw"
@@ -970,6 +970,17 @@ export default function CommercialHvacServicesPage() {
                   >
                     (951) 696-4495
                   </a>
+                </div>
+
+                <div className="mt-10 overflow-hidden rounded-xl border border-[#D8D4CC]">
+                  <Image
+                    src="/customer-service-reps-v2.webp"
+                    alt="Gardner Air customer service representatives"
+                    width={1536}
+                    height={1024}
+                    className="w-full h-auto"
+                    sizes="(max-width: 1024px) 100vw, 40vw"
+                  />
                 </div>
               </div>
             </div>

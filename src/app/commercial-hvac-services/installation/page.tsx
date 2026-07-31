@@ -419,9 +419,9 @@ export default function InstallationPage() {
               </div>
 
               <div className="flex flex-col gap-5">
-                <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
+                <div className="relative aspect-square rounded-2xl overflow-hidden">
                   <Image
-                    src="/Ducting-Installation-1.webp"
+                    src="/installation.webp"
                     alt="Gardner Air commercial HVAC ductwork installation at a Southern California facility"
                     fill
                     sizes="(max-width: 1024px) 100vw, 45vw"

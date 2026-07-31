@@ -65,12 +65,61 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${BASE_URL}/leadership-team/`,
+      url: `${BASE_URL}/about/leadership-team/`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/blog/`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    {
+      url: `${BASE_URL}/blog/how-preventative-hvac-maintenance-tracking-prevents-repeat-equipment-failures/`,
+      lastModified: new Date("2026-05-26"),
+      changeFrequency: "yearly",
+      priority: 0.6,
+    },
+    {
+      url: `${BASE_URL}/blog/how-hvac-preventative-maintenance-saves-property-managers-thousands-annually/`,
+      lastModified: new Date("2026-04-27"),
+      changeFrequency: "yearly",
+      priority: 0.6,
+    },
+    {
+      url: `${BASE_URL}/blog/commercial-hvac-repair-or-replacement-warning-signs-you-should-not-ignore/`,
+      lastModified: new Date("2026-03-31"),
+      changeFrequency: "yearly",
+      priority: 0.6,
+    },
+    // Areas We Serve
+    {
+      url: `${BASE_URL}/areas-we-serve/`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/areas-we-serve/riverside/`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/areas-we-serve/orange-county/`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/areas-we-serve/san-bernardino-county-ca/`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
     },
     // Placeholder routes — pages not yet built:
-    // /equipment, /case-studies, /service-area
+    // /equipment, /case-studies
   ];
 }

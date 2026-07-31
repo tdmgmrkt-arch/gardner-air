@@ -7,9 +7,19 @@
  *   hairline divider, warm-neutral initials avatar, two-line attribution
  * - No featured hierarchy. No dark background. No red panel. No italic quotes.
  * - "Trust by the Numbers" panel removed — stats already live in TrustStrip.
+ * - Accepts optional `items` prop to render page-specific testimonials.
  */
 
-const TESTIMONIALS = [
+export interface TestimonialItem {
+  quote: string;
+  name: string;
+  initials: string;
+  role: string;
+  company: string;
+  industry: string;
+}
+
+const DEFAULT_TESTIMONIALS: TestimonialItem[] = [
   {
     quote:
       "We've worked with a number of commercial HVAC contractors over the years. Gardner Air is the first where I never have to wonder what was done — the report shows up same day, every task is documented, and if something needs attention they flag it before it becomes a problem.",
@@ -18,7 +28,6 @@ const TESTIMONIALS = [
     role: "Facilities Director",
     company: "Mid-Sized Manufacturer · Inland Empire",
     industry: "Manufacturing",
-    // TODO: Replace with real client testimonial
   },
   {
     quote:
@@ -28,7 +37,6 @@ const TESTIMONIALS = [
     role: "Operations Manager",
     company: "Commercial Real Estate",
     industry: "Real Estate",
-    // TODO: Replace with real testimonial
   },
   {
     quote:
@@ -38,15 +46,25 @@ const TESTIMONIALS = [
     role: "VP of Facilities",
     company: "Class A Office Portfolio",
     industry: "Office",
-    // TODO: Replace with real testimonial
   },
 ];
 
 // Warm-neutral initials discs — alternating so cards feel distinct
-const AVATAR_BG = ["#E8E4DC", "#DDE3E8", "#E6E0DC"] as const;
-const AVATAR_TEXT = ["#6B5E4A", "#435260", "#5A4A42"] as const;
+const AVATAR_BG = ["#E8E4DC", "#DDE3E8", "#E6E0DC", "#E4DDDB", "#DDE8E4"] as const;
+const AVATAR_TEXT = ["#6B5E4A", "#435260", "#5A4A42", "#5C4A48", "#3D5A52"] as const;
 
-export function Testimonials() {
+interface TestimonialsProps {
+  items?: TestimonialItem[];
+  heading?: string;
+  subhead?: string;
+}
+
+export function Testimonials({
+  items,
+  heading = "What our clients say.",
+  subhead = "A partnership approach, backed by results our clients can measure.",
+}: TestimonialsProps) {
+  const TESTIMONIALS = items ?? DEFAULT_TESTIMONIALS;
   return (
     <section
       id="testimonials"
@@ -76,23 +94,33 @@ export function Testimonials() {
               fontSize: "clamp(2rem, 3.5vw, 3rem)",
             }}
           >
-            What our clients say.
+            {heading}
           </h2>
 
           <p className="text-[#6B7280] text-base leading-relaxed">
-            A partnership approach, backed by results our clients can measure.
+            {subhead}
           </p>
         </div>
 
-        {/* Three equal-weight testimonial cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
+        {/* Testimonial cards — grid for ≤3, horizontal snap carousel for ≥4 */}
+        <div
+          className={
+            TESTIMONIALS.length >= 4
+              ? "flex gap-5 lg:gap-6 overflow-x-auto snap-x snap-mandatory pb-4 -mx-5 sm:-mx-6 lg:-mx-8 px-5 sm:px-6 lg:px-8 scrollbar-none [&::-webkit-scrollbar]:hidden"
+              : "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6"
+          }
+        >
           {TESTIMONIALS.map((t, i) => (
             <blockquote
               key={t.name}
-              className="bg-white rounded-2xl p-8 lg:p-10 flex flex-col
+              className={`bg-white rounded-2xl p-8 lg:p-10 flex flex-col
                          shadow-[0_2px_16px_-4px_rgba(17,19,24,0.08),0_1px_4px_-2px_rgba(17,19,24,0.04)]
                          hover:shadow-[0_8px_32px_-8px_rgba(17,19,24,0.14),0_2px_8px_-4px_rgba(17,19,24,0.06)]
-                         transition-shadow duration-300"
+                         transition-shadow duration-300${
+                           TESTIMONIALS.length >= 4
+                             ? " snap-start shrink-0 basis-[85%] sm:basis-[calc((100%-1.25rem)/2)] lg:basis-[calc((100%-4.5rem)/4)]"
+                             : ""
+                         }`}
             >
               {/* Red top rule */}
               <div
@@ -119,7 +147,7 @@ export function Testimonials() {
                 {/* Initials avatar — warm neutral disc */}
                 <div
                   className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0"
-                  style={{ background: AVATAR_BG[i], color: AVATAR_TEXT[i] }}
+                  style={{ background: AVATAR_BG[i % AVATAR_BG.length], color: AVATAR_TEXT[i % AVATAR_TEXT.length] }}
                   aria-hidden="true"
                 >
                   <span

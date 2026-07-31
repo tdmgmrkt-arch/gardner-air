@@ -451,9 +451,9 @@ export default function PreventativeMaintenancePage() {
               </div>
 
               <div className="flex flex-col gap-5">
-                <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
+                <div className="relative aspect-square rounded-2xl overflow-hidden">
                   <Image
-                    src="/EnvironmentBand.webp"
+                    src="/preventive-maintenance.webp"
                     alt="Gardner Air technician performing a preventative maintenance inspection on a commercial rooftop HVAC unit in Southern California"
                     fill
                     sizes="(max-width: 1024px) 100vw, 45vw"

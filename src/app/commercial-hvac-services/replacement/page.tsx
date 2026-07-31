@@ -409,10 +409,10 @@ export default function ReplacementPage() {
               </div>
 
               <div className="flex flex-col gap-5">
-                <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
+                <div className="relative aspect-square rounded-2xl overflow-hidden">
                   <Image
-                    src="/Package-Unit-Replacement-25-Ton-2.webp"
-                    alt="Gardner Air rigging a 25-ton commercial rooftop package unit replacement at a Southern California facility"
+                    src="/replacement.webp"
+                    alt="Rooftop opening prepared for a commercial HVAC package unit replacement in Southern California"
                     fill
                     sizes="(max-width: 1024px) 100vw, 45vw"
                     className="object-cover"

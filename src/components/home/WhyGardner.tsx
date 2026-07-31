@@ -64,9 +64,9 @@ export function WhyGardner() {
             </p>
           </div>
 
-          <div className="relative aspect-4/5 lg:aspect-3/2 rounded-2xl overflow-hidden">
+          <div className="relative aspect-3/2 rounded-2xl overflow-hidden">
             <Image
-              src="/Gardner-Air-line-of-trucks-1030x644.webp"
+              src="/gardner-air-fleet.webp"
               alt="Gardner Air fleet of commercial HVAC service trucks lined up — the long-term partnership Gardner Air offers Southern California facilities"
               fill
               sizes="(max-width: 1024px) 100vw, 560px"

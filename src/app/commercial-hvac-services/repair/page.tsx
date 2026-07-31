@@ -451,9 +451,9 @@ export default function RepairPage() {
               </div>
 
               <div className="flex flex-col gap-5">
-                <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
+                <div className="relative aspect-square rounded-2xl overflow-hidden">
                   <Image
-                    src="/Gardner-Air-HVAC-equipment-electrical-panel-1030x644.webp"
+                    src="/repair.webp"
                     alt="Gardner Air technician diagnosing a commercial HVAC electrical panel during a repair call in Southern California"
                     fill
                     sizes="(max-width: 1024px) 100vw, 45vw"

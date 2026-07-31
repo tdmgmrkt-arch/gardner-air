@@ -15,13 +15,13 @@ export const metadata: Metadata = {
   description:
     "Meet the leadership team behind Gardner Air — decades of hands-on commercial HVAC experience guiding every service call, project, and long-term client relationship across Southern California.",
   alternates: {
-    canonical: "https://gardnerair.com/leadership-team/",
+    canonical: "https://gardnerair.com/about/leadership-team/",
   },
   openGraph: {
     title: "Leadership Team | Gardner Air Commercial HVAC",
     description:
       "Meet the leadership team behind Gardner Air — decades of hands-on commercial HVAC experience guiding every service call, project, and long-term client relationship across Southern California.",
-    url: "https://gardnerair.com/leadership-team/",
+    url: "https://gardnerair.com/about/leadership-team/",
   },
 };
 
@@ -119,7 +119,7 @@ const DIFFERENTIATORS = [
 const leadershipSchema = {
   "@context": "https://schema.org",
   "@type": "AboutPage",
-  url: "https://gardnerair.com/leadership-team/",
+  url: "https://gardnerair.com/about/leadership-team/",
   name: "Leadership Team | Gardner Air",
   about: {
     "@type": "HVACBusiness",
@@ -153,7 +153,7 @@ export default function LeadershipPage() {
             itemListElement: [
               { "@type": "ListItem", position: 1, name: "Home", item: "https://gardnerair.com/" },
               { "@type": "ListItem", position: 2, name: "About", item: "https://gardnerair.com/about/" },
-              { "@type": "ListItem", position: 3, name: "Leadership Team", item: "https://gardnerair.com/leadership-team/" },
+              { "@type": "ListItem", position: 3, name: "Leadership Team", item: "https://gardnerair.com/about/leadership-team/" },
             ],
           }),
         }}

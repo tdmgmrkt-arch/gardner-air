@@ -107,14 +107,14 @@ const NAV: NavItem[] = [
         {
           num: "01",
           title: "Areas We Serve",
-          body: "Five-county coverage across Southern California — Riverside, San Bernardino, Orange, San Diego, and LA.",
+          body: "Three-county coverage across Southern California — Riverside, San Bernardino, and Orange.",
           href: "/areas-we-serve",
         },
         {
           num: "02",
           title: "Leadership Team",
           body: "Second-generation ownership. Master-technician-led operations. Long-tenured field crews.",
-          href: "/leadership-team",
+          href: "/about/leadership-team",
         },
         {
           num: "03",

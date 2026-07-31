@@ -3,9 +3,9 @@ import Image from "next/image";
 import { ArrowRight, MapPin } from "lucide-react";
 
 const COUNTIES = [
-  { name: "Riverside County", abbr: "Temecula · Murrieta · Riverside" },
-  { name: "San Bernardino County", abbr: "Ontario · San Bernardino" },
-  { name: "Orange County", abbr: "Anaheim · Irvine · Santa Ana" },
+  { name: "Riverside County", abbr: "Temecula · Murrieta · Riverside", href: "/areas-we-serve/riverside/" },
+  { name: "San Bernardino County", abbr: "Ontario · San Bernardino", href: "/areas-we-serve/san-bernardino-county-ca/" },
+  { name: "Orange County", abbr: "Anaheim · Irvine · Santa Ana", href: "/areas-we-serve/orange-county/" },
 ];
 
 export function ServiceArea() {
@@ -65,9 +65,10 @@ export function ServiceArea() {
         {/* Typographic county list */}
         <div className="flex flex-col divide-y divide-[#D8D4CC] border-t border-b border-[#D8D4CC] mb-10">
           {COUNTIES.map((county) => (
-            <div
+            <Link
               key={county.name}
-              className="flex items-center justify-between py-6 lg:py-7 gap-6"
+              href={county.href}
+              className="group flex items-center justify-between py-6 lg:py-7 gap-6 transition-colors hover:bg-white/40"
             >
               <div className="flex items-center gap-5 lg:gap-8 min-w-0">
                 <MapPin
@@ -76,7 +77,7 @@ export function ServiceArea() {
                   aria-hidden="true"
                 />
                 <p
-                  className="font-bold text-ga-black leading-tight tracking-[-0.015em]"
+                  className="font-bold text-ga-black leading-tight tracking-[-0.015em] group-hover:text-ga-red transition-colors"
                   style={{
                     fontFamily: "var(--font-dm-sans)",
                     fontSize: "clamp(1.25rem, 2vw, 1.625rem)",
@@ -90,7 +91,7 @@ export function ServiceArea() {
               >
                 {county.abbr}
               </p>
-            </div>
+            </Link>
           ))}
         </div>
 
