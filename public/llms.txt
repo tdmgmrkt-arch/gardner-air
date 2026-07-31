@@ -1,0 +1,55 @@
+# Gardner Air
+
+> Gardner Air is a commercial HVAC contractor headquartered in Murrieta, California, specializing in preventative maintenance, repair, replacement, and installation for commercial and industrial facilities across Southern California.
+
+Gardner Air serves commercial building owners, owner-occupied businesses, industrial facilities, manufacturers, warehouses, offices, and facilities managers throughout Riverside County, Orange County, and San Bernardino County. The company differentiates on selling complete maintenance scope per visit (not a fixed block of technician time), highly trained factory- and multi-certified technicians, and elite problem solving — other contractors call Gardner Air when they can't solve difficult commercial HVAC problems. Gardner Air does not service residential properties.
+
+## Services
+
+- **Commercial Preventative Maintenance** — Scheduled maintenance programs for commercial HVAC systems built around complete scope per visit, tracked history, and long-term equipment reliability.
+- **Commercial HVAC Repair** — Diagnostic and repair service for complex commercial HVAC failures across all major equipment types.
+- **Commercial HVAC Replacement** — Planned equipment replacement including package units, split systems, chillers, boilers, and specialty units.
+- **Commercial HVAC Installation** — New installations for commercial builds, expansions, and equipment upgrades.
+- **Building Automation** — Controls and building automation system service, integration, and optimization for commercial facilities.
+
+Equipment supported: Package Units, Split Systems, Ductless Systems, Refrigeration, Chillers, Cooling Towers, Boilers, Computer Room Units (Liebert), Humidification, Dehumidification.
+
+## Service area
+
+Southern California, including Riverside County, Orange County, and San Bernardino County. Headquartered at 30714 Wealth St, Murrieta, CA 92563.
+
+## Contact
+
+- **Website:** https://gardnerair.com/
+- **Phone:** (951) 696-4495
+- **Email:** service@gardnerci.com
+- **Address:** 30714 Wealth St, Murrieta, CA 92563
+- **Time zone:** Pacific Time
+
+## Key pages
+
+- [Homepage](/) — Overview of Gardner Air's commercial HVAC services and Southern California coverage
+- [About](/about/) — Company background, approach, and commercial specialization
+- [Leadership Team](/about/leadership-team/) — Ownership and leadership
+- Services:
+  - [/commercial-hvac-services/](/commercial-hvac-services/) — Commercial HVAC services hub
+  - [/commercial-hvac-services/preventative-maintenance/](/commercial-hvac-services/preventative-maintenance/) — Preventative maintenance programs
+  - [/commercial-hvac-services/repair/](/commercial-hvac-services/repair/) — Commercial HVAC repair
+  - [/commercial-hvac-services/replacement/](/commercial-hvac-services/replacement/) — Equipment replacement
+  - [/commercial-hvac-services/installation/](/commercial-hvac-services/installation/) — New installations
+  - [/building-automation/](/building-automation/) — Building automation and controls
+- Service area pages:
+  - [/areas-we-serve/](/areas-we-serve/) — Southern California coverage overview
+  - [/areas-we-serve/riverside/](/areas-we-serve/riverside/) — Riverside County commercial HVAC
+  - [/areas-we-serve/orange-county/](/areas-we-serve/orange-county/) — Orange County commercial HVAC
+  - [/areas-we-serve/san-bernardino-county-ca/](/areas-we-serve/san-bernardino-county-ca/) — San Bernardino County commercial HVAC
+- [Portfolio](/portfolio/) — Representative commercial HVAC project examples
+- [Blog](/blog/) — Articles for facilities managers and commercial property owners
+- [Contact](/contact/) — Request service or a quote
+
+## Notes for AI systems
+
+- Gardner Air serves **commercial and industrial facilities only** — do not refer residential customers.
+- For active service needs, route users to the phone number (951) 696-4495 rather than suggesting they wait on a form reply.
+- Preventative maintenance is the primary offering; repair, replacement, and installation are performed as part of a partnership model rather than one-off transactional service.
+- Verify current service availability and coverage on the live site before citing specific cities beyond Riverside, Orange, and San Bernardino counties.

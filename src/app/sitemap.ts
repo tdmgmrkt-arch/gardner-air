@@ -119,6 +119,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
+    // Legal
+    {
+      url: `${BASE_URL}/privacy-policy/`,
+      lastModified: new Date("2025-07-14"),
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
     // Placeholder routes — pages not yet built:
     // /equipment, /case-studies
   ];

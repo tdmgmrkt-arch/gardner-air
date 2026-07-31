@@ -132,7 +132,7 @@ export function SiteFooter() {
             &copy; {currentYear} Gardner Air · All rights reserved
           </p>
           <div className="flex items-center gap-5">
-            <Link href="/privacy-policy" className="font-mono text-[10px] text-white/50 hover:text-white/80 uppercase tracking-widest transition-colors">
+            <Link href="/privacy-policy/" className="font-mono text-[10px] text-white/50 hover:text-white/80 uppercase tracking-widest transition-colors">
               Privacy
             </Link>
             <Link href="/terms" className="font-mono text-[10px] text-white/50 hover:text-white/80 uppercase tracking-widest transition-colors">

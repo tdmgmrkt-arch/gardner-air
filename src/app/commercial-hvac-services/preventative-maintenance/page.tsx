@@ -600,11 +600,13 @@ export default function PreventativeMaintenancePage() {
                 <div className="mt-6 pt-6 border-t border-white/10">
                   <Link
                     href="/#complete-scope"
-                    className="inline-flex items-center gap-2 text-sm font-semibold text-[#D42027] hover:text-[#E84048] transition-colors"
+                    className="group inline-flex items-center gap-3 h-12 pl-5 pr-4 rounded-full text-sm font-bold bg-ga-red text-white hover:bg-ga-red-dark shadow-[0_4px_20px_-4px_rgba(212,32,39,0.5)] transition-all duration-200 min-h-11"
                     style={{ fontFamily: "var(--font-dm-sans)" }}
                   >
                     See the full 17-point scope
-                    <ArrowRight size={14} aria-hidden="true" />
+                    <span className="flex items-center justify-center h-7 w-7 rounded-full bg-white/15 group-hover:bg-white/25 group-hover:translate-x-0.5 transition-all">
+                      <ArrowRight size={14} aria-hidden="true" />
+                    </span>
                   </Link>
                 </div>
               </div>
