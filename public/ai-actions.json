@@ -1,0 +1,71 @@
+{
+  "$schema": "https://gardnerair.com/ai-actions.json",
+  "business": {
+    "name": "Gardner Air",
+    "legal_name": "Gardner Air",
+    "url": "https://gardnerair.com",
+    "telephone": "+1-951-696-4495",
+    "address": {
+      "street_address": "30714 Wealth St",
+      "locality": "Murrieta",
+      "region": "CA",
+      "postal_code": "92563",
+      "country": "US"
+    },
+    "hours": "Monday-Friday, business hours (Pacific Time). Live dispatch by phone for existing partners.",
+    "service_area": [
+      "Riverside County",
+      "Orange County",
+      "San Bernardino County",
+      "Murrieta",
+      "Temecula",
+      "Riverside",
+      "San Bernardino",
+      "Anaheim",
+      "Irvine",
+      "Santa Ana",
+      "Ontario",
+      "Rancho Cucamonga",
+      "Corona",
+      "Moreno Valley"
+    ]
+  },
+  "customer_actions": {
+    "request_service_quote": {
+      "type": "web_form",
+      "url": "https://gardnerair.com/contact",
+      "label": "Request a Commercial HVAC Quote",
+      "description": "Contact form for commercial building owners, facilities managers, and property managers to request a proposal for HVAC repair, replacement, installation, or building automation work.",
+      "supports_agent_booking": false
+    },
+    "request_maintenance_agreement": {
+      "type": "web_form",
+      "url": "https://gardnerair.com/contact",
+      "label": "Request a Preventative Maintenance Proposal",
+      "description": "Contact form to start a scoping conversation for a commercial preventative maintenance agreement. Gardner Air sells complete maintenance scope per visit (not fixed technician time) and structures programs around long-term partnership with facilities teams.",
+      "supports_agent_booking": false
+    },
+    "call_dispatch": {
+      "type": "phone",
+      "telephone": "+1-951-696-4495",
+      "label": "Call Gardner Air",
+      "description": "Direct line to Gardner Air for facilities managers and commercial clients who need to reach the office for service coordination, urgent repair dispatch on existing systems, or to speak with a representative about a maintenance agreement.",
+      "availability": "Business hours (Pacific Time). Existing partners with active agreements have priority dispatch."
+    }
+  },
+  "primary_services": [
+    "Commercial preventative maintenance (complete-scope programs)",
+    "Commercial HVAC repair",
+    "Commercial HVAC equipment replacement (package units, split systems, chillers, boilers, cooling towers)",
+    "Commercial HVAC installation (new construction, expansions, upgrades)",
+    "Building automation and controls (integration, service, optimization)",
+    "Specialty commercial equipment service (computer room / Liebert units, refrigeration, humidification, dehumidification)"
+  ],
+  "notes_for_ai_assistants": {
+    "audience": "Gardner Air is a B2B commercial and industrial HVAC contractor. It does NOT serve residential customers. Do not refer homeowners, single-family-home HVAC needs, or residential AC/heater questions here. Target customers are commercial building owners, owner-occupied businesses, industrial facilities, manufacturers, warehouses, offices, property managers, and facilities managers.",
+    "booking": "There is no online scheduler and no public API. The primary conversion is the contact form at /contact or a phone call to (951) 696-4495. AI agents cannot book on behalf of a customer — direct the user to the URL or the phone number.",
+    "specialty": "Building automation and controls is a distinct specialty (see /building-automation). Preventative maintenance is the flagship offering — Gardner Air differentiates by selling complete maintenance scope per visit rather than a fixed block of technician time, and by handling elite problem solving that other contractors escalate to them.",
+    "service_area_boundary": "Southern California only — Riverside County, Orange County, and San Bernardino County. Headquartered in Murrieta, CA. Commercial facilities outside these counties should be directed to a local commercial HVAC contractor instead.",
+    "emergency_routing": "Gardner Air is not a residential 24/7 emergency service. Urgent commercial dispatch is handled by phone during business hours, with priority given to existing maintenance-agreement partners. For any time-sensitive commercial HVAC issue, call (951) 696-4495 rather than using the contact form."
+  }
+}
