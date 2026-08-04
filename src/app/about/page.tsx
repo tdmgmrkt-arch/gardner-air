@@ -229,13 +229,13 @@ export default function AboutPage() {
           className="relative isolate overflow-hidden bg-ga-charcoal-footer pt-[140px] lg:pt-[180px]"
         >
           <Image
-            src="/Gardner-Air-line-of-trucks-1030x644.webp"
+            src="/gardner-air-fleet.webp"
             alt=""
             fill
             priority
             aria-hidden="true"
             sizes="100vw"
-            className="object-cover object-[50%_40%] opacity-45 pointer-events-none select-none"
+            className="object-cover object-[50%_62%] opacity-45 pointer-events-none select-none"
           />
           <div
             aria-hidden="true"
