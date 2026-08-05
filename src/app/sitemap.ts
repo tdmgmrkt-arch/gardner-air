@@ -126,6 +126,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.3,
     },
+    // AI agent discovery
+    {
+      url: `${BASE_URL}/ai-actions.json`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
     // Placeholder routes — pages not yet built:
     // /equipment, /case-studies
   ];

@@ -50,6 +50,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://gardnerair.com"), // TODO: replace with live domain once confirmed
   alternates: {
     canonical: "https://gardnerair.com",
+    types: {
+      "application/json": [
+        { url: "/ai-actions.json", title: "Gardner Air AI Service Menu" },
+      ],
+    },
   },
   openGraph: {
     type: "website",
