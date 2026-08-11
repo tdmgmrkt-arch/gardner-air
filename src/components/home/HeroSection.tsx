@@ -23,13 +23,6 @@ import { ArrowRight, Award, Shield, Zap } from "lucide-react";
 const HERO_VIDEO_URL = "/roof_video_1.mp4";
 const HERO_POSTER_URL = "/herooption2.webp";
 
-const TECH_READOUT = [
-  { label: "FOCUS", value: "COMMERCIAL ONLY" },
-  { label: "REGION", value: "IE · ORANGE COUNTY" },
-  { label: "CLIENTS", value: "OWNER-OCCUPIED" },
-  { label: "SCOPE", value: "100% EVERY VISIT" },
-];
-
 const TRUST_BADGES = [
   { Icon: Award, text: "NATE Certified Technicians" },
   { Icon: Shield, text: "CSLB Licensed & Insured" },
@@ -72,26 +65,6 @@ export function HeroSection() {
 
       {/* Red accent bar at very top */}
       <div className="absolute top-0 inset-x-0 h-[3px] bg-[#D42027] z-10" aria-hidden="true" />
-
-      {/* Technical readout block — right rail */}
-      <div
-        className="absolute top-[92px] lg:top-[112px] right-5 sm:right-6 lg:right-8 xl:right-10 hidden sm:block z-10"
-        aria-hidden="true"
-      >
-        <div className="flex flex-col gap-[5px] items-end">
-          {TECH_READOUT.map((row, i) => (
-            <div key={i} className="flex items-center gap-2">
-              <span className="font-mono text-[9px] font-medium uppercase tracking-[0.18em] text-white/40">
-                {row.label}
-              </span>
-              <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-white/65">
-                {row.value}
-              </span>
-            </div>
-          ))}
-          <div className="mt-2 w-full h-px bg-[#D42027]/40" />
-        </div>
-      </div>
 
       {/* Main content */}
       <div

@@ -101,13 +101,6 @@ const faqSchema = {
 /* ------------------------------------------------------------------ */
 /* Data                                                                 */
 /* ------------------------------------------------------------------ */
-const TECH_READOUT = [
-  { label: "COUNTY", value: "ORANGE COUNTY" },
-  { label: "REGION", value: "SOUTHERN CALIFORNIA" },
-  { label: "HQ", value: "MURRIETA, CA" },
-  { label: "FOCUS", value: "COMMERCIAL ONLY" },
-];
-
 const TRUST_BADGES = [
   { Icon: Award, text: "NATE Certified" },
   { Icon: Shield, text: "CSLB Licensed" },
@@ -206,25 +199,6 @@ export default function OrangeCountyPage() {
           />
 
           <div className="absolute top-0 inset-x-0 h-[3px] bg-[#D42027] z-10" aria-hidden="true" />
-
-          <div
-            className="absolute top-[92px] lg:top-[112px] right-5 sm:right-6 lg:right-8 xl:right-10 hidden sm:block z-10"
-            aria-hidden="true"
-          >
-            <div className="flex flex-col gap-[5px] items-end">
-              {TECH_READOUT.map((row, i) => (
-                <div key={i} className="flex items-center gap-2">
-                  <span className="font-mono text-[9px] font-medium uppercase tracking-[0.18em] text-white/40">
-                    {row.label}
-                  </span>
-                  <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-white/65">
-                    {row.value}
-                  </span>
-                </div>
-              ))}
-              <div className="mt-2 w-full h-px bg-[#D42027]/40" />
-            </div>
-          </div>
 
           <div
             className="relative flex-1 flex flex-col justify-center w-full mx-auto max-w-[1280px] px-5 sm:px-6 lg:px-8 z-10"

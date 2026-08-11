@@ -191,7 +191,7 @@ export function SiteHeader() {
               <div className="flex items-center gap-6">
                 <span className="flex items-center gap-2">
                   <MapPin size={12} className="text-ga-red" />
-                  Serving Southern California &mdash; 5-County Coverage
+                  Serving Southern California &mdash; 3-County Coverage
                 </span>
                 <span className="flex items-center gap-2 text-white/60">
                   <Clock size={12} />
