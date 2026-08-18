@@ -335,7 +335,7 @@ export default function EquipmentHubPage() {
           {/* Background image */}
           <div className="absolute inset-0 overflow-hidden">
             <Image
-              src="/equipment/equipment-hero.webp"
+              src="/equipment/equipment-hero-bg.webp"
               alt=""
               fill
               priority

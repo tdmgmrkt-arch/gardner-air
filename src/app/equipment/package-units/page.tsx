@@ -13,7 +13,6 @@ import {
   ChevronDown,
   Wrench,
   AlertTriangle,
-  Building2,
 } from "lucide-react";
 import { SiteHeader } from "@/components/home/SiteHeader";
 import { SiteFooter } from "@/components/home/SiteFooter";
@@ -324,7 +323,7 @@ export default function PackageUnitsPage() {
           {/* Hero background image */}
           <div className="absolute inset-0 overflow-hidden">
             <Image
-              src="/equipment/package-units-hero.webp"
+              src="/equipment/equipment-hero-bg.webp"
               alt=""
               fill
               priority
@@ -498,29 +497,19 @@ export default function PackageUnitsPage() {
                 </p>
               </div>
 
-              {/* Intro photo placeholder */}
+                            {/* Intro photo */}
               <div className="flex flex-col gap-5">
                 <div
-                  className="relative rounded-2xl overflow-hidden border-2 border-dashed border-[#D8D4CC] bg-[#F7F6F3] flex flex-col items-center justify-center text-center p-8 gap-4"
+                  className="relative rounded-2xl overflow-hidden border border-[#D8D4CC] bg-[#F7F6F3]"
                   style={{ aspectRatio: "4 / 5" }}
-                  aria-label="Photo placeholder: package-units-intro-detail.webp"
                 >
-                  <Building2 size={32} className="text-[#9CA3AF]" aria-hidden="true" />
-                  <div>
-                    <p className="font-mono text-[10px] uppercase tracking-[0.15em] text-[#6B7280] mb-1">
-                      Photo placeholder
-                    </p>
-                    <p className="text-sm font-semibold text-[#374151]" style={{ fontFamily: "var(--font-dm-sans)" }}>
-                      Package Unit — intro detail shot
-                    </p>
-                    <p className="text-xs text-[#6B7280] mt-2 leading-relaxed max-w-xs">
-                      Technician kneeling beside a rooftop package unit on a commercial roof, hand resting on the unit cabinet, reading a manifold gauge. Equipment fills the frame. Flat overcast daylight. Lived-in rooftop with normal wear — HVAC curb visible, seam tape on the membrane.
-                    </p>
-                  </div>
-                  <div className="font-mono text-[10px] text-[#9CA3AF] bg-[#E5E1D8] rounded px-3 py-1.5 leading-snug">
-                    /public/equipment/package-units-intro-detail.webp<br />
-                    1200 × 1500 px (4:5)
-                  </div>
+                  <Image
+                    src="/equipment/package-units-intro-detail.webp"
+                    alt="Gardner Air technician inspecting a rooftop package unit at a Southern California commercial facility."
+                    fill
+                    sizes="(min-width: 1024px) 40vw, 90vw"
+                    className="object-cover"
+                  />
                 </div>
 
                 <div className="rounded-xl border border-[#D8D4CC] bg-[#F7F6F3] px-6 py-5 flex items-center gap-5">
