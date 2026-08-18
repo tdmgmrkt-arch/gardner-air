@@ -964,7 +964,7 @@ export default function DehumidificationPage() {
               <div className="grid grid-cols-1 lg:grid-cols-[288px_1fr] gap-0">
                 <div className="relative aspect-[4/3] lg:aspect-auto">
                   <Image
-                    src="/Package-Unit-Replacement-25-Ton-1.webp"
+                    src="/equipment/dehumidification-replacement.webp"
                     alt="Gardner Air commercial HVAC equipment replacement"
                     fill
                     sizes="(max-width: 1024px) 100vw, 288px"
