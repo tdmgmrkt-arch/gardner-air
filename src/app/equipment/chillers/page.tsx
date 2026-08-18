@@ -328,7 +328,7 @@ export default function ChillersPage() {
               fill
               priority
               sizes="100vw"
-              className="object-cover object-center opacity-35"
+              className="object-cover object-center opacity-60"
               aria-hidden="true"
             />
           </div>
@@ -338,7 +338,7 @@ export default function ChillersPage() {
             className="absolute inset-0 pointer-events-none"
             style={{
               background:
-                "linear-gradient(to bottom, rgba(42,45,51,0.72) 0%, rgba(42,45,51,0.60) 35%, rgba(42,45,51,0.85) 70%, rgba(42,45,51,0.98) 100%)",
+                "linear-gradient(to bottom, rgba(42,45,51,0.50) 0%, rgba(42,45,51,0.35) 35%, rgba(42,45,51,0.75) 70%, rgba(42,45,51,0.95) 100%)",
             }}
             aria-hidden="true"
           />
@@ -369,11 +369,6 @@ export default function ChillersPage() {
                 <li className="text-white/60">Chillers</li>
               </ol>
             </nav>
-
-            <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.2em] text-[#D42027] mb-5">
-              Equipment &middot; Cooling &amp; Refrigeration
-            </p>
-
             <h1
               id="chillers-hero-heading"
               className="font-bold text-white leading-[0.92] tracking-[-0.035em] mb-8"
@@ -405,7 +400,7 @@ export default function ChillersPage() {
           <div className="relative z-10" aria-label="Gardner Air credentials">
             <div
               className="border-t border-white/10"
-              style={{ background: "rgba(42,45,51,0.85)", backdropFilter: "blur(12px)" }}
+              style={{ background: "rgba(42,45,51,0.75)", backdropFilter: "blur(12px)" }}
             >
               <div className="mx-auto max-w-[1280px] px-5 sm:px-6 lg:px-8">
                 <div className="py-4 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-8">
@@ -506,6 +501,10 @@ export default function ChillersPage() {
                   className="relative rounded-2xl overflow-hidden border border-[#D8D4CC] bg-[#F7F6F3]"
                   style={{ aspectRatio: "4 / 5" }}
                 >
+                  <div className="absolute top-4 left-4 z-10 flex items-center gap-2 rounded px-2.5 py-1.5 bg-black/55 backdrop-blur-sm border border-white/10">
+                    <span className="block h-1.5 w-1.5 rounded-full bg-[#D42027]" aria-hidden="true" />
+                    <span className="font-mono text-[9px] font-semibold uppercase tracking-[0.15em] text-white/90">Chiller · Mechanical Room</span>
+                  </div>
                   <Image
                     src="/equipment/chillers-intro-detail.webp"
                     alt="Gardner Air technician inspecting a commercial chiller in a Southern California mechanical room."
@@ -679,13 +678,15 @@ export default function ChillersPage() {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              {SERVICES.map((svc) => (
+              {SERVICES.map((svc, i) => {
+                const ServiceIcon = [Wrench, Zap, TrendingDown, Shield][i] ?? Wrench;
+                return (
                 <div
                   key={svc.title}
                   className="rounded-2xl bg-white border border-[#D8D4CC] p-7 lg:p-8 flex flex-col gap-4 hover:border-[#D42027]/30 hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-200"
                 >
                   <div className="w-10 h-10 rounded-lg bg-[#D42027]/8 flex items-center justify-center flex-shrink-0">
-                    <Wrench size={18} className="text-[#D42027]" aria-hidden="true" />
+                    <ServiceIcon size={18} className="text-[#D42027]" aria-hidden="true" />
                   </div>
                   <h3
                     className="font-bold text-[#111318] leading-tight tracking-[-0.01em]"
@@ -712,7 +713,8 @@ export default function ChillersPage() {
                     />
                   </Link>
                 </div>
-              ))}
+              );
+              })}
             </div>
           </div>
         </section>
@@ -722,23 +724,15 @@ export default function ChillersPage() {
         {/* ------------------------------------------------------------------ */}
         <section
           aria-label="Schedule a chiller assessment"
-          className="relative overflow-hidden bg-[#1E2126] py-16 lg:py-24"
-        >
-          <Image
-            src="/schematic.webp"
-            alt=""
-            fill
-            sizes="100vw"
-            className="object-cover opacity-[0.13] [filter:invert(1)] pointer-events-none select-none"
-            aria-hidden="true"
-          />
+          className="relative overflow-hidden bg-[#F7F6F3] border-t border-b border-[#E5E7EB] py-16 lg:py-24"
+          >
           <div className="relative mx-auto max-w-[1280px] px-5 sm:px-6 lg:px-8">
-            <div className="max-w-2xl">
+            <div className="max-w-2xl border-l-2 border-[#D42027] pl-6 lg:pl-8">
               <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.2em] text-[#D42027] mb-5">
                 Prevent Failures Before They Happen
               </p>
               <h2
-                className="font-bold text-white leading-[1.05] tracking-tight mb-5"
+                className="font-bold text-[#111318] leading-[1.05] tracking-tight mb-5"
                 style={{
                   fontFamily: "var(--font-dm-sans)",
                   fontSize: "clamp(1.75rem, 3.5vw, 2.75rem)",
@@ -746,7 +740,7 @@ export default function ChillersPage() {
               >
                 Schedule a Chiller Assessment for Your Facility
               </h2>
-              <p className="text-white/65 text-base leading-relaxed mb-8">
+              <p className="text-[#6B7280] text-base leading-relaxed mb-8">
                 Gardner Air serves commercial and industrial facilities across Riverside County, San Bernardino County, and Orange County. If your chiller is on a maintenance program that is not delivering complete-scope service and documented reports after every visit, that is worth a conversation.
               </p>
               <Link

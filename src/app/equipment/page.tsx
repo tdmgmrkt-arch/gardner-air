@@ -8,7 +8,35 @@ import {
   Zap,
   Check,
   Wrench,
+  TrendingDown,
+  Package,
+  Wind,
+  Snowflake,
+  Server,
+  Waves,
+  Cloud,
+  Thermometer,
+  Droplets,
+  Flame,
+  Droplet,
+  Sun,
+  Gauge,
 } from "lucide-react";
+
+const EQUIPMENT_ICONS: Record<string, typeof Package> = {
+  "/equipment/package-units/": Package,
+  "/equipment/split-systems/": Wind,
+  "/equipment/ductless-systems/": Snowflake,
+  "/equipment/computer-room-units/": Server,
+  "/equipment/chillers/": Waves,
+  "/equipment/cooling-towers/": Cloud,
+  "/equipment/refrigeration/": Thermometer,
+  "/equipment/dehumidification/": Droplets,
+  "/equipment/boilers/": Flame,
+  "/equipment/humidification/": Droplet,
+  "/equipment/rooftop-heating/": Sun,
+  "/equipment/precision-controls/": Gauge,
+};
 import { SiteHeader } from "@/components/home/SiteHeader";
 import { SiteFooter } from "@/components/home/SiteFooter";
 import { MobileCTABar } from "@/components/home/MobileCTABar";
@@ -340,7 +368,7 @@ export default function EquipmentHubPage() {
               fill
               priority
               sizes="100vw"
-              className="object-cover object-center opacity-35"
+              className="object-cover object-center opacity-60"
               aria-hidden="true"
             />
           </div>
@@ -350,7 +378,7 @@ export default function EquipmentHubPage() {
             className="absolute inset-0 pointer-events-none"
             style={{
               background:
-                "linear-gradient(to bottom, rgba(42,45,51,0.72) 0%, rgba(42,45,51,0.60) 35%, rgba(42,45,51,0.85) 70%, rgba(42,45,51,0.98) 100%)",
+                "linear-gradient(to bottom, rgba(42,45,51,0.50) 0%, rgba(42,45,51,0.35) 35%, rgba(42,45,51,0.75) 70%, rgba(42,45,51,0.95) 100%)",
             }}
             aria-hidden="true"
           />
@@ -375,11 +403,6 @@ export default function EquipmentHubPage() {
                 <li className="text-white/60">Equipment</li>
               </ol>
             </nav>
-
-            <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.2em] text-[#D42027] mb-5">
-              Equipment &middot; Commercial HVAC
-            </p>
-
             <h1
               id="equipment-hero-heading"
               className="font-bold text-white leading-[0.92] tracking-[-0.035em] mb-8 max-w-4xl"
@@ -421,7 +444,7 @@ export default function EquipmentHubPage() {
           <div className="relative z-10" aria-label="Gardner Air credentials">
             <div
               className="border-t border-white/10"
-              style={{ background: "rgba(42,45,51,0.85)", backdropFilter: "blur(12px)" }}
+              style={{ background: "rgba(42,45,51,0.75)", backdropFilter: "blur(12px)" }}
             >
               <div className="mx-auto max-w-[1280px] px-5 sm:px-6 lg:px-8">
                 <div className="py-4 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-8">
@@ -495,7 +518,9 @@ export default function EquipmentHubPage() {
 
                   {/* Equipment card list */}
                   <ul className="flex flex-col divide-y divide-[#D8D4CC] border-t border-[#D8D4CC]" role="list">
-                    {cat.items.map((item) => (
+                    {cat.items.map((item) => {
+                      const ItemIcon = EQUIPMENT_ICONS[item.href] ?? Package;
+                      return (
                       <li key={item.name}>
                         <Link
                           href={item.href}
@@ -503,6 +528,9 @@ export default function EquipmentHubPage() {
                         >
                           <div className="flex-1 min-w-0">
                             <div className="flex items-baseline gap-3 mb-2 flex-wrap">
+                              <span className="flex h-7 w-7 items-center justify-center rounded-md bg-[#D42027]/8 self-center" aria-hidden="true">
+                                <ItemIcon size={14} className="text-[#D42027]" strokeWidth={2} />
+                              </span>
                               <h3
                                 className="font-bold text-[#111318] leading-tight"
                                 style={{
@@ -531,7 +559,8 @@ export default function EquipmentHubPage() {
                           </span>
                         </Link>
                       </li>
-                    ))}
+                      );
+                    })}
                   </ul>
                 </div>
               ))}
@@ -564,13 +593,15 @@ export default function EquipmentHubPage() {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              {SERVICES.map((svc) => (
+              {SERVICES.map((svc, i) => {
+                const ServiceIcon = [Wrench, Zap, TrendingDown, Shield][i] ?? Wrench;
+                return (
                 <div
                   key={svc.title}
                   className="rounded-2xl bg-white border border-[#D8D4CC] p-7 lg:p-8 flex flex-col gap-4 hover:border-[#D42027]/30 hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-200"
                 >
                   <div className="w-10 h-10 rounded-lg bg-[#D42027]/8 flex items-center justify-center flex-shrink-0">
-                    <Wrench size={18} className="text-[#D42027]" aria-hidden="true" />
+                    <ServiceIcon size={18} className="text-[#D42027]" aria-hidden="true" />
                   </div>
                   <h3
                     className="font-bold text-[#111318] leading-tight tracking-[-0.01em]"
@@ -597,7 +628,8 @@ export default function EquipmentHubPage() {
                     />
                   </Link>
                 </div>
-              ))}
+              );
+              })}
             </div>
           </div>
         </section>
@@ -609,21 +641,13 @@ export default function EquipmentHubPage() {
           aria-label="Request an equipment service proposal"
           className="relative overflow-hidden bg-[#1E2126] py-16 lg:py-24"
         >
-          <Image
-            src="/schematic.webp"
-            alt=""
-            fill
-            sizes="100vw"
-            className="object-cover opacity-[0.13] [filter:invert(1)] pointer-events-none select-none"
-            aria-hidden="true"
-          />
           <div className="relative mx-auto max-w-[1280px] px-5 sm:px-6 lg:px-8">
-            <div className="max-w-2xl">
+            <div className="max-w-2xl border-l-2 border-[#D42027] pl-6 lg:pl-8">
               <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.2em] text-[#D42027] mb-5">
                 Full Spectrum · Complete Scope
               </p>
               <h2
-                className="font-bold text-white leading-[1.05] tracking-tight mb-5"
+                className="font-bold text-[#111318] leading-[1.05] tracking-tight mb-5"
                 style={{
                   fontFamily: "var(--font-dm-sans)",
                   fontSize: "clamp(1.75rem, 3.5vw, 2.75rem)",
@@ -631,7 +655,7 @@ export default function EquipmentHubPage() {
               >
                 One contractor for your entire equipment inventory.
               </h2>
-              <p className="text-white/65 text-base leading-relaxed mb-8">
+              <p className="text-[#6B7280] text-base leading-relaxed mb-8">
                 Gardner Air maintains commercial HVAC equipment across Riverside County, San Bernardino County, and Orange County. If your current maintenance program is not delivering complete-scope visits and documented reports for every piece of equipment, that is worth a conversation.
               </p>
               <Link
