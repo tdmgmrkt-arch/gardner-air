@@ -373,9 +373,9 @@ export default function PrecisionControlsPage() {
                 fontSize: "clamp(2.25rem, 5.5vw, 4.5rem)",
               }}
             >
-              Commercial HVAC controls service,{" "}
-              <br className="hidden lg:block" />
-              <span className="text-[#D42027]">completed in full.</span>
+              The BAS you inherited doesn&apos;t have to be the BAS you fight.
+              <br className="hidden lg:block" />{" "}
+              <span className="text-[#D42027]">Recommissioned. Documented. Yours.</span>
             </h1>
 
             <p className="text-white/65 text-base lg:text-lg leading-relaxed max-w-xl mb-10">

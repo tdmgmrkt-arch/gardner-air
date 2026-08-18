@@ -370,9 +370,9 @@ export default function ComputerRoomUnitsPage() {
                 fontSize: "clamp(2.25rem, 5.5vw, 4.5rem)",
               }}
             >
-              CRAC / CRAH service for mission-critical facilities,{" "}
-              <br className="hidden lg:block" />
-              <span className="text-[#D42027]">completed in full.</span>
+              Server rooms don&apos;t tolerate approximate cooling.
+              <br className="hidden lg:block" />{" "}
+              <span className="text-[#D42027]">Serviced to precision-cooling standards.</span>
             </h1>
 
             <p className="text-white/65 text-base lg:text-lg leading-relaxed max-w-xl mb-10">

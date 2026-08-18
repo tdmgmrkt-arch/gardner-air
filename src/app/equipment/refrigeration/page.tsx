@@ -376,9 +376,9 @@ export default function RefrigerationPage() {
                 fontSize: "clamp(2.25rem, 5.5vw, 4.5rem)",
               }}
             >
-              Commercial refrigeration service,{" "}
-              <br className="hidden lg:block" />
-              <span className="text-[#D42027]">completed in full.</span>
+Product loss starts with equipment nobody watched.
+              <br className="hidden lg:block" />{" "}
+              <span className="text-[#D42027]">Watched. Documented. Serviced.</span>
             </h1>
 
             <p className="text-white/65 text-base lg:text-lg leading-relaxed max-w-xl mb-10">

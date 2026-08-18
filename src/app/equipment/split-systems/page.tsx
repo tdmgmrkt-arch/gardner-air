@@ -371,9 +371,9 @@ export default function SplitSystemsPage() {
                 fontSize: "clamp(2.25rem, 5.5vw, 4.5rem)",
               }}
             >
-              Commercial split system service,{" "}
-              <br className="hidden lg:block" />
-              <span className="text-[#D42027]">completed in full.</span>
+Multi-zone systems drift out of spec quietly.
+              <br className="hidden lg:block" />{" "}
+              <span className="text-[#D42027]">Catch it before your tenants do.</span>
             </h1>
 
             <p className="text-white/65 text-base lg:text-lg leading-relaxed max-w-xl mb-10">

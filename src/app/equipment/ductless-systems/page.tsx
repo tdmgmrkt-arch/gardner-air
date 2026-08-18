@@ -370,9 +370,9 @@ export default function DuctlessSystemsPage() {
                 fontSize: "clamp(2.25rem, 5.5vw, 4.5rem)",
               }}
             >
-              Commercial VRF and ductless service,{" "}
-              <br className="hidden lg:block" />
-              <span className="text-[#D42027]">completed in full.</span>
+              VRF platforms punish generalist contractors.
+              <br className="hidden lg:block" />{" "}
+              <span className="text-[#D42027]">Serviced by technicians who read the diagnostics.</span>
             </h1>
 
             <p className="text-white/65 text-base lg:text-lg leading-relaxed max-w-xl mb-10">

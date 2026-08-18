@@ -376,9 +376,9 @@ export default function DehumidificationPage() {
                 fontSize: "clamp(2.25rem, 5.5vw, 4.5rem)",
               }}
             >
-              Commercial dehumidification service,{" "}
-              <br className="hidden lg:block" />
-              <span className="text-[#D42027]">completed in full.</span>
+Humidity control isn&rsquo;t a comfort feature.
+              <br className="hidden lg:block" />{" "}
+              <span className="text-[#D42027]">It&rsquo;s a process requirement.</span>
             </h1>
 
             <p className="text-white/65 text-base lg:text-lg leading-relaxed max-w-xl mb-10">

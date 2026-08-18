@@ -499,64 +499,62 @@ export default function EquipmentHubPage() {
               Last Updated: August 2026
             </p>
 
-            {/* 3-column grid — stacks on mobile */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-6 border-t border-[#D8D4CC] pt-8 lg:pt-0 lg:border-t-0">
-              {CATEGORIES.map((cat, catIndex) => (
-                <div
-                  key={cat.label}
-                  className={[
-                    "flex flex-col",
-                    catIndex > 0
-                      ? "lg:border-l lg:border-[#D8D4CC] lg:pl-6"
-                      : "",
-                  ].join(" ")}
-                >
+            {/* Category grid — 1 col mobile, 2 cols tablet, 3 cols desktop */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-8 lg:gap-10">
+              {CATEGORIES.map((cat) => (
+                <div key={cat.label} className="flex flex-col">
                   {/* Category eyebrow */}
-                  <p className="font-mono text-[12px] font-semibold uppercase tracking-[0.18em] text-[#D42027] mb-6">
+                  <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.2em] text-[#D42027] mb-5 pb-4 border-b border-[#D8D4CC]">
                     {cat.label}
                   </p>
 
                   {/* Equipment card list */}
-                  <ul className="flex flex-col divide-y divide-[#D8D4CC] border-t border-[#D8D4CC]" role="list">
+                  <ul className="flex flex-col divide-y divide-[#D8D4CC]" role="list">
                     {cat.items.map((item) => {
                       const ItemIcon = EQUIPMENT_ICONS[item.href] ?? Package;
                       return (
                       <li key={item.name}>
                         <Link
                           href={item.href}
-                          className="group flex items-start justify-between gap-4 py-6 hover:bg-white/60 -mx-3 px-3 rounded-lg transition-colors duration-150"
+                          className="group flex items-start gap-4 py-6 hover:bg-white/70 -mx-3 px-3 rounded-lg transition-colors duration-150"
                         >
+                          {/* Icon column */}
+                          <span
+                            className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#D42027]/10 flex-shrink-0 mt-0.5 group-hover:bg-[#D42027] transition-colors duration-200"
+                            aria-hidden="true"
+                          >
+                            <ItemIcon
+                              size={18}
+                              className="text-[#D42027] group-hover:text-white transition-colors duration-200"
+                              strokeWidth={2}
+                            />
+                          </span>
+
+                          {/* Content column */}
                           <div className="flex-1 min-w-0">
-                            <div className="flex items-baseline gap-3 mb-2 flex-wrap">
-                              <span className="flex h-7 w-7 items-center justify-center rounded-md bg-[#D42027]/8 self-center" aria-hidden="true">
-                                <ItemIcon size={14} className="text-[#D42027]" strokeWidth={2} />
-                              </span>
+                            <div className="flex items-center justify-between gap-3 mb-1.5">
                               <h3
-                                className="font-bold text-[#111318] leading-tight"
+                                className="font-bold text-[#111318] leading-tight tracking-[-0.01em]"
                                 style={{
                                   fontFamily: "var(--font-dm-sans)",
-                                  fontSize: "clamp(0.9375rem, 1.1vw, 1.0625rem)",
+                                  fontSize: "1.0625rem",
                                 }}
                               >
                                 {item.name}
                               </h3>
-                              <span className="font-mono text-[9px] uppercase tracking-[0.15em] text-[#6B7280] shrink-0">
-                                {item.spec}
-                              </span>
+                              <ArrowRight
+                                size={16}
+                                className="text-[#9CA3AF] group-hover:text-[#D42027] group-hover:translate-x-0.5 transition-all duration-200 flex-shrink-0"
+                                aria-hidden="true"
+                              />
                             </div>
+                            <p className="font-mono text-[10px] uppercase tracking-[0.15em] text-[#9CA3AF] mb-2.5">
+                              {item.spec}
+                            </p>
                             <p className="text-[14px] text-[#6B7280] leading-relaxed">
                               {item.description}
                             </p>
                           </div>
-                          <span
-                            className="flex-shrink-0 mt-1 flex h-8 w-8 items-center justify-center rounded-full border border-[#D8D4CC] text-[#6B7280] group-hover:border-[#D42027] group-hover:bg-[#D42027] group-hover:text-white transition-colors duration-200"
-                            aria-hidden="true"
-                          >
-                            <ArrowRight
-                              size={14}
-                              className="group-hover:translate-x-0.5 transition-transform duration-200"
-                            />
-                          </span>
                         </Link>
                       </li>
                       );
@@ -647,7 +645,7 @@ export default function EquipmentHubPage() {
                 Full Spectrum · Complete Scope
               </p>
               <h2
-                className="font-bold text-[#111318] leading-[1.05] tracking-tight mb-5"
+                className="font-bold text-white leading-[1.05] tracking-tight mb-5"
                 style={{
                   fontFamily: "var(--font-dm-sans)",
                   fontSize: "clamp(1.75rem, 3.5vw, 2.75rem)",
@@ -655,7 +653,7 @@ export default function EquipmentHubPage() {
               >
                 One contractor for your entire equipment inventory.
               </h2>
-              <p className="text-[#6B7280] text-base leading-relaxed mb-8">
+              <p className="text-white/70 text-base leading-relaxed mb-8">
                 Gardner Air maintains commercial HVAC equipment across Riverside County, San Bernardino County, and Orange County. If your current maintenance program is not delivering complete-scope visits and documented reports for every piece of equipment, that is worth a conversation.
               </p>
               <Link
