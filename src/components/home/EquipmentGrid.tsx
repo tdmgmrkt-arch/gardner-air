@@ -1,29 +1,32 @@
+import Link from "next/link";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
+
 const CATEGORIES = [
   {
     label: "Air Systems",
     items: [
-      { name: "Package Units", spec: "Rooftop" },
-      { name: "Split Systems", spec: "Multi-Zone" },
-      { name: "Ductless Systems", spec: "VRF / Mini-Split" },
-      { name: "Computer Room Units", spec: "CRAC / CRAH" },
+      { name: "Package Units", spec: "Rooftop", href: "/equipment/package-units/" },
+      { name: "Split Systems", spec: "Multi-Zone", href: "/equipment/split-systems/" },
+      { name: "Ductless Systems", spec: "VRF / Mini-Split", href: "/equipment/ductless-systems/" },
+      { name: "Computer Room Units", spec: "CRAC / CRAH", href: "/equipment/computer-room-units/" },
     ],
   },
   {
     label: "Cooling & Refrigeration",
     items: [
-      { name: "Chillers", spec: "Centrifugal / Screw" },
-      { name: "Cooling Towers", spec: "Induced Draft" },
-      { name: "Refrigeration", spec: "Commercial-Grade" },
-      { name: "Dehumidification", spec: "Desiccant / Refrigerant" },
+      { name: "Chillers", spec: "Centrifugal / Screw", href: "/equipment/chillers/" },
+      { name: "Cooling Towers", spec: "Induced Draft", href: "/equipment/cooling-towers/" },
+      { name: "Refrigeration", spec: "Commercial-Grade", href: "/equipment/refrigeration/" },
+      { name: "Dehumidification", spec: "Desiccant / Refrigerant", href: "/equipment/dehumidification/" },
     ],
   },
   {
     label: "Heating & Precision",
     items: [
-      { name: "Boilers", spec: "Hot Water / Steam" },
-      { name: "Humidification", spec: "Steam / Evaporative" },
-      { name: "Rooftop Heating", spec: "Gas-Fired" },
-      { name: "Precision Controls", spec: "BAS Integration" },
+      { name: "Boilers", spec: "Hot Water / Steam", href: "/equipment/boilers/" },
+      { name: "Humidification", spec: "Steam / Evaporative", href: "/equipment/humidification/" },
+      { name: "Rooftop Heating", spec: "Gas-Fired", href: "/equipment/rooftop-heating/" },
+      { name: "Precision Controls", spec: "BAS Integration", href: "/equipment/precision-controls/" },
     ],
   },
 ];
@@ -80,27 +83,47 @@ export function EquipmentGrid() {
 
               <ul className="flex flex-col divide-y divide-[#D8D4CC]" role="list">
                 {cat.items.map((item) => (
-                  <li
-                    key={item.name}
-                    className="flex items-baseline justify-between gap-4 py-4"
-                  >
-                    <p
-                      className="font-bold text-ga-black leading-tight"
-                      style={{
-                        fontFamily: "var(--font-dm-sans)",
-                        fontSize: "clamp(0.9375rem, 1.15vw, 1.0625rem)",
-                      }}
+                  <li key={item.name}>
+                    <Link
+                      href={item.href}
+                      className="group flex items-baseline justify-between gap-4 py-4 -mx-2 px-2 rounded transition-colors hover:bg-[#EFEBE3]"
                     >
-                      {item.name}
-                    </p>
-                    <p className="font-mono text-[9px] lg:text-[10px] uppercase tracking-[0.15em] text-ga-gray-600 text-right shrink-0">
-                      {item.spec}
-                    </p>
+                      <p
+                        className="font-bold text-ga-black leading-tight group-hover:text-ga-red transition-colors"
+                        style={{
+                          fontFamily: "var(--font-dm-sans)",
+                          fontSize: "clamp(0.9375rem, 1.15vw, 1.0625rem)",
+                        }}
+                      >
+                        {item.name}
+                      </p>
+                      <span className="flex items-baseline gap-2 shrink-0">
+                        <span className="font-mono text-[9px] lg:text-[10px] uppercase tracking-[0.15em] text-ga-gray-600 text-right">
+                          {item.spec}
+                        </span>
+                        <ArrowUpRight
+                          size={12}
+                          className="text-ga-gray-600 group-hover:text-ga-red group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"
+                          aria-hidden="true"
+                        />
+                      </span>
+                    </Link>
                   </li>
                 ))}
               </ul>
             </div>
           ))}
+        </div>
+
+        {/* See-all CTA */}
+        <div className="mt-12 lg:mt-14 flex justify-center">
+          <Link
+            href="/equipment/"
+            className="btn-arrow-slide inline-flex items-center gap-2 h-12 px-6 rounded-lg text-sm font-semibold border-2 border-ga-black text-ga-black hover:bg-ga-black hover:text-white transition-colors"
+          >
+            See all equipment we service
+            <ArrowRight size={16} className="arrow-icon" aria-hidden="true" />
+          </Link>
         </div>
 
       </div>

@@ -24,6 +24,17 @@ type MegaService = {
   href: string;
 };
 
+type MegaCategoryItem = {
+  name: string;
+  spec: string;
+  href: string;
+};
+
+type MegaCategory = {
+  label: string;
+  items: MegaCategoryItem[];
+};
+
 type MegaFeature = {
   eyebrow: string;
   title: string;
@@ -33,13 +44,28 @@ type MegaFeature = {
   ctaHref: string;
 };
 
-type MegaContent = {
+/** Numbered-rows layout — used by Services and About */
+type MegaServicesContent = {
+  layout: "services";
   eyebrow: string;
   headline: string;
   intro: string;
   services: MegaService[];
   feature: MegaFeature;
 };
+
+/** 3-column categorized layout — used by Equipment */
+type MegaEquipmentContent = {
+  layout: "categories";
+  eyebrow: string;
+  headline: string;
+  intro: string;
+  categories: MegaCategory[];
+  browseLabel: string;
+  feature: MegaFeature;
+};
+
+type MegaContent = MegaServicesContent | MegaEquipmentContent;
 
 type NavChild = { label: string; href: string };
 type NavItem = {
@@ -51,38 +77,19 @@ type NavItem = {
 
 const NAV: NavItem[] = [
   {
-    label: "Commercial HVAC Services",
+    label: "Services",
     href: "/commercial-hvac-services/",
     mega: {
+      layout: "services",
       eyebrow: "What We Do",
       headline: "Four services. One standard.",
       intro:
         "Commercial-only HVAC — factory-trained technicians, full-scope service, documented on every visit.",
       services: [
-        {
-          num: "01",
-          title: "Preventative Maintenance",
-          body: "Programs built around your facility's schedule and equipment mix. Full-scope visits — not time-blocks.",
-          href: "/commercial-hvac-services/preventative-maintenance/",
-        },
-        {
-          num: "02",
-          title: "Repair",
-          body: "Certified technicians resolve HVAC issues fast — no guesswork, no upsells. Same-visit resolution on most calls.",
-          href: "/commercial-hvac-services/repair/",
-        },
-        {
-          num: "03",
-          title: "Replacement",
-          body: "We determine when replacement saves more than repair, then install with minimal disruption to operations.",
-          href: "/commercial-hvac-services/replacement/",
-        },
-        {
-          num: "04",
-          title: "Installation",
-          body: "Retrofits and full-system overhauls, engineered for your building. Commercial-grade equipment, certified installation.",
-          href: "/commercial-hvac-services/installation/",
-        },
+        { num: "01", title: "Preventative Maintenance", body: "Programs built around your facility's schedule and equipment mix. Full-scope visits — not time-blocks.", href: "/commercial-hvac-services/preventative-maintenance/" },
+        { num: "02", title: "Repair", body: "Certified technicians resolve HVAC issues fast — no guesswork, no upsells. Same-visit resolution on most calls.", href: "/commercial-hvac-services/repair/" },
+        { num: "03", title: "Replacement", body: "We determine when replacement saves more than repair, then install with minimal disruption to operations.", href: "/commercial-hvac-services/replacement/" },
+        { num: "04", title: "Installation", body: "Retrofits and full-system overhauls, engineered for your building. Commercial-grade equipment, certified installation.", href: "/commercial-hvac-services/installation/" },
       ],
       feature: {
         eyebrow: "Featured Program",
@@ -94,34 +101,69 @@ const NAV: NavItem[] = [
       },
     },
   },
+  {
+    label: "Equipment",
+    href: "/equipment/",
+    mega: {
+      layout: "categories",
+      eyebrow: "Every commercial system",
+      headline: "Equipment we service.",
+      intro:
+        "Factory-trained across the full commercial HVAC spectrum — from rooftop package units to centrifugal chillers.",
+      categories: [
+        {
+          label: "Air Systems",
+          items: [
+            { name: "Package Units",        spec: "Rooftop",               href: "/equipment/package-units/" },
+            { name: "Split Systems",        spec: "Multi-Zone",            href: "/equipment/split-systems/" },
+            { name: "Ductless Systems",     spec: "VRF / Mini-Split",      href: "/equipment/ductless-systems/" },
+            { name: "Computer Room Units",  spec: "CRAC / CRAH",           href: "/equipment/computer-room-units/" },
+          ],
+        },
+        {
+          label: "Cooling & Refrigeration",
+          items: [
+            { name: "Chillers",          spec: "Centrifugal / Screw",    href: "/equipment/chillers/" },
+            { name: "Cooling Towers",    spec: "Induced Draft",          href: "/equipment/cooling-towers/" },
+            { name: "Refrigeration",     spec: "Commercial-Grade",       href: "/equipment/refrigeration/" },
+            { name: "Dehumidification",  spec: "Desiccant / Refrigerant",href: "/equipment/dehumidification/" },
+          ],
+        },
+        {
+          label: "Heating & Precision",
+          items: [
+            { name: "Boilers",            spec: "Hot Water / Steam",     href: "/equipment/boilers/" },
+            { name: "Humidification",     spec: "Steam / Evaporative",   href: "/equipment/humidification/" },
+            { name: "Rooftop Heating",    spec: "Gas-Fired",             href: "/equipment/rooftop-heating/" },
+            { name: "Precision Controls", spec: "BAS Integration",       href: "/equipment/precision-controls/" },
+          ],
+        },
+      ],
+      browseLabel: "Browse all equipment",
+      feature: {
+        eyebrow: "Equipment Directory",
+        title: "The full commercial spectrum",
+        body: "Browse every commercial HVAC equipment category Gardner Air services — organized by system type, with detailed service scope per equipment.",
+        image: "/CompleteScope.webp",
+        ctaLabel: "Browse all equipment",
+        ctaHref: "/equipment/",
+      },
+    },
+  },
   { label: "Building Automation", href: "/building-automation" },
   {
     label: "About",
     href: "/about",
     mega: {
+      layout: "services",
       eyebrow: "The Company",
       headline: "Built for commercial. Proven since 1985.",
       intro:
         "Family-run, master-technician-led, and structured to serve Southern California's most demanding facilities.",
       services: [
-        {
-          num: "01",
-          title: "Areas We Serve",
-          body: "Three-county coverage across Southern California — Riverside, San Bernardino, and Orange.",
-          href: "/areas-we-serve",
-        },
-        {
-          num: "02",
-          title: "Leadership Team",
-          body: "Second-generation ownership. Master-technician-led operations. Long-tenured field crews.",
-          href: "/about/leadership-team",
-        },
-        {
-          num: "03",
-          title: "Insights & Field Notes",
-          body: "Technical field notes and long-form commercial HVAC guidance from the Gardner Air team.",
-          href: "/blog",
-        },
+        { num: "01", title: "Areas We Serve", body: "Three-county coverage across Southern California — Riverside, San Bernardino, and Orange.", href: "/areas-we-serve" },
+        { num: "02", title: "Leadership Team", body: "Second-generation ownership. Master-technician-led operations. Long-tenured field crews.", href: "/about/leadership-team" },
+        { num: "03", title: "Insights & Field Notes", body: "Technical field notes and long-form commercial HVAC guidance from the Gardner Air team.", href: "/blog" },
       ],
       feature: {
         eyebrow: "Portfolio",
@@ -376,14 +418,17 @@ export function SiteHeader() {
             <nav className="mx-auto max-w-[1280px] px-5 py-4 flex flex-col gap-1">
               {NAV.map((item) => {
                 const megaChildren: NavChild[] | undefined = item.mega
-                  ? [
-                      /* 2c. "View all" as first child */
-                      { label: `View all ${item.label}`, href: item.href },
-                      ...item.mega.services.map((s) => ({
-                        label: s.title,
-                        href: s.href,
-                      })),
-                    ]
+                  ? item.mega.layout === "categories"
+                    ? [
+                        { label: item.mega.browseLabel, href: item.href },
+                        ...item.mega.categories.flatMap((cat) =>
+                          cat.items.map((i) => ({ label: i.name, href: i.href }))
+                        ),
+                      ]
+                    : item.mega.services.map((svc) => ({
+                        label: svc.title,
+                        href: svc.href,
+                      }))
                   : item.children;
 
                 return megaChildren ? (
@@ -480,6 +525,74 @@ export function SiteHeader() {
 }
 
 /* ------------------------------------------------------------------ */
+/* Shared feature aside — used by both mega layouts                    */
+/* ------------------------------------------------------------------ */
+function MegaFeatureAside({
+  feature,
+  onNavigate,
+}: {
+  feature: MegaFeature;
+  onNavigate: () => void;
+}) {
+  return (
+    <aside className="flex flex-col gap-5">
+      <div className="relative aspect-4/3 rounded overflow-hidden">
+        <Image
+          src={feature.image}
+          alt=""
+          fill
+          sizes="(max-width: 1024px) 100vw, 420px"
+          className="object-cover"
+          aria-hidden="true"
+        />
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(30,33,38,0.05) 0%, rgba(30,33,38,0.55) 100%)",
+          }}
+          aria-hidden="true"
+        />
+        <div className="absolute inset-x-0 bottom-0 p-5 lg:p-6">
+          <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-white/80 mb-2">
+            {feature.eyebrow}
+          </p>
+          <p
+            className="font-bold text-white leading-tight tracking-[-0.01em]"
+            style={{
+              fontFamily: "var(--font-dm-sans)",
+              fontSize: "1.25rem",
+            }}
+          >
+            {feature.title}
+          </p>
+        </div>
+      </div>
+
+      <p className="text-[13.5px] text-ga-gray-600 leading-relaxed">
+        {feature.body}
+      </p>
+
+      <Link
+        href={feature.ctaHref}
+        onClick={onNavigate}
+        className="group inline-flex items-center justify-between gap-3 h-12 px-5 rounded-md bg-ga-charcoal text-white text-[13px] font-semibold hover:bg-[#3A3E45] transition-colors"
+        style={{ fontFamily: "var(--font-dm-sans)" }}
+      >
+        <span className="inline-flex items-center gap-2">
+          {feature.ctaLabel}
+        </span>
+        <ArrowUpRight
+          size={16}
+          className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
+          aria-hidden="true"
+        />
+      </Link>
+    </aside>
+  );
+}
+
+/* ------------------------------------------------------------------ */
 /* Mega Menu Panel — editorial magazine layout                         */
 /* ------------------------------------------------------------------ */
 function MegaPanel({
@@ -491,30 +604,106 @@ function MegaPanel({
   parentHref: string;
   onNavigate: () => void;
 }) {
+  /* Shared eyebrow + headline + intro header */
+  const Header = (
+    <div className="mb-8 lg:mb-10 grid grid-cols-1 md:grid-cols-[1.3fr_1fr] gap-6 md:gap-10 md:items-end">
+      <div>
+        <p className="font-mono text-[12px] font-semibold uppercase tracking-[0.15em] text-ga-gray-600 mb-4">
+          {content.eyebrow}
+        </p>
+        <h2
+          className="font-bold text-ga-black leading-[1.05] tracking-tight"
+          style={{
+            fontFamily: "var(--font-dm-sans)",
+            fontSize: "clamp(1.5rem, 2.25vw, 2rem)",
+          }}
+        >
+          {content.headline}
+        </h2>
+      </div>
+      <p className="text-sm lg:text-[15px] text-ga-gray-600 leading-relaxed max-w-md">
+        {content.intro}
+      </p>
+    </div>
+  );
+
+  /* ---- Equipment: 3-column category grid ---- */
+  if (content.layout === "categories") {
+    return (
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-10 lg:gap-16">
+        <div>
+          {Header}
+          {/* 3-column category grid — widens the left panel to fit */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-8 gap-y-8 border-t border-[#D8D4CC] pt-8">
+            {content.categories.map((cat) => (
+              <div key={cat.label}>
+                {/* Red uppercase category label — matches EquipmentGrid.tsx eyebrow */}
+                <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-ga-red mb-4">
+                  {cat.label}
+                </p>
+                <ul className="flex flex-col gap-0.5">
+                  {cat.items.map((item) => (
+                    <li key={item.href}>
+                      <Link
+                        href={item.href}
+                        onClick={onNavigate}
+                        className="group flex items-start justify-between gap-3 py-2.5 -mx-2 px-2 rounded-sm hover:bg-white/60 transition-colors"
+                      >
+                        <div>
+                          <p
+                            className="font-semibold text-ga-black text-[14px] leading-tight group-hover:text-ga-red transition-colors"
+                            style={{ fontFamily: "var(--font-dm-sans)" }}
+                          >
+                            {item.name}
+                          </p>
+                          <p className="text-[11.5px] text-ga-gray-600 leading-tight mt-0.5">
+                            {item.spec}
+                          </p>
+                        </div>
+                        <ArrowRight
+                          size={14}
+                          className="text-ga-black/30 mt-1 shrink-0 group-hover:text-ga-red group-hover:translate-x-0.5 transition-all"
+                          aria-hidden="true"
+                        />
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+          {/* "Browse all" footer row — mirrors the "View all" row in the services layout */}
+          <div className="border-t border-[#D8D4CC] mt-6 pt-5">
+            <Link
+              href={parentHref}
+              onClick={onNavigate}
+              className="group inline-flex items-center gap-2 text-[13.5px] font-semibold text-ga-red hover:text-ga-red/80 transition-colors"
+              style={{ fontFamily: "var(--font-dm-sans)" }}
+            >
+              Browse all equipment
+              <ArrowRight
+                size={15}
+                className="group-hover:translate-x-1 transition-transform"
+                aria-hidden="true"
+              />
+            </Link>
+          </div>
+        </div>
+
+        {/* Right feature card */}
+        <div className="w-75 xl:w-85 shrink-0">
+          <MegaFeatureAside feature={content.feature} onNavigate={onNavigate} />
+        </div>
+      </div>
+    );
+  }
+
+  /* ---- Default: numbered services layout (Commercial HVAC, About) ---- */
   return (
     <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-10 lg:gap-16">
       {/* Left: eyebrow + headline + numbered service rows */}
       <div>
-        {/* Eyebrow + headline (left) with intro dek aligned to headline baseline (right) */}
-        <div className="mb-8 lg:mb-10 grid grid-cols-1 md:grid-cols-[1.3fr_1fr] gap-6 md:gap-10 md:items-end">
-          <div>
-            <p className="font-mono text-[12px] font-semibold uppercase tracking-[0.15em] text-ga-gray-600 mb-4">
-              {content.eyebrow}
-            </p>
-            <h2
-              className="font-bold text-ga-black leading-[1.05] tracking-tight"
-              style={{
-                fontFamily: "var(--font-dm-sans)",
-                fontSize: "clamp(1.5rem, 2.25vw, 2rem)",
-              }}
-            >
-              {content.headline}
-            </h2>
-          </div>
-          <p className="text-sm lg:text-[15px] text-ga-gray-600 leading-relaxed max-w-md">
-            {content.intro}
-          </p>
-        </div>
+        {Header}
 
         <div className="flex flex-col divide-y divide-[#D8D4CC] border-t border-[#D8D4CC]">
           {content.services.map((svc) => (
@@ -582,60 +771,7 @@ function MegaPanel({
       </div>
 
       {/* Right: feature card — photo + editorial CTA block */}
-      <aside className="flex flex-col gap-5">
-        <div className="relative aspect-4/3 rounded overflow-hidden">
-          <Image
-            src={content.feature.image}
-            alt=""
-            fill
-            sizes="(max-width: 1024px) 100vw, 420px"
-            className="object-cover"
-            aria-hidden="true"
-          />
-          <div
-            className="absolute inset-0 pointer-events-none"
-            style={{
-              background:
-                "linear-gradient(180deg, rgba(30,33,38,0.05) 0%, rgba(30,33,38,0.55) 100%)",
-            }}
-            aria-hidden="true"
-          />
-          <div className="absolute inset-x-0 bottom-0 p-5 lg:p-6">
-            <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-white/80 mb-2">
-              {content.feature.eyebrow}
-            </p>
-            <p
-              className="font-bold text-white leading-tight tracking-[-0.01em]"
-              style={{
-                fontFamily: "var(--font-dm-sans)",
-                fontSize: "1.25rem",
-              }}
-            >
-              {content.feature.title}
-            </p>
-          </div>
-        </div>
-
-        <p className="text-[13.5px] text-ga-gray-600 leading-relaxed">
-          {content.feature.body}
-        </p>
-
-        <Link
-          href={content.feature.ctaHref}
-          onClick={onNavigate}
-          className="group inline-flex items-center justify-between gap-3 h-12 px-5 rounded-md bg-ga-charcoal text-white text-[13px] font-semibold hover:bg-[#3A3E45] transition-colors"
-          style={{ fontFamily: "var(--font-dm-sans)" }}
-        >
-          <span className="inline-flex items-center gap-2">
-            {content.feature.ctaLabel}
-          </span>
-          <ArrowUpRight
-            size={16}
-            className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
-            aria-hidden="true"
-          />
-        </Link>
-      </aside>
+      <MegaFeatureAside feature={content.feature} onNavigate={onNavigate} />
     </div>
   );
 }
