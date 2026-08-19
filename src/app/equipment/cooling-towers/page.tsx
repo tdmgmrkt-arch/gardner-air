@@ -23,7 +23,7 @@ import { ContactForm } from "@/components/forms/ContactForm";
 /* Metadata                                                             */
 /* ------------------------------------------------------------------ */
 export const metadata: Metadata = {
-  title: "Commercial Cooling Tower Service | Gardner Air | Southern California",
+  title: { absolute: "Commercial Cooling Tower Service | Gardner Air | Southern California" },
   description:
     "Gardner Air provides preventative maintenance, repair, and installation support for commercial cooling towers across Southern California. Factory-trained technicians. Call (951) 696-4495.",
   alternates: {

@@ -33,7 +33,7 @@ const POST = {
 /* Metadata                                                             */
 /* ------------------------------------------------------------------ */
 export const metadata: Metadata = {
-  title: `${POST.title} | Gardner Air`,
+  title: { absolute: `${POST.title} | Gardner Air` },
   description:
     "Repeat HVAC failures usually trace back to missing service history. See how preventative HVAC maintenance tracking captures the data facility managers need to break the cycle.",
   alternates: {

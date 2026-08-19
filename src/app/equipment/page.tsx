@@ -46,7 +46,7 @@ import { ContactForm } from "@/components/forms/ContactForm";
 /* Metadata                                                             */
 /* ------------------------------------------------------------------ */
 export const metadata: Metadata = {
-  title: "Commercial HVAC Equipment Maintenance & Repair | Gardner Air, SoCal",
+  title: { absolute: "Commercial HVAC Equipment Maintenance & Repair | Gardner Air, SoCal" },
   description:
     "Gardner Air services the complete commercial HVAC equipment spectrum across Southern California — chillers, boilers, cooling towers, rooftop units, VRF, refrigeration, and precision controls.",
   alternates: {

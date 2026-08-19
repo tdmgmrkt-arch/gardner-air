@@ -7,7 +7,7 @@ import { SiteFooter } from "@/components/home/SiteFooter";
 import { MobileCTABar } from "@/components/home/MobileCTABar";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Gardner Air",
+  title: { absolute: "Privacy Policy | Gardner Air" },
   description:
     "Gardner Air's privacy policy: how we collect, use, and protect personal data on our website.",
   alternates: {

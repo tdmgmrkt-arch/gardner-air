@@ -12,7 +12,7 @@ import { LazyMap } from "@/components/contact/LazyMap";
 /* Metadata                                                             */
 /* ------------------------------------------------------------------ */
 export const metadata: Metadata = {
-  title: "Contact Gardner Air — Commercial HVAC Southern California",
+  title: { absolute: "Contact Gardner Air — Commercial HVAC Southern California" },
   description:
     "Schedule a commercial HVAC maintenance proposal with Gardner Air. Serving Riverside, San Bernardino, and Orange County facilities.",
   alternates: {

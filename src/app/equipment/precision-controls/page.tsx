@@ -23,7 +23,7 @@ import { ContactForm } from "@/components/forms/ContactForm";
 /* Metadata                                                             */
 /* ------------------------------------------------------------------ */
 export const metadata: Metadata = {
-  title: "Commercial HVAC Controls & Building Automation Service | Gardner Air",
+  title: { absolute: "Commercial HVAC Controls & Building Automation Service | Gardner Air" },
   description:
     "Gardner Air provides preventative maintenance and integration support for commercial HVAC controls and building automation systems across Southern California. Call (951) 696-4495.",
   alternates: {

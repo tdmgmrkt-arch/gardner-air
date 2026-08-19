@@ -33,7 +33,7 @@ const POST = {
 /* Metadata                                                             */
 /* ------------------------------------------------------------------ */
 export const metadata: Metadata = {
-  title: `${POST.title} | Gardner Air`,
+  title: { absolute: `${POST.title} | Gardner Air` },
   description:
     "Commercial HVAC preventative maintenance cuts emergency repairs, reduces energy use, and extends equipment life. See where the savings come from and what a strong program covers.",
   alternates: {

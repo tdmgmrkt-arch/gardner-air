@@ -139,9 +139,6 @@ export function SiteFooter() {
             <Link href="/privacy-policy/" className="font-mono text-[10px] text-white/50 hover:text-white/80 uppercase tracking-widest transition-colors">
               Privacy
             </Link>
-            <Link href="/terms" className="font-mono text-[10px] text-white/50 hover:text-white/80 uppercase tracking-widest transition-colors">
-              Terms
-            </Link>
           </div>
         </div>
       </div>

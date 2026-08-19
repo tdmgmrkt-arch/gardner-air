@@ -20,7 +20,7 @@ import { AreaWhyBlock } from "@/components/areas/WhyBlock";
 /* Metadata                                                             */
 /* ------------------------------------------------------------------ */
 export const metadata: Metadata = {
-  title: "Commercial HVAC Services in San Bernardino County, CA | Gardner Air",
+  title: { absolute: "Commercial HVAC Services in San Bernardino County, CA | Gardner Air" },
   description:
     "Gardner Air delivers commercial HVAC preventative maintenance, repair, and installation across San Bernardino County, CA — certified technicians, full-scope service, rapid response.",
   alternates: {

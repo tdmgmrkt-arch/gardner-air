@@ -23,7 +23,7 @@ import { ContactForm } from "@/components/forms/ContactForm";
 /* Metadata                                                             */
 /* ------------------------------------------------------------------ */
 export const metadata: Metadata = {
-  title: "Commercial Refrigeration Service | Gardner Air | Southern California",
+  title: { absolute: "Commercial Refrigeration Service | Gardner Air | Southern California" },
   description:
     "Gardner Air provides preventative maintenance and repair for commercial refrigeration systems across Southern California. Walk-ins, rack systems, cold storage. Call (951) 696-4495.",
   alternates: {

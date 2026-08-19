@@ -33,7 +33,7 @@ const POST = {
 /* Metadata                                                             */
 /* ------------------------------------------------------------------ */
 export const metadata: Metadata = {
-  title: `${POST.title} | Gardner Air`,
+  title: { absolute: `${POST.title} | Gardner Air` },
   description:
     "Uneven temperatures, rising energy costs, frequent breakdowns — the early warning signs your commercial HVAC system needs repair or replacement, and how to decide between them.",
   alternates: {

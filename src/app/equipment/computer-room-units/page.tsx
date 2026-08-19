@@ -23,7 +23,7 @@ import { ContactForm } from "@/components/forms/ContactForm";
 /* Metadata                                                             */
 /* ------------------------------------------------------------------ */
 export const metadata: Metadata = {
-  title: "Computer Room Unit Service | Gardner Air | Southern California",
+  title: { absolute: "Computer Room Unit Service | Gardner Air | Southern California" },
   description:
     "Gardner Air provides preventative maintenance, repair, and installation for CRAC and CRAH computer room units across Southern California. Factory-trained technicians. Call (951) 696-4495.",
   alternates: {

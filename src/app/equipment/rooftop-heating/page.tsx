@@ -23,7 +23,7 @@ import { ContactForm } from "@/components/forms/ContactForm";
 /* Metadata                                                             */
 /* ------------------------------------------------------------------ */
 export const metadata: Metadata = {
-  title: "Commercial Rooftop Heating Service | Gardner Air | Southern California",
+  title: { absolute: "Commercial Rooftop Heating Service | Gardner Air | Southern California" },
   description:
     "Gardner Air provides preventative maintenance and repair for gas-fired commercial rooftop heating systems across Southern California. Factory-trained technicians. Call (951) 696-4495.",
   alternates: {

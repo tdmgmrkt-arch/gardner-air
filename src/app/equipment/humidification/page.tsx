@@ -23,7 +23,7 @@ import { ContactForm } from "@/components/forms/ContactForm";
 /* Metadata                                                             */
 /* ------------------------------------------------------------------ */
 export const metadata: Metadata = {
-  title: "Commercial Humidification System Maintenance & Repair | Gardner Air",
+  title: { absolute: "Commercial Humidification System Maintenance & Repair | Gardner Air" },
   description:
     "Gardner Air provides preventative maintenance and repair for commercial steam and evaporative humidification systems across Southern California. Call (951) 696-4495.",
   alternates: {

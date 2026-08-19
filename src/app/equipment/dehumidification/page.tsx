@@ -23,7 +23,7 @@ import { ContactForm } from "@/components/forms/ContactForm";
 /* Metadata                                                             */
 /* ------------------------------------------------------------------ */
 export const metadata: Metadata = {
-  title: "Commercial Dehumidification System Service & Repair | Gardner Air",
+  title: { absolute: "Commercial Dehumidification System Service & Repair | Gardner Air" },
   description:
     "Gardner Air provides preventative maintenance and repair for commercial desiccant and refrigerant dehumidification systems across Southern California. Call (951) 696-4495.",
   alternates: {

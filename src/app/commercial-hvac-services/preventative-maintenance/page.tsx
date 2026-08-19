@@ -21,7 +21,7 @@ import { ContactForm } from "@/components/forms/ContactForm";
 /* Metadata                                                             */
 /* ------------------------------------------------------------------ */
 export const metadata: Metadata = {
-  title: "Commercial HVAC Preventative Maintenance Programs | Gardner Air, CA",
+  title: { absolute: "Commercial HVAC Preventative Maintenance Programs | Gardner Air, CA" },
   description:
     "Extend the life of your commercial HVAC system and reduce costly breakdowns with Gardner Air's preventative maintenance programs for Southern California facilities.",
   alternates: {

@@ -10,8 +10,7 @@ import { MobileCTABar } from "@/components/home/MobileCTABar";
 /* Metadata                                                             */
 /* ------------------------------------------------------------------ */
 export const metadata: Metadata = {
-  title:
-    "Field Notes & Insights — Commercial HVAC Guidance from Gardner Air",
+  title: { absolute: "Field Notes & Insights — Commercial HVAC Guidance from Gardner Air" },
   description:
     "Technical field notes and long-form commercial HVAC guidance from the Gardner Air team — maintenance strategy, equipment longevity, energy performance, and facility-manager know-how across Southern California.",
   alternates: {

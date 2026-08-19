@@ -11,7 +11,7 @@ import { ContactForm } from "@/components/forms/ContactForm";
 /* Metadata                                                             */
 /* ------------------------------------------------------------------ */
 export const metadata: Metadata = {
-  title: "About Gardner Air — Commercial HVAC Since 2006 | Southern California",
+  title: { absolute: "About Gardner Air — Commercial HVAC Since 2006 | Southern California" },
   description:
     "Founded in 2006 by Dirk Gardner, Gardner Air is a Southern California commercial HVAC service company grounded in experience, built on relationships, and focused on long-term performance.",
   alternates: {

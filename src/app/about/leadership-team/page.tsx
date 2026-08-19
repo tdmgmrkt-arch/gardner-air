@@ -11,7 +11,7 @@ import { ContactForm } from "@/components/forms/ContactForm";
 /* Metadata                                                             */
 /* ------------------------------------------------------------------ */
 export const metadata: Metadata = {
-  title: "Leadership Team | Gardner Air Commercial HVAC",
+  title: { absolute: "Leadership Team | Gardner Air Commercial HVAC" },
   description:
     "Meet the leadership team behind Gardner Air — decades of hands-on commercial HVAC experience guiding every service call, project, and long-term client relationship across Southern California.",
   alternates: {

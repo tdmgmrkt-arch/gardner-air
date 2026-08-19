@@ -21,8 +21,7 @@ import { ContactForm } from "@/components/forms/ContactForm";
 /* Metadata                                                             */
 /* ------------------------------------------------------------------ */
 export const metadata: Metadata = {
-  title:
-    "Commercial HVAC Replacement — Southern California | Gardner Air",
+  title: { absolute: "Commercial HVAC Replacement — Southern California | Gardner Air" },
   description:
     "Strategic commercial HVAC equipment replacement across Southern California. Gardner Air right-sizes rooftop units, split systems, chillers, and boilers — with a clear cost analysis and minimal disruption to your operations.",
   alternates: {

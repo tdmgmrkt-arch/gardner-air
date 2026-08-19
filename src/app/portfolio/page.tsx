@@ -12,7 +12,7 @@ import { PhotoPlaceholder } from "@/components/photo-placeholder";
 /* Metadata                                                             */
 /* ------------------------------------------------------------------ */
 export const metadata: Metadata = {
-  title: "Portfolio — Commercial HVAC Projects | Gardner Air",
+  title: { absolute: "Portfolio — Commercial HVAC Projects | Gardner Air" },
   description:
     "Real commercial HVAC project wins across Southern California — package unit replacements, computer room Liebert units, ducting installations, and cooling towers.",
   alternates: {

@@ -20,8 +20,7 @@ import { ContactForm } from "@/components/forms/ContactForm";
 /* Metadata                                                             */
 /* ------------------------------------------------------------------ */
 export const metadata: Metadata = {
-  title:
-    "Commercial HVAC Service Areas — Southern California | Gardner Air",
+  title: { absolute: "Commercial HVAC Service Areas — Southern California | Gardner Air" },
   description:
     "Gardner Air serves commercial HVAC clients across Riverside, San Bernardino, and Orange County — certified technicians, proactive maintenance, and rapid repairs.",
   alternates: {

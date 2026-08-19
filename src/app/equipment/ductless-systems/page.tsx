@@ -23,7 +23,7 @@ import { ContactForm } from "@/components/forms/ContactForm";
 /* Metadata                                                             */
 /* ------------------------------------------------------------------ */
 export const metadata: Metadata = {
-  title: "Commercial VRF & Ductless System Service | Gardner Air | SoCal",
+  title: { absolute: "Commercial VRF & Ductless System Service | Gardner Air | SoCal" },
   description:
     "Gardner Air provides preventative maintenance, repair, and installation for commercial VRF and ductless systems across Southern California. Factory-trained technicians. Call (951) 696-4495.",
   alternates: {
