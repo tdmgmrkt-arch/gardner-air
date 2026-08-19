@@ -82,7 +82,7 @@ const INFO_ITEMS = [
   {
     Icon: Clock,
     label: "Business Hours",
-    content: "{{TBD}}",
+    content: "Mon–Fri · 7:30 AM – 4:00 PM",
     href: null,
   },
 ];

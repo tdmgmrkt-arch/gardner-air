@@ -11,7 +11,7 @@ export function JsonLd() {
     "url": "https://gardnerair.com", // TODO: confirm live domain
     "logo": "https://gardnerair.com/gardnerairlogo.webp", // TODO: confirm domain
     "image": "https://gardnerair.com/og-image.webp", // TODO: real OG image
-    "telephone": "+1-951-696-4495",
+    "telephone": "+19516964495",
     "email": "service@gardnerci.com",
     "address": {
       "@type": "PostalAddress",
@@ -21,18 +21,23 @@ export function JsonLd() {
       "postalCode": "92563",
       "addressCountry": "US",
     },
-    "areaServed": {
-      "@type": "State",
-      "name": "Southern California",
-    },
+    "areaServed": [
+      { "@type": "AdministrativeArea", "name": "Riverside County" },
+      { "@type": "AdministrativeArea", "name": "San Bernardino County" },
+      { "@type": "AdministrativeArea", "name": "Orange County" },
+    ],
+    "hasCredential": [
+      { "@type": "EducationalOccupationalCredential", "name": "California Contractors License #871464 — B (General Building), C20 (HVAC), C4 (Boiler)" },
+      { "@type": "EducationalOccupationalCredential", "name": "NATE Certified Technicians" },
+      { "@type": "EducationalOccupationalCredential", "name": "NCI Certified" },
+    ],
     "priceRange": "$$$$",
     "openingHoursSpecification": [
-      // TODO: confirm actual business hours
       {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "{{TBD}}",
-        "closes": "{{TBD}}",
+        "opens": "07:30",
+        "closes": "16:00",
       },
     ],
     "hasOfferCatalog": {

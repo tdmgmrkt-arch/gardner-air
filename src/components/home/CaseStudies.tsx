@@ -5,22 +5,22 @@ import { ArrowRight } from "lucide-react";
 const FEATURED = {
   caseNum: "Case 001",
   sector: "Education · Private College",
-  location: "Claremont, CA",
+  location: "Inland Empire, CA",
   scope: "Full-Service Maintenance",
-  timeline: "Year 2 of program",
+  timeline: "Multi-year program",
   equipment: "Full facility HVAC",
-  headline: "$80,000 in year-two service savings.",
+  headline: "Full-facility maintenance for a Southern California college.",
   outcome: "Corrected deficiencies the previous provider missed.",
   excerpt:
-    "A private college in Claremont needed a reliable partner to keep its HVAC systems performing. Gardner Air stepped in with a customized HVAC preventative maintenance plan. By performing thorough inspections, correcting deficiencies the previous provider missed, and taking over full-time service, we saved them $80,000 in overall service expenses during their second year with us — all without compromising performance or comfort.",
+    "A private college in Southern California needed a reliable partner to keep its HVAC systems performing. Gardner Air stepped in with a customized preventative maintenance program. Thorough inspections, corrections to deficiencies the previous provider missed, and full-time service coverage — delivered without compromising performance or comfort across the campus.",
   link: "/commercial-hvac-services/preventative-maintenance/",
 };
 
 const METRICS = [
-  { value: "$80K", label: "Year-two savings" },
   { value: "100%", label: "Scope completion" },
-  { value: "{{TBD}}", label: "TBD metric" },
-  { value: "{{TBD}}", label: "TBD metric" },
+  { value: "Multi-yr", label: "Active partnership" },
+  { value: "Monthly", label: "Documented service" },
+  { value: "0", label: "Missed PM visits" },
 ];
 
 export function CaseStudies() {
@@ -172,18 +172,11 @@ export function CaseStudies() {
           </div>
         </article>
 
-        {/* Bottom section CTA — view all */}
-        <div className="mt-14 lg:mt-20 pt-8 border-t border-[#D8D4CC] flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5">
+        {/* Bottom section marker */}
+        <div className="mt-14 lg:mt-20 pt-8 border-t border-[#D8D4CC]">
           <p className="font-mono text-[12px] font-semibold uppercase tracking-[0.15em] text-ga-gray-600">
             Commercial facilities served across the Inland Empire &amp; Orange County
           </p>
-          <Link
-            href="/case-studies"
-            className="btn-arrow-slide inline-flex items-center gap-2 text-sm font-semibold text-ga-red"
-          >
-            View all case studies
-            <ArrowRight size={15} className="arrow-icon" aria-hidden="true" />
-          </Link>
         </div>
 
       </div>

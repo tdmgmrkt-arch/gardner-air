@@ -55,9 +55,9 @@ const aboutSchema = {
       { "@type": "County", name: "Orange County" },
     ],
     hasCredential: [
-      { "@type": "EducationalOccupationalCredential", name: "California Contractors License B" },
-      { "@type": "EducationalOccupationalCredential", name: "California Contractors License C20" },
-      { "@type": "EducationalOccupationalCredential", name: "California Contractors License C4" },
+      { "@type": "EducationalOccupationalCredential", name: "California Contractors License #871464 — B (General Building)" },
+      { "@type": "EducationalOccupationalCredential", name: "California Contractors License #871464 — C20 (HVAC)" },
+      { "@type": "EducationalOccupationalCredential", name: "California Contractors License #871464 — C4 (Boiler)" },
       { "@type": "EducationalOccupationalCredential", name: "NATE Certified Technicians" },
       { "@type": "EducationalOccupationalCredential", name: "NCI Certified" },
     ],
@@ -173,7 +173,7 @@ const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "What licenses and certifications does Gardner Air hold?",
-    a: "Gardner Air holds California contractor licenses B (General Building), C20 (HVAC), and C4 (Boiler, Hot-Water Heating and Steam Fitting). Every field technician is NATE-certified and trained through the National Comfort Institute (NCI), and our supervisors and office staff meet bi-weekly to stay current on equipment, code, and best practices.",
+    a: "Gardner Air holds California contractor license #871464 with classifications B (General Building), C20 (HVAC), and C4 (Boiler, Hot-Water Heating and Steam Fitting). Every field technician is NATE-certified and trained through the National Comfort Institute (NCI), and our supervisors and office staff meet bi-weekly to stay current on equipment, code, and best practices.",
   },
   {
     q: "What areas of Southern California do you serve?",
@@ -354,8 +354,10 @@ export default function AboutPage() {
                     Southern California with certified technicians, responsive
                     office staff, and experienced supervisors who train
                     bi-weekly to stay sharp. We hold California contractor
-                    licenses B, C20, and C4, and specialize in systems that
-                    need reliable solutions built for long-term performance.
+                    license #871464, classifications B (General Building), C20
+                    (HVAC), and C4 (Boiler, Hot-Water Heating and Steam Fitting),
+                    and specialize in systems that need reliable solutions built
+                    for long-term performance.
                   </p>
                 </div>
 

@@ -34,9 +34,9 @@ const FOOTER_NAV = [
     heading: "Company",
     links: [
       { label: "About Us", href: "/about" },
-      { label: "Case Studies", href: "/case-studies" },
       { label: "Certifications", href: "/about#certifications" },
-      { label: "Service Area", href: "/service-area" },
+      { label: "Service Area", href: "/areas-we-serve/" },
+      { label: "Contact", href: "/contact/" },
     ],
   },
   {
@@ -94,6 +94,10 @@ export function SiteFooter() {
               <a href="mailto:service@gardnerci.com" className="hover:text-white transition-colors">
                 service@gardnerci.com
               </a>
+              <br />
+              <span className="font-mono text-[10px] uppercase tracking-widest text-white/30 mt-2 inline-block">
+                CSLB License #871464
+              </span>
             </address>
           </div>
 

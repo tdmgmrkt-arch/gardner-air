@@ -37,6 +37,9 @@ export function HeroSection() {
       className="relative min-h-[88vh] lg:min-h-[90vh] flex flex-col overflow-hidden"
       style={{ background: "linear-gradient(145deg, #2A2D33 0%, #3A3E45 100%)" }}
     >
+      {/* React 19 hoists this to <head> — preloads the LCP element (video poster) */}
+      <link rel="preload" as="image" href={HERO_POSTER_URL} fetchPriority="high" />
+
       {/* Background video — silent, looping ambient rooftop footage */}
       <div className="absolute inset-0 overflow-hidden">
         <video

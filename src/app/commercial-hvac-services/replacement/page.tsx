@@ -192,7 +192,7 @@ const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "How disruptive is a commercial HVAC changeout?",
-    a: "Less than most owners expect, when it&rsquo;s planned. We stage rigging, crane work, and controls tie-in around your operating hours, and often complete rooftop package-unit changeouts in a single day per unit. For larger central-plant projects, we phase work so critical zones stay conditioned throughout.",
+    a: "Less than most owners expect, when it\u2019s planned. We stage rigging, crane work, and controls tie-in around your operating hours, and often complete rooftop package-unit changeouts in a single day per unit. For larger central-plant projects, we phase work so critical zones stay conditioned throughout.",
   },
   {
     q: "Do you handle permitting, warranty registration, and rebates?",
