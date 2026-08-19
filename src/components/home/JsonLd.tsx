@@ -1,16 +1,34 @@
 /**
- * JsonLd — LocalBusiness (HVACBusiness) structured data for the homepage.
+ * JsonLd — Structured data for the homepage.
+ *
+ * Emits three linked JSON-LD blocks:
+ *   1. HVACBusiness — primary LocalBusiness entity
+ *   2. Organization — entity anchor for the Knowledge Graph
+ *   3. WebSite — canonical site entity, links to the Organization
+ *
+ * NOTE: `sameAs` on the Organization is intentionally omitted until real
+ * profile URLs (GBP, Facebook, LinkedIn, YouTube) are confirmed. Adding
+ * placeholder URLs risks Knowledge Graph disambiguation errors.
  */
+
+const ORG_ID = "https://gardnerair.com/#organization";
+const SITE_ID = "https://gardnerair.com/#website";
+const BUSINESS_ID = "https://gardnerair.com/#hvacbusiness";
+
+// Murrieta, CA 92563 — verified against listed address (30714 Wealth St)
+const GEO = { latitude: 33.55396, longitude: -117.21464 };
+
 export function JsonLd() {
-  const schema = {
+  const hvacBusiness = {
     "@context": "https://schema.org",
     "@type": "HVACBusiness",
+    "@id": BUSINESS_ID,
     "name": "Gardner Air",
     "description":
       "Gardner Air specializes in commercial HVAC preventative maintenance across Southern California. Complete-scope service visits, factory-trained technicians, long-term partnerships with facilities managers.",
-    "url": "https://gardnerair.com", // TODO: confirm live domain
-    "logo": "https://gardnerair.com/gardnerairlogo.webp", // TODO: confirm domain
-    "image": "https://gardnerair.com/og-image.webp", // TODO: real OG image
+    "url": "https://gardnerair.com",
+    "logo": "https://gardnerair.com/gardnerairlogo.webp",
+    "image": "https://gardnerair.com/og-image.webp",
     "telephone": "+19516964495",
     "email": "service@gardnerci.com",
     "address": {
@@ -20,6 +38,11 @@ export function JsonLd() {
       "addressRegion": "CA",
       "postalCode": "92563",
       "addressCountry": "US",
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": GEO.latitude,
+      "longitude": GEO.longitude,
     },
     "areaServed": [
       { "@type": "AdministrativeArea", "name": "Riverside County" },
@@ -40,46 +63,62 @@ export function JsonLd() {
         "closes": "16:00",
       },
     ],
+    "parentOrganization": { "@id": ORG_ID },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Commercial HVAC Services",
       "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Commercial Preventative Maintenance",
-          },
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Commercial HVAC Repair",
-          },
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Equipment Replacement",
-          },
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Commercial HVAC Installation",
-          },
-        },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial Preventative Maintenance" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial HVAC Repair" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Equipment Replacement" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial HVAC Installation" } },
       ],
     },
   };
 
+  const organization = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": ORG_ID,
+    "name": "Gardner Air",
+    "url": "https://gardnerair.com",
+    "logo": "https://gardnerair.com/gardnerairlogo.webp",
+    "telephone": "+19516964495",
+    "email": "service@gardnerci.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "30714 Wealth St",
+      "addressLocality": "Murrieta",
+      "addressRegion": "CA",
+      "postalCode": "92563",
+      "addressCountry": "US",
+    },
+  };
+
+  const website = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": SITE_ID,
+    "url": "https://gardnerair.com",
+    "name": "Gardner Air",
+    "publisher": { "@id": ORG_ID },
+    "inLanguage": "en-US",
+  };
+
   return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(hvacBusiness) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organization) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(website) }}
+      />
+    </>
   );
 }

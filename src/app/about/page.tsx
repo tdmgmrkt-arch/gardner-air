@@ -49,6 +49,11 @@ const aboutSchema = {
       postalCode: "92563",
       addressCountry: "US",
     },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 33.55396,
+      longitude: -117.21464,
+    },
     areaServed: [
       { "@type": "County", name: "Riverside County" },
       { "@type": "County", name: "San Bernardino County" },
@@ -120,10 +125,6 @@ const REVIEWS = [
   {
     name: "Dana Wood",
     body: "Best HVAC experts. Owner is one of the smartest, most honest people I've met.",
-  },
-  {
-    name: "Kelly Crull",
-    body: "5-star rating.",
   },
 ];
 

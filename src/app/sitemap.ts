@@ -205,14 +205,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.3,
     },
-    // AI agent discovery
-    {
-      url: `${BASE_URL}/ai-actions.json`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.5,
-    },
     // Placeholder routes — pages not yet built:
     // /case-studies
+    //
+    // NOTE: /ai-actions.json and /llms.txt intentionally excluded from sitemap
+    // (non-HTML resources; discovered via robots.txt + known conventions).
   ];
 }

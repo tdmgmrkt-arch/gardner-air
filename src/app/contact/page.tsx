@@ -57,6 +57,15 @@ const contactPageSchema = {
   },
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://gardnerair.com/" },
+    { "@type": "ListItem", position: 2, name: "Contact", item: "https://gardnerair.com/contact/" },
+  ],
+};
+
 /* ------------------------------------------------------------------ */
 /* Contact info items                                                   */
 /* ------------------------------------------------------------------ */
@@ -104,6 +113,10 @@ export default function ContactPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPageSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       <SiteHeader />
