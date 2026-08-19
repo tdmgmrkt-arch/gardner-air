@@ -46,14 +46,14 @@ import { ContactForm } from "@/components/forms/ContactForm";
 /* Metadata                                                             */
 /* ------------------------------------------------------------------ */
 export const metadata: Metadata = {
-  title: "Commercial HVAC Equipment We Service — Southern California | Gardner Air",
+  title: "Commercial HVAC Equipment We Service | Gardner Air",
   description:
     "Gardner Air services the complete commercial HVAC equipment spectrum across Southern California — chillers, boilers, cooling towers, rooftop units, VRF, refrigeration, and precision controls.",
   alternates: {
     canonical: "https://gardnerair.com/equipment/",
   },
   openGraph: {
-    title: "Commercial HVAC Equipment We Service — Southern California | Gardner Air",
+    title: "Commercial HVAC Equipment We Service | Gardner Air",
     description:
       "Gardner Air services the complete commercial HVAC equipment spectrum across Southern California — chillers, boilers, cooling towers, rooftop units, VRF, refrigeration, and precision controls.",
     url: "https://gardnerair.com/equipment/",

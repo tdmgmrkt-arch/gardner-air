@@ -21,8 +21,7 @@ import { ContactForm } from "@/components/forms/ContactForm";
 /* Metadata                                                             */
 /* ------------------------------------------------------------------ */
 export const metadata: Metadata = {
-  title:
-    "Commercial HVAC Preventative Maintenance — Southern California | Gardner Air",
+  title: "Commercial HVAC Preventative Maintenance | Gardner Air",
   description:
     "Extend the life of your commercial HVAC system and reduce costly breakdowns with Gardner Air's preventative maintenance programs for Southern California facilities.",
   alternates: {
@@ -30,8 +29,7 @@ export const metadata: Metadata = {
       "https://gardnerair.com/commercial-hvac-services/preventative-maintenance/",
   },
   openGraph: {
-    title:
-      "Commercial HVAC Preventative Maintenance — Southern California | Gardner Air",
+    title: "Commercial HVAC Preventative Maintenance | Gardner Air",
     description:
       "Extend the life of your commercial HVAC system and reduce costly breakdowns with Gardner Air's preventative maintenance programs for Southern California facilities.",
     url: "https://gardnerair.com/commercial-hvac-services/preventative-maintenance/",

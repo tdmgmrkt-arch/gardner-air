@@ -23,14 +23,14 @@ import { ContactForm } from "@/components/forms/ContactForm";
 /* Metadata                                                             */
 /* ------------------------------------------------------------------ */
 export const metadata: Metadata = {
-  title: "Commercial Humidification System Service | Gardner Air | Southern California",
+  title: "Commercial Humidification System Service | Gardner Air",
   description:
     "Gardner Air provides preventative maintenance and repair for commercial steam and evaporative humidification systems across Southern California. Call (951) 696-4495.",
   alternates: {
     canonical: "https://gardnerair.com/equipment/humidification/",
   },
   openGraph: {
-    title: "Commercial Humidification System Service | Gardner Air | Southern California",
+    title: "Commercial Humidification System Service | Gardner Air",
     description:
       "Gardner Air provides preventative maintenance and repair for commercial steam and evaporative humidification systems across Southern California. Call (951) 696-4495.",
     url: "https://gardnerair.com/equipment/humidification/",

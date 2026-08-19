@@ -23,14 +23,14 @@ import { ContactForm } from "@/components/forms/ContactForm";
 /* Metadata                                                             */
 /* ------------------------------------------------------------------ */
 export const metadata: Metadata = {
-  title: "Commercial HVAC Controls & BAS Service | Gardner Air | Southern California",
+  title: "Commercial HVAC Controls & BAS Service | Gardner Air",
   description:
     "Gardner Air provides preventative maintenance and integration support for commercial HVAC controls and building automation systems across Southern California. Call (951) 696-4495.",
   alternates: {
     canonical: "https://gardnerair.com/equipment/precision-controls/",
   },
   openGraph: {
-    title: "Commercial HVAC Controls & BAS Service | Gardner Air | Southern California",
+    title: "Commercial HVAC Controls & BAS Service | Gardner Air",
     description:
       "Gardner Air provides preventative maintenance and integration support for commercial HVAC controls and building automation systems across Southern California. Call (951) 696-4495.",
     url: "https://gardnerair.com/equipment/precision-controls/",

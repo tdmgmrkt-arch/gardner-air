@@ -20,16 +20,14 @@ import { AreaWhyBlock } from "@/components/areas/WhyBlock";
 /* Metadata                                                             */
 /* ------------------------------------------------------------------ */
 export const metadata: Metadata = {
-  title:
-    "Commercial HVAC San Bernardino County — Southern California | Gardner Air",
+  title: "Commercial HVAC — San Bernardino County | Gardner Air",
   description:
     "Gardner Air delivers commercial HVAC preventative maintenance, repair, and installation across San Bernardino County, CA — certified technicians, full-scope service, rapid response.",
   alternates: {
     canonical: "https://gardnerair.com/areas-we-serve/san-bernardino-county-ca/",
   },
   openGraph: {
-    title:
-      "Commercial HVAC San Bernardino County — Southern California | Gardner Air",
+    title: "Commercial HVAC — San Bernardino County | Gardner Air",
     description:
       "Gardner Air delivers commercial HVAC preventative maintenance, repair, and installation across San Bernardino County, CA — certified technicians, full-scope service, rapid response.",
     url: "https://gardnerair.com/areas-we-serve/san-bernardino-county-ca/",

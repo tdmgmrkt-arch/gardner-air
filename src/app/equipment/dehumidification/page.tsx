@@ -23,14 +23,14 @@ import { ContactForm } from "@/components/forms/ContactForm";
 /* Metadata                                                             */
 /* ------------------------------------------------------------------ */
 export const metadata: Metadata = {
-  title: "Commercial Dehumidification Service | Gardner Air | Southern California",
+  title: "Commercial Dehumidification Service | Gardner Air",
   description:
     "Gardner Air provides preventative maintenance and repair for commercial desiccant and refrigerant dehumidification systems across Southern California. Call (951) 696-4495.",
   alternates: {
     canonical: "https://gardnerair.com/equipment/dehumidification/",
   },
   openGraph: {
-    title: "Commercial Dehumidification Service | Gardner Air | Southern California",
+    title: "Commercial Dehumidification Service | Gardner Air",
     description:
       "Gardner Air provides preventative maintenance and repair for commercial desiccant and refrigerant dehumidification systems across Southern California. Call (951) 696-4495.",
     url: "https://gardnerair.com/equipment/dehumidification/",
