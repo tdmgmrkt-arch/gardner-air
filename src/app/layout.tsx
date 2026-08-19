@@ -42,7 +42,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Commercial HVAC Maintenance — Southern California | Gardner Air",
+    default: "Commercial HVAC Maintenance Across Southern California | Gardner Air",
     template: "%s | Gardner Air",
   },
   description:
