@@ -66,7 +66,7 @@ export const metadata: Metadata = {
       "Complete-scope commercial HVAC maintenance. Factory-trained technicians. Southern California's trusted commercial HVAC specialists.",
     images: [
       {
-        url: "/og-image.webp",
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Gardner Air — Commercial HVAC Maintenance Specialists",
@@ -78,7 +78,7 @@ export const metadata: Metadata = {
     title: "Gardner Air | Commercial HVAC Preventative Maintenance",
     description:
       "Complete-scope commercial HVAC maintenance across Southern California.",
-    images: ["/og-image.webp"],
+    images: ["/og-image.jpg"],
   },
   robots: {
     index: true,

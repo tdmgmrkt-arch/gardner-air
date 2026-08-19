@@ -25,7 +25,7 @@ export function JsonLd() {
       "Gardner Air specializes in commercial HVAC preventative maintenance across Southern California. Complete-scope service visits, factory-trained technicians, long-term partnerships with facilities managers.",
     "url": "https://gardnerair.com",
     "logo": "https://gardnerair.com/gardnerairlogo.webp",
-    "image": "https://gardnerair.com/og-image.webp",
+    "image": "https://gardnerair.com/og-image.jpg",
     "telephone": "+19516964495",
     "email": "service@gardnerci.com",
     "address": {
