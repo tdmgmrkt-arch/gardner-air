@@ -6,17 +6,14 @@
  *   2. Organization — entity anchor for the Knowledge Graph
  *   3. WebSite — canonical site entity, links to the Organization
  *
- * NOTE: `sameAs` on the Organization is intentionally omitted until real
- * profile URLs (GBP, Facebook, LinkedIn, YouTube) are confirmed. Adding
- * placeholder URLs risks Knowledge Graph disambiguation errors.
  */
 
 const ORG_ID = "https://gardnerair.com/#organization";
 const SITE_ID = "https://gardnerair.com/#website";
 const BUSINESS_ID = "https://gardnerair.com/#hvacbusiness";
 
-// Murrieta, CA 92563 — verified against listed address (30714 Wealth St)
-const GEO = { latitude: 33.55396, longitude: -117.21464 };
+// Coordinates sourced from the Gardner Air Google Business Profile pin.
+const GEO = { latitude: 33.5795015, longitude: -117.1221113 };
 
 export function JsonLd() {
   const hvacBusiness = {
@@ -93,6 +90,11 @@ export function JsonLd() {
       "postalCode": "92563",
       "addressCountry": "US",
     },
+    "sameAs": [
+      "https://www.google.com/maps/place/Gardner+Air/@33.5795015,-117.1221113,17z/data=!3m1!4b1!4m6!3m5!1s0x80db7dd3dc307def:0xe4651dd6deb40ae6!8m2!3d33.5795015!4d-117.1221113!16s%2Fg%2F1td_5gqs",
+      "https://www.facebook.com/profile.php?id=100064700769749",
+      "https://www.linkedin.com/company/gardner-air/",
+    ],
   };
 
   const website = {

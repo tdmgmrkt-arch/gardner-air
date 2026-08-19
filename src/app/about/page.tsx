@@ -51,8 +51,8 @@ const aboutSchema = {
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: 33.55396,
-      longitude: -117.21464,
+      latitude: 33.5795015,
+      longitude: -117.1221113,
     },
     areaServed: [
       { "@type": "County", name: "Riverside County" },
@@ -386,10 +386,10 @@ export default function AboutPage() {
                         fontSize: "clamp(2.5rem, 4vw, 3.5rem)",
                       }}
                     >
-                      9
+                      5
                     </p>
                     <p className="font-mono text-[10px] uppercase tracking-[0.15em] text-[#6B7280] leading-snug">
-                      Certifications held
+                      Certifications &amp; authorizations
                     </p>
                   </div>
                 </div>

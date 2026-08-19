@@ -252,8 +252,8 @@ export default function ContactPage() {
                     Riverside · San Bernardino · Orange County
                   </p>
                   <p className="text-sm text-[#6B7280] leading-relaxed">
-                    50-mile radius from Murrieta, CA. Commercial and industrial
-                    facilities only.
+                    We travel to your facility &mdash; 50-mile radius from
+                    Murrieta, CA. Commercial and industrial facilities only.
                   </p>
                 </div>
 
