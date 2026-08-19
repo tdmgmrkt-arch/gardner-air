@@ -25,6 +25,7 @@ const POST = {
   image: "/BLOG/hvac-preventative-maintenance-saves-property-managers-thousands.webp",
   imageAlt:
     "Commercial HVAC preventative maintenance program helping property managers control repair costs and extend equipment life",
+  ogImage: "/BLOG/og-blog-property-managers-save-thousands.jpg",
   url: "https://gardnerair.com/blog/how-hvac-preventative-maintenance-saves-property-managers-thousands-annually/",
 };
 
@@ -46,9 +47,9 @@ export const metadata: Metadata = {
     type: "article",
     images: [
       {
-        url: `https://gardnerair.com${POST.image}`,
-        width: 1536,
-        height: 864,
+        url: `https://gardnerair.com${POST.ogImage}`,
+        width: 1200,
+        height: 630,
         alt: POST.imageAlt,
       },
     ],

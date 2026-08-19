@@ -25,6 +25,7 @@ const POST = {
   image: "/preventative-maintenance-tracking-prevents-repeat-failures.webp",
   imageAlt:
     "Gardner Air technician documenting commercial HVAC preventative maintenance findings on a tablet for a customer portal service record",
+  ogImage: "/BLOG/og-blog-maintenance-tracking-prevents-failures.jpg",
   url: "https://gardnerair.com/blog/how-preventative-hvac-maintenance-tracking-prevents-repeat-equipment-failures/",
 };
 
@@ -46,9 +47,9 @@ export const metadata: Metadata = {
     type: "article",
     images: [
       {
-        url: `https://gardnerair.com${POST.image}`,
-        width: 2000,
-        height: 1250,
+        url: `https://gardnerair.com${POST.ogImage}`,
+        width: 1200,
+        height: 630,
         alt: POST.imageAlt,
       },
     ],

@@ -25,6 +25,7 @@ const POST = {
   image: "/BLOG/commercial-hvac-repair-or-replacement-warning-signs.webp",
   imageAlt:
     "Commercial HVAC rooftop unit showing warning signs that a facility manager should evaluate for repair versus replacement",
+  ogImage: "/BLOG/og-blog-repair-or-replacement-warning-signs.jpg",
   url: "https://gardnerair.com/blog/commercial-hvac-repair-or-replacement-warning-signs-you-should-not-ignore/",
 };
 
@@ -46,9 +47,9 @@ export const metadata: Metadata = {
     type: "article",
     images: [
       {
-        url: `https://gardnerair.com${POST.image}`,
-        width: 1536,
-        height: 864,
+        url: `https://gardnerair.com${POST.ogImage}`,
+        width: 1200,
+        height: 630,
         alt: POST.imageAlt,
       },
     ],
