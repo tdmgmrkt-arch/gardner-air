@@ -1,9 +1,8 @@
 import type { NextConfig } from "next";
 
-// Content-Security-Policy — deployed in report-only mode until launch.
-// Watch the browser DevTools console for violations on preview traffic,
-// then flip the header key from "Content-Security-Policy-Report-Only" to
-// "Content-Security-Policy" once clean.
+// Content-Security-Policy — enforced. Audited clean on preview
+// (homepage, contact + map iframe, blog, equipment, area pages) before
+// flipping from report-only.
 //
 // script/style 'unsafe-inline' is required for Next.js hydration scripts
 // and inline JSON-LD blocks. Migrating to nonce-based CSP would require
@@ -36,7 +35,7 @@ const securityHeaders = [
     value: "camera=(), microphone=(), geolocation=(), interest-cohort=()",
   },
   {
-    key: "Content-Security-Policy-Report-Only",
+    key: "Content-Security-Policy",
     value: contentSecurityPolicy,
   },
 ];
