@@ -959,7 +959,7 @@ Humidity control isn&rsquo;t a comfort feature.
                 <div className="relative aspect-[4/3] lg:aspect-auto">
                   <Image
                     src="/equipment/dehumidification-replacement.webp"
-                    alt="Gardner Air commercial HVAC equipment replacement"
+                    alt="Commercial dehumidification system replacement by Gardner Air in Southern California"
                     fill
                     sizes="(max-width: 1024px) 100vw, 288px"
                     className="object-cover"
@@ -1135,7 +1135,7 @@ Humidity control isn&rsquo;t a comfort feature.
                 <div className="mt-10 overflow-hidden rounded-xl border border-[#D8D4CC]">
                   <Image
                     src="/customer-service-reps-v2.webp"
-                    alt="Gardner Air customer service representatives"
+                    alt="Gardner Air commercial HVAC dispatch and customer service team in Murrieta, California"
                     width={1536}
                     height={1024}
                     className="w-full h-auto"

@@ -274,7 +274,7 @@ export function SiteHeader() {
             >
               <Image
                 src="/gardnerairlogo.webp"
-                alt="Gardner Air logo"
+                alt="Gardner Air — commercial HVAC preventative maintenance in Southern California"
                 width={260}
                 height={56}
                 priority

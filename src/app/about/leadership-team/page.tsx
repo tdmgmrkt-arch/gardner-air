@@ -555,7 +555,7 @@ export default function LeadershipPage() {
                 <div className="mt-10 overflow-hidden rounded-xl border border-[#D8D4CC]">
                   <Image
                     src="/customer-service-reps-v2.webp"
-                    alt="Gardner Air customer service representatives"
+                    alt="Gardner Air commercial HVAC dispatch and customer service team in Murrieta, California"
                     width={1536}
                     height={1024}
                     className="w-full h-auto"

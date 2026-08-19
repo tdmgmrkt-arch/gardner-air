@@ -65,7 +65,7 @@ export function SiteFooter() {
             <Link href="/" aria-label="Gardner Air — home">
               <Image
                 src="/gardnerairlogo.webp"
-                alt="Gardner Air logo"
+                alt="Gardner Air — commercial HVAC preventative maintenance in Southern California"
                 width={205}
                 height={44}
                 className="h-7 w-auto object-contain mb-5"

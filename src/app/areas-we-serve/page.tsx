@@ -316,7 +316,7 @@ export default function AreasWeServePage() {
                 <div className="relative aspect-square rounded-2xl overflow-hidden">
                   <Image
                     src="/commercial-roof-overview.webp"
-                    alt="Aerial view of commercial rooftop HVAC equipment"
+                    alt="Aerial view of commercial rooftop HVAC units across a Southern California facility served by Gardner Air"
                     fill
                     sizes="(max-width: 1024px) 100vw, 45vw"
                     className="object-cover"
@@ -599,7 +599,7 @@ export default function AreasWeServePage() {
                 <div className="mt-10 overflow-hidden rounded-xl border border-[#D8D4CC]">
                   <Image
                     src="/customer-service-reps-v2.webp"
-                    alt="Gardner Air customer service representatives"
+                    alt="Gardner Air commercial HVAC dispatch and customer service team in Murrieta, California"
                     width={1536}
                     height={1024}
                     className="w-full h-auto"
