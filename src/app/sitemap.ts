@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const BASE_URL = "https://gardnerair.com"; // TODO: update to live domain
+const BASE_URL = "https://gardnerair.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
@@ -205,9 +205,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.3,
     },
-    // Placeholder routes — pages not yet built:
-    // /case-studies
-    //
     // NOTE: /ai-actions.json and /llms.txt intentionally excluded from sitemap
     // (non-HTML resources; discovered via robots.txt + known conventions).
   ];

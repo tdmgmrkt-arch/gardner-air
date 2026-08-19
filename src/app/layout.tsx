@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   },
   description:
     "Gardner Air specializes in commercial HVAC preventative maintenance across Southern California. Complete-scope service visits, factory-trained technicians, long-term partnerships with facilities managers.",
-  metadataBase: new URL("https://gardnerair.com"), // TODO: replace with live domain once confirmed
+  metadataBase: new URL("https://gardnerair.com"),
   alternates: {
     canonical: "https://gardnerair.com",
     types: {

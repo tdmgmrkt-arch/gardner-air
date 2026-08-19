@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   description:
     "Gardner Air delivers complete-scope commercial HVAC preventative maintenance across Southern California. Factory-trained technicians. Full maintenance scope every visit. Trusted by facilities managers.",
   alternates: {
-    canonical: "https://gardnerair.com", // TODO: update to live domain
+    canonical: "https://gardnerair.com",
   },
 };
 
