@@ -5,6 +5,10 @@ import { ArrowRight, ArrowUpRight, Check } from "lucide-react";
 import { SiteHeader } from "@/components/home/SiteHeader";
 import { SiteFooter } from "@/components/home/SiteFooter";
 import { MobileCTABar } from "@/components/home/MobileCTABar";
+import { AuthorBio } from "@/components/blog/AuthorBio";
+import { AUTHORS } from "@/data/authors";
+
+const AUTHOR = AUTHORS["dirk-gardner"];
 
 /* ------------------------------------------------------------------ */
 /* Post meta                                                            */
@@ -64,9 +68,13 @@ const articleSchema = {
   datePublished: POST.dateISO,
   dateModified: POST.dateISO,
   author: {
-    "@type": "Organization",
-    name: "Gardner Air",
-    url: "https://gardnerair.com/",
+    "@type": "Person",
+    "@id": AUTHOR.id,
+    name: AUTHOR.name,
+    jobTitle: AUTHOR.role,
+    url: AUTHOR.url,
+    sameAs: AUTHOR.sameAs,
+    worksFor: { "@type": "Organization", name: "Gardner Air" },
   },
   publisher: {
     "@type": "Organization",
@@ -210,7 +218,7 @@ export default function BlogPostPage() {
                 { k: "Published", v: POST.date },
                 { k: "Read Time", v: POST.readTime },
                 { k: "Category", v: POST.category },
-                { k: "Author", v: "Gardner Air Team" },
+                { k: "Author", v: AUTHOR.name },
               ].map((row) => (
                 <div key={row.k}>
                   <dt className="font-mono text-[9px] font-semibold uppercase tracking-[0.2em] text-white/50 mb-2">
@@ -593,6 +601,8 @@ export default function BlogPostPage() {
                 answers your building needs.
               </p>
             </div>
+
+            <AuthorBio author={AUTHOR} />
 
             {/* ---- Share ---- */}
             <div className="mt-16 pt-8 border-t border-[#D8D4CC] flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
