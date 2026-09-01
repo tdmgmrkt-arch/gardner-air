@@ -303,14 +303,9 @@ const SERVICES = [
     body: "Root-cause diagnostics before any parts are ordered. Gardner Air identifies what is actually wrong — across chillers, boilers, VRF systems, controls, and everything in between.",
   },
   {
-    title: "Replacement",
-    href: "/commercial-hvac-services/replacement/",
-    body: "End-of-life equipment removed and replaced with full documentation — refrigerant recovery, rigging coordination, startup, and controls integration included.",
-  },
-  {
-    title: "Installation and Startup",
+    title: "Installation and Replacement",
     href: "/commercial-hvac-services/installation/",
-    body: "New equipment commissioned to factory specification. Performance baseline documented before Gardner Air considers the installation accepted.",
+    body: "End-of-life equipment removed and replaced with full documentation — refrigerant recovery, rigging coordination, and controls integration — and new equipment commissioned to factory specification. Performance baseline documented before Gardner Air considers the installation accepted.",
   },
 ];
 

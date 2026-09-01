@@ -204,14 +204,9 @@ const SERVICES = [
     body: "When a refrigeration system is losing temperature control or generating alarms, Gardner Air diagnoses the root cause rather than replacing components sequentially. Covers refrigerant leak detection and recovery, compressor evaluation and replacement, defrost control system diagnosis, evaporator coil cleaning and defrost, condenser fan motor replacement, and temperature controller fault analysis. Existing maintenance clients receive priority scheduling.",
   },
   {
-    title: "Replacement",
-    href: "/commercial-hvac-services/replacement/",
-    body: "When a compressor failure, obsolete refrigerant type, or end-of-service-life determination makes replacement the correct decision, Gardner Air manages the process from equipment specification through commissioning — including refrigerant recovery and reclaim, equipment rigging and decommissioning, condensing unit or rack replacement, and temperature control setup and documentation.",
-  },
-  {
-    title: "Installation and Startup",
+    title: "Installation and Replacement",
     href: "/commercial-hvac-services/installation/",
-    body: "New commercial refrigeration installation and startup requires proper refrigerant charging to manufacturer specification, defrost system programming, temperature control commissioning, and pull-down temperature verification before Gardner Air considers a system accepted. Operating data at startup establishes the performance baseline the maintenance program tracks from that point forward.",
+    body: "When a compressor failure, obsolete refrigerant type, or end-of-service-life determination makes replacement the correct decision, Gardner Air manages the process from specification through commissioning — refrigerant recovery and reclaim, rigging and decommissioning, and condensing unit or rack replacement. New systems are charged to manufacturer specification, with defrost programming, temperature control commissioning, and pull-down verification establishing the performance baseline the maintenance program tracks.",
   },
 ];
 
@@ -980,15 +975,15 @@ Product loss starts with equipment nobody watched.
                     Is Your Refrigeration System Beyond the Maintenance Stage?
                   </h2>
                   <p className="text-sm text-[#6B7280] leading-relaxed max-w-lg">
-                    Explore Gardner Air&rsquo;s replacement services to see how we manage the full decommission-to-startup process for aging or failed commercial refrigeration equipment.
+                    Explore Gardner Air&rsquo;s installation and replacement services to see how we manage the full decommission-to-startup process for aging or failed commercial refrigeration equipment.
                   </p>
                   <div>
                     <Link
-                      href="/commercial-hvac-services/replacement/"
+                      href="/commercial-hvac-services/installation/"
                       className="inline-flex items-center gap-2 h-12 px-6 rounded-xl text-sm font-bold border-2 border-[#111318] text-[#111318] hover:bg-[#111318] hover:text-white transition-colors duration-200 min-h-[44px]"
                       style={{ fontFamily: "var(--font-dm-sans)" }}
                     >
-                      Explore Replacement Services
+                      Explore Installation &amp; Replacement
                       <ArrowRight size={15} aria-hidden="true" />
                     </Link>
                   </div>

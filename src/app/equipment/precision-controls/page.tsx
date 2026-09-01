@@ -204,14 +204,9 @@ const SERVICES = [
     body: "When controls are producing incorrect setpoints, failing to communicate with field devices, or generating fault alarms that cannot be cleared, Gardner Air diagnoses the root cause. Covers sensor replacement and recalibration, controller firmware evaluation, network communication fault isolation, PID retuning, and sequence of operations correction. Existing maintenance clients receive priority scheduling.",
   },
   {
-    title: "Replacement",
-    href: "/commercial-hvac-services/replacement/",
-    body: "When a controls system has reached end of support life or a facility's operational requirements have outgrown the existing system's capabilities, Gardner Air manages the replacement process from specification through commissioning — including protocol selection, controller hardware procurement, sequence programming, integration with existing HVAC equipment, and full commissioning documentation.",
-  },
-  {
-    title: "Installation and Startup",
+    title: "Installation and Replacement",
     href: "/commercial-hvac-services/installation/",
-    body: "New controls system installation and startup requires more than hardware commissioning. Sequence of operations programming, point-to-point verification of every sensor and command output, alarm logic configuration, BAS integration testing, and baseline documentation all occur before Gardner Air considers the system accepted.",
+    body: "When a controls system reaches end of support life or the facility outgrows its capabilities, Gardner Air manages replacement from specification through commissioning — protocol selection, controller hardware, sequence programming, and integration with existing HVAC equipment. Every installation includes point-to-point verification of each sensor and command output, alarm logic configuration, BAS integration testing, and baseline documentation before the system is accepted.",
   },
 ];
 

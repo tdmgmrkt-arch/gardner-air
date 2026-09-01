@@ -204,14 +204,9 @@ const SERVICES = [
     body: "When a split system is underperforming or offline, Gardner Air's technicians diagnose the root cause rather than replacing components sequentially. Covers refrigerant leak detection and recovery, indoor coil freeze analysis, condenser fan evaluation, capacitor and contactor testing, drain line clearing, and zone controls fault isolation.",
   },
   {
-    title: "Replacement",
-    href: "/commercial-hvac-services/replacement/",
-    body: "When a split system reaches the end of its service life, Gardner Air manages the replacement process from equipment specification through startup documentation — including refrigerant recovery, matched-system selection, line set evaluation, controls integration, and a documented startup baseline.",
-  },
-  {
-    title: "Installation and Startup",
+    title: "Installation and Replacement",
     href: "/commercial-hvac-services/installation/",
-    body: "New split system installation requires correct line set sizing, proper refrigerant charging, drain system installation, and controls commissioning. Gardner Air follows the manufacturer's startup procedures and delivers a startup report with measured performance data before the system is accepted.",
+    body: "When a split system reaches the end of its service life, or a new one goes in, Gardner Air manages the project from equipment specification through startup documentation — refrigerant recovery, matched-system selection, line set sizing and evaluation, proper charging, drain system installation, and controls commissioning. A startup report with measured performance data is delivered before the system is accepted.",
   },
 ];
 
@@ -968,15 +963,15 @@ Multi-zone systems drift out of spec quietly.
                     Is Your Split System Beyond the Maintenance Stage?
                   </h2>
                   <p className="text-sm text-[#6B7280] leading-relaxed max-w-lg">
-                    Explore Gardner Air&rsquo;s replacement services to see how we manage the full decommission-to-startup process for aging or failed split system equipment.
+                    Explore Gardner Air&rsquo;s installation and replacement services to see how we manage the full decommission-to-startup process for aging or failed split system equipment.
                   </p>
                   <div>
                     <Link
-                      href="/commercial-hvac-services/replacement/"
+                      href="/commercial-hvac-services/installation/"
                       className="inline-flex items-center gap-2 h-12 px-6 rounded-xl text-sm font-bold border-2 border-[#111318] text-[#111318] hover:bg-[#111318] hover:text-white transition-colors duration-200 min-h-[44px]"
                       style={{ fontFamily: "var(--font-dm-sans)" }}
                     >
-                      Explore Replacement Services
+                      Explore Installation &amp; Replacement
                       <ArrowRight size={15} aria-hidden="true" />
                     </Link>
                   </div>

@@ -19,16 +19,9 @@ const SERVICES = [
   },
   {
     num: "03",
-    eyebrow: "Capital Planning",
-    title: "Replacement",
-    body: "We help determine when a replacement saves more than a repair — then install with minimal disruption to operations.",
-    link: "/commercial-hvac-services/replacement/",
-  },
-  {
-    num: "04",
-    eyebrow: "New Construction & TI",
-    title: "Installation",
-    body: "Retrofits and full-system overhauls, engineered for your building. Commercial-grade equipment, certified installation.",
+    eyebrow: "Capital Planning & New Builds",
+    title: "Installation & Replacement",
+    body: "We help determine when a replacement saves more than a repair — then install new systems and retrofits engineered for your building, with minimal disruption to operations.",
     link: "/commercial-hvac-services/installation/",
   },
 ];
@@ -57,7 +50,7 @@ export function FeaturedServices() {
                   fontSize: "clamp(2.25rem, 4vw, 3.5rem)",
                 }}
               >
-                Four services.
+                Three services.
                 <br />
                 <span className="text-ga-red">One standard.</span>
               </h2>

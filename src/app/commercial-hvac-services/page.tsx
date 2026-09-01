@@ -9,7 +9,6 @@ import {
   Zap,
   ClipboardCheck,
   Wrench,
-  RefreshCw,
   Layers,
   TrendingDown,
   Clock,
@@ -78,21 +77,9 @@ const servicesSchema = {
       position: 3,
       item: {
         "@type": "Service",
-        name: "Commercial HVAC Replacement",
+        name: "Commercial HVAC Installation & Replacement",
         description:
-          "Strategic HVAC equipment replacement for commercial buildings — cost analysis, minimal disruption, long-term performance.",
-        url: "https://gardnerair.com/commercial-hvac-services/replacement/",
-        provider: { "@type": "HVACBusiness", name: "Gardner Air" },
-      },
-    },
-    {
-      "@type": "ListItem",
-      position: 4,
-      item: {
-        "@type": "Service",
-        name: "Commercial HVAC Installation",
-        description:
-          "Commercial HVAC installation tailored to building size, usage, and future needs. Factory-precision, code-compliant.",
+          "New commercial HVAC installation and strategic equipment replacement — load calcs, cost analysis, factory-precision workmanship, and documented commissioning.",
         url: "https://gardnerair.com/commercial-hvac-services/installation/",
         provider: { "@type": "HVACBusiness", name: "Gardner Air" },
       },
@@ -176,25 +163,14 @@ const SERVICES = [
   },
   {
     num: "03",
-    title: "Replacement",
-    Icon: RefreshCw,
-    body: "Strategic replacement when repair no longer pencils out. Load calcs, cost comparison, and a phased transition planned around your operations.",
-    bullets: ["Repair vs. replace analysis", "Right-sized equipment", "Minimal downtime"],
-    href: "/commercial-hvac-services/replacement/",
-    image: "/Package-Unit-Replacement-25-Ton-1.webp",
-    imageAlt:
-      "25-ton commercial rooftop package unit replacement installed by Gardner Air",
-  },
-  {
-    num: "04",
-    title: "Installation",
+    title: "Installation & Replacement",
     Icon: Layers,
-    body: "New commercial HVAC installs specified for the building — not the invoice. Code-compliant, commissioned, and documented for the long haul.",
-    bullets: ["Design & spec review", "Factory-precision install", "Full commissioning"],
+    body: "New installs and end-of-life changeouts specified for the building — not the invoice. Load calcs, cost comparison, and a transition phased around your operations.",
+    bullets: ["Repair vs. replace analysis", "Right-sized, code-compliant installs", "Full commissioning"],
     href: "/commercial-hvac-services/installation/",
-    image: "/Ducting-Installation-1.webp",
+    image: "/Package-Units-1.webp",
     imageAlt:
-      "Gardner Air commercial ducting installation for a Southern California facility",
+      "New commercial rooftop package units installed by Gardner Air in Southern California",
   },
 ];
 
@@ -242,7 +218,7 @@ const OUTCOMES = [
 const FAQS: { q: string; a: string }[] = [
   {
     q: "Which commercial HVAC services does Gardner Air offer?",
-    a: "Gardner Air covers four core services for commercial facilities: preventative maintenance, repair, equipment replacement, and new installation. We handle rooftop package units, split systems, chillers, boilers, cooling towers, refrigeration, precision cooling (Liebert), and specialty equipment across a single service relationship.",
+    a: "Gardner Air covers three core services for commercial facilities: preventative maintenance, repair, and installation & replacement. We handle rooftop package units, split systems, chillers, boilers, cooling towers, refrigeration, precision cooling (Liebert), and specialty equipment across a single service relationship.",
   },
   {
     q: "What types of facilities do you work with?",
@@ -461,7 +437,7 @@ export default function CommercialHvacServicesPage() {
                     fontSize: "clamp(2rem, 4vw, 3rem)",
                   }}
                 >
-                  Four services. One team. One line of communication.
+                  Three services. One team. One line of communication.
                 </h2>
                 <div className="flex flex-col gap-6 text-base lg:text-lg text-[#6B7280] leading-relaxed">
                   <p>

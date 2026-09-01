@@ -82,14 +82,13 @@ const NAV: NavItem[] = [
     mega: {
       layout: "services",
       eyebrow: "What We Do",
-      headline: "Four services. One standard.",
+      headline: "Three services. One standard.",
       intro:
         "Commercial-only HVAC — factory-trained technicians, full-scope service, documented on every visit.",
       services: [
         { num: "01", title: "Preventative Maintenance", body: "Programs built around your facility's schedule and equipment mix. Full-scope visits — not time-blocks.", href: "/commercial-hvac-services/preventative-maintenance/" },
         { num: "02", title: "Repair", body: "Certified technicians resolve HVAC issues fast — no guesswork, no upsells. Same-visit resolution on most calls.", href: "/commercial-hvac-services/repair/" },
-        { num: "03", title: "Replacement", body: "We determine when replacement saves more than repair, then install with minimal disruption to operations.", href: "/commercial-hvac-services/replacement/" },
-        { num: "04", title: "Installation", body: "Retrofits and full-system overhauls, engineered for your building. Commercial-grade equipment, certified installation.", href: "/commercial-hvac-services/installation/" },
+        { num: "03", title: "Installation & Replacement", body: "New systems, retrofits, and end-of-life changeouts — right-sized to the building and commissioned at handover.", href: "/commercial-hvac-services/installation/" },
       ],
       feature: {
         eyebrow: "Featured Program",

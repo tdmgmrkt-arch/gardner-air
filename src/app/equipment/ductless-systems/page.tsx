@@ -204,14 +204,9 @@ const SERVICES = [
     body: "When a VRF system or individual zone is underperforming or offline, Gardner Air's technicians diagnose the root cause through the system's communications network and direct measurement — not by replacing branch controllers or indoor units sequentially. Covers refrigerant leak detection, branch controller fault analysis, communications network fault isolation, and condensate system evaluation.",
   },
   {
-    title: "Replacement",
-    href: "/commercial-hvac-services/replacement/",
-    body: "When a VRF system or outdoor unit reaches the end of its service life, Gardner Air manages the replacement process from equipment specification through startup. VRF replacement involves refrigerant circuit sizing, branch controller compatibility, indoor unit matching, and BAS re-integration — Gardner Air coordinates with the facility's team throughout.",
-  },
-  {
-    title: "Installation and Startup",
+    title: "Installation and Replacement",
     href: "/commercial-hvac-services/installation/",
-    body: "New VRF installation requires correct refrigerant line sizing for the full circuit length and elevation change, proper branch controller placement, verified refrigerant charge using the manufacturer's calculation method for actual line set length, and complete controls commissioning across all zones.",
+    body: "Whether an outdoor unit has reached the end of its service life or a new VRF system is going in, Gardner Air handles refrigerant circuit and line sizing for the full circuit length and elevation change, branch controller placement and compatibility, indoor unit matching, verified charge using the manufacturer's calculation method, and complete controls commissioning across all zones — with BAS integration coordinated with the facility's team throughout.",
   },
 ];
 
@@ -967,15 +962,15 @@ export default function DuctlessSystemsPage() {
                     Is Your VRF System Beyond the Maintenance Stage?
                   </h2>
                   <p className="text-sm text-[#6B7280] leading-relaxed max-w-lg">
-                    Explore Gardner Air&rsquo;s replacement services to see how we manage the full decommission-to-startup process for aging or failed VRF equipment.
+                    Explore Gardner Air&rsquo;s installation and replacement services to see how we manage the full decommission-to-startup process for aging or failed VRF equipment.
                   </p>
                   <div>
                     <Link
-                      href="/commercial-hvac-services/replacement/"
+                      href="/commercial-hvac-services/installation/"
                       className="inline-flex items-center gap-2 h-12 px-6 rounded-xl text-sm font-bold border-2 border-[#111318] text-[#111318] hover:bg-[#111318] hover:text-white transition-colors duration-200 min-h-[44px]"
                       style={{ fontFamily: "var(--font-dm-sans)" }}
                     >
-                      Explore Replacement Services
+                      Explore Installation &amp; Replacement
                       <ArrowRight size={15} aria-hidden="true" />
                     </Link>
                   </div>

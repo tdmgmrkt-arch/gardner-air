@@ -121,9 +121,9 @@ const RELATED = [
     label: "Service",
   },
   {
-    slug: "/commercial-hvac-services/replacement/",
-    title: "Commercial HVAC Replacement",
-    dek: "Repair-vs-replace analysis, right-sized equipment, and a phased transition planned around your operations.",
+    slug: "/commercial-hvac-services/installation/",
+    title: "Commercial HVAC Installation & Replacement",
+    dek: "Repair-vs-replace analysis, right-sized equipment, and a phased install planned around your operations.",
     label: "Service",
   },
   {

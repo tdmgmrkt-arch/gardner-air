@@ -1,7 +1,16 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Check, Award, Shield, Zap, FileCheck, ChevronDown } from "lucide-react";
+import {
+  ArrowRight,
+  Check,
+  Award,
+  Shield,
+  Zap,
+  Clock,
+  FileCheck,
+  ChevronDown,
+} from "lucide-react";
 import { SiteHeader } from "@/components/home/SiteHeader";
 import { SiteFooter } from "@/components/home/SiteFooter";
 import { MobileCTABar } from "@/components/home/MobileCTABar";
@@ -11,17 +20,20 @@ import { ContactForm } from "@/components/forms/ContactForm";
 /* Metadata                                                             */
 /* ------------------------------------------------------------------ */
 export const metadata: Metadata = {
-  title: { absolute: "Commercial HVAC Installation — Southern California | Gardner Air" },
+  title: {
+    absolute:
+      "Commercial HVAC Installation & Replacement — Southern California | Gardner Air",
+  },
   description:
-    "Commercial HVAC installation across Southern California — load-calculated design, factory-precision workmanship, code-compliant ductwork, and documented commissioning for warehouses, offices, schools, and industrial buildings.",
+    "Commercial HVAC installation and equipment replacement across Southern California — repair-versus-replace analysis, load-calculated design, right-sized equipment, and documented commissioning for warehouses, offices, schools, and industrial buildings.",
   alternates: {
     canonical: "https://gardnerair.com/commercial-hvac-services/installation/",
   },
   openGraph: {
     title:
-      "Commercial HVAC Installation — Southern California | Gardner Air",
+      "Commercial HVAC Installation & Replacement — Southern California | Gardner Air",
     description:
-      "Commercial HVAC installation across Southern California — load-calculated design, factory-precision workmanship, code-compliant ductwork, and documented commissioning for warehouses, offices, schools, and industrial buildings.",
+      "Commercial HVAC installation and equipment replacement across Southern California — repair-versus-replace analysis, load-calculated design, right-sized equipment, and documented commissioning for warehouses, offices, schools, and industrial buildings.",
     url: "https://gardnerair.com/commercial-hvac-services/installation/",
   },
 };
@@ -32,9 +44,9 @@ export const metadata: Metadata = {
 const installationSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Commercial HVAC Installation",
+  name: "Commercial HVAC Installation & Replacement",
   description:
-    "Gardner Air designs and installs commercial HVAC systems across Southern California — package units, split systems, ductwork, ductless, refrigeration, chillers, and boilers. Load-calculated, factory-precision, code-compliant.",
+    "Gardner Air designs, installs, and replaces commercial HVAC systems across Southern California — package units, split systems, ductwork, ductless, refrigeration, chillers, and boilers. Repair-versus-replace analysis, load-calculated design, factory-precision workmanship, and documented commissioning.",
   url: "https://gardnerair.com/commercial-hvac-services/installation/",
   provider: {
     "@type": "HVACBusiness",
@@ -55,8 +67,32 @@ const installationSchema = {
       { "@type": "County", name: "Orange County" },
     ],
   },
-  serviceType: "HVAC Installation",
+  serviceType: ["HVAC Installation", "HVAC Equipment Replacement"],
   areaServed: "Southern California",
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Commercial HVAC Installation & Replacement",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Commercial HVAC Installation",
+          description:
+            "Load-calculated design, factory-precision installation, and documented commissioning for new construction, tenant improvements, and facility expansions.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Commercial HVAC Equipment Replacement",
+          description:
+            "Repair-versus-replace analysis, right-sized replacement equipment, and coordinated changeouts staged around your operations.",
+        },
+      },
+    ],
+  },
 };
 
 /* ------------------------------------------------------------------ */
@@ -68,21 +104,51 @@ const TRUST_BADGES = [
   { Icon: Zap, text: "Factory-Trained" },
 ];
 
+const PATHS = [
+  {
+    eyebrow: "Path 01",
+    title: "Replacing Existing Equipment",
+    body: "Aging systems fail in expensive ways — ballooning repair bills, rising energy use, and downtime that costs far more than the invoice. We run the numbers with you before anything comes off the roof.",
+    items: [
+      "Written repair-versus-replace cost analysis",
+      "Right-sized to the building's current load, not the old spec",
+      "Changeouts staged around your operating hours",
+      "Refrigerant recovery, curb adapters, rigging, and crane work",
+    ],
+  },
+  {
+    eyebrow: "Path 02",
+    title: "Installing New Systems",
+    body: "New builds, tenant improvements, and expansions are decided at design. Undersized ductwork and oversized units bake in problems no maintenance program can fully undo — so we design first.",
+    items: [
+      "Load calc, equipment schedules, and duct design",
+      "New construction, tenant improvements, and expansions",
+      "Sheet metal, VAV, and distribution built to spec",
+      "Permits, inspections, and AHJ coordination handled",
+    ],
+  },
+];
+
 const PROCESS_STEPS = [
   {
     num: "01",
-    title: "Load Calc & System Design",
-    body: "We size the system to your actual building load, usage pattern, and future plans — not a generic rule of thumb. Design is documented with equipment schedules, duct layout, and control strategy.",
+    title: "Assess & Analyze",
+    body: "For existing equipment, we benchmark remaining life, refrigerant type, efficiency losses, and repair history — so the replace decision is a math decision, not a sales pitch. For new systems, we start from the building's actual load and use pattern.",
   },
   {
     num: "02",
-    title: "Factory-Precision Install",
-    body: "Ductwork, refrigerant lines, electrical, and controls are installed to manufacturer spec and local code. Rigging, permits, and inspection coordination are handled by our team.",
+    title: "Design & Right-Size",
+    body: "We spec the system to the building in front of us — documented with equipment schedules, duct layout, and control strategy. Not a generic rule of thumb, and not whatever happened to be installed the last time around.",
   },
   {
     num: "03",
-    title: "Commissioning & Handover",
-    body: "We start up, test, and balance the system — airflow, refrigerant charge, electrical load, and controls — and deliver a documented commissioning packet at project close.",
+    title: "Install or Change Out",
+    body: "Ductwork, refrigerant lines, electrical, and controls are installed to manufacturer spec and local code. Rigging, crane work, permits, and inspection coordination are handled by our team and scheduled around your operations.",
+  },
+  {
+    num: "04",
+    title: "Commission & Hand Over",
+    body: "We start up, test, and balance the system — airflow, refrigerant charge, electrical load, and controls — then deliver a commissioning packet, warranty registration, and as-built records at project close.",
   },
 ];
 
@@ -90,9 +156,9 @@ const SCOPE_PANEL_CATEGORIES = [
   {
     label: "Rooftop & Package Units",
     items: [
-      "Package unit installs from 5 tons through large tonnage",
-      "Curb design, fabrication, and rigging coordination",
-      "Roof penetration, flashing, and weather-tight sealing",
+      "New package units and 5-ton through 25-ton+ changeouts",
+      "Curb design, adapter fabrication, and rigging",
+      "Crane coordination, roof penetration, and weather-tight sealing",
     ],
   },
   {
@@ -100,7 +166,7 @@ const SCOPE_PANEL_CATEGORIES = [
     items: [
       "Condensers, air handlers, and ductless mini-splits",
       "Multi-zone systems for office and retail buildouts",
-      "Refrigerant piping and lineset design",
+      "Refrigerant piping and lineset design or reconfiguration",
     ],
   },
   {
@@ -114,9 +180,17 @@ const SCOPE_PANEL_CATEGORIES = [
   {
     label: "Central Plant & Specialty",
     items: [
-      "Boilers, chillers, and cooling tower installation",
-      "Refrigeration, computer room, and precision cooling",
+      "Chiller, boiler, and cooling tower install and changeout",
+      "Refrigeration racks and condensing units",
+      "Computer room and precision cooling equipment",
+    ],
+  },
+  {
+    label: "Commissioning & Handover",
+    items: [
+      "Startup, testing, and performance verification",
       "Controls integration and BAS tie-in",
+      "Permits, warranty registration, and service records",
     ],
   },
 ];
@@ -132,44 +206,56 @@ const CERT_LOGOS = [
 const OUTCOMES = [
   {
     eyebrow: "OUTCOME 01",
-    body: "Right-sized systems · Efficient from day one",
+    body: "Right-sized equipment · Efficient from day one",
     Icon: Zap,
   },
   {
     eyebrow: "OUTCOME 02",
-    body: "Code-compliant workmanship · Clean inspections",
-    Icon: FileCheck,
+    body: "Minimal downtime · Work staged around operations",
+    Icon: Clock,
   },
   {
     eyebrow: "OUTCOME 03",
-    body: "Documented commissioning · Full warranty coverage",
-    Icon: Award,
+    body: "Documented commissioning · Clean inspections and full warranty",
+    Icon: FileCheck,
   },
 ];
 
 const FACILITIES = [
   { src: "/Ducting-Installation-1.webp", label: "Ducting Systems", alt: "Commercial ductwork installation by Gardner Air" },
-  { src: "/Package-Units-1.webp", label: "New Package Units", alt: "New commercial package unit installation" },
-  { src: "/Ducting-Installation-2.webp", label: "Ducting Retrofits", alt: "Commercial ducting retrofit project" },
-  { src: "/Gardner-Air-HVAC-equipment-pipes-1030x644.webp", label: "Full Facility Integration", alt: "Full facility HVAC piping integration" },
+  { src: "/Package-Units-1.webp", label: "New Package Units", alt: "New commercial package unit installation by Gardner Air" },
+  { src: "/Package-Unit-Replacement-25-Ton-1.webp", label: "25-Ton Changeouts", alt: "Gardner Air replacing a 25-ton commercial rooftop package unit in Southern California" },
+  { src: "/Package-Unit-Replacement-5-Ton-1.webp", label: "5-Ton Changeouts", alt: "Gardner Air replacing a 5-ton commercial package unit" },
+  { src: "/Ducting-Installation-2.webp", label: "Ducting Retrofits", alt: "Commercial ducting retrofit project by Gardner Air" },
+  { src: "/Package-Unit-Replacement-25-Ton-3.webp", label: "Rooftop Retrofits", alt: "Commercial rooftop HVAC retrofit and replacement by Gardner Air" },
+  { src: "/Computer-Rooms-Liebert-Units-2.webp", label: "Precision Cooling", alt: "Liebert precision cooling unit replacement in a commercial computer room by Gardner Air" },
+  { src: "/Gardner-Air-HVAC-equipment-pipes-1030x644.webp", label: "Full Facility Integration", alt: "Full facility HVAC piping integration by Gardner Air" },
 ];
 
 const FAQS: { q: string; a: string }[] = [
   {
-    q: "What kinds of buildings does Gardner Air install commercial HVAC systems for?",
-    a: "We install for owner-occupied commercial buildings, warehouses, offices, schools, industrial facilities, and multi-tenant properties across Southern California — including package units, split systems, ductless multi-zone systems, chillers, boilers, and refrigeration equipment.",
+    q: "How do I know when it's time to replace commercial HVAC equipment instead of repairing it?",
+    a: "The decision usually comes down to equipment age, refrigerant type, repair frequency, and efficiency losses versus modern equipment. Gardner Air provides a written repair-versus-replace analysis with the numbers behind each option — so the choice is defensible to leadership and finance.",
+  },
+  {
+    q: "What kinds of buildings does Gardner Air install and replace commercial HVAC systems for?",
+    a: "We work on owner-occupied commercial buildings, warehouses, offices, schools, industrial facilities, and multi-tenant properties across Southern California — including package units, split systems, ductless multi-zone systems, chillers, boilers, and refrigeration equipment.",
   },
   {
     q: "Do you handle the design and load calculations, or do we need a separate engineer?",
-    a: "For most commercial installations we handle the load calc, equipment selection, and duct design in-house. On larger central-plant or engineered projects we coordinate with your mechanical engineer or design-build partner and execute the installation to their specifications.",
+    a: "For most commercial installations and replacements we handle the load calc, equipment selection, and duct design in-house. On larger central-plant or engineered projects we coordinate with your mechanical engineer or design-build partner and execute the work to their specifications.",
   },
   {
-    q: "What brands do you install?",
-    a: "Gardner Air is a Diamond-level dealer for York and factory-trained on Carrier, Trane, Samsung, Mitsubishi, Raypak, and other major commercial brands. We spec across manufacturers based on what fits your building and application best, not a single-brand preference.",
+    q: "What brands do you install, and does a replacement have to match the existing equipment?",
+    a: "Gardner Air is a Diamond-level dealer for York and factory-trained on Carrier, Trane, Samsung, Mitsubishi, Raypak, and other major commercial brands. A replacement does not have to match what was there before — we spec across manufacturers based on what fits your building and application best.",
   },
   {
-    q: "Do you pull permits and coordinate inspections?",
-    a: "Yes. We pull all required mechanical, electrical, and building permits for commercial HVAC work, coordinate with local AHJs for inspection, and register new equipment for full manufacturer warranty at project close.",
+    q: "How disruptive is a commercial installation or changeout?",
+    a: "Less than most owners expect, when it’s planned. We stage rigging, crane work, and controls tie-in around your operating hours, and often complete rooftop package-unit changeouts in a single day per unit. For larger central-plant or new-construction projects, we phase work so critical zones stay conditioned throughout.",
+  },
+  {
+    q: "Do you pull permits and handle inspections, warranty registration, and rebates?",
+    a: "Yes. Gardner Air pulls the required mechanical, electrical, and building permits, coordinates with local AHJs for inspection, registers new equipment for full manufacturer warranty coverage, and coordinates any applicable utility or efficiency rebates. You receive a documented handover packet at project close.",
   },
 ];
 
@@ -192,7 +278,7 @@ export default function InstallationPage() {
             itemListElement: [
               { "@type": "ListItem", position: 1, name: "Home", item: "https://gardnerair.com/" },
               { "@type": "ListItem", position: 2, name: "Commercial HVAC Services", item: "https://gardnerair.com/commercial-hvac-services/" },
-              { "@type": "ListItem", position: 3, name: "Installation", item: "https://gardnerair.com/commercial-hvac-services/installation/" },
+              { "@type": "ListItem", position: 3, name: "Installation & Replacement", item: "https://gardnerair.com/commercial-hvac-services/installation/" },
             ],
           }),
         }}
@@ -263,12 +349,12 @@ export default function InstallationPage() {
                   </Link>
                 </li>
                 <li aria-hidden="true">/</li>
-                <li className="text-white/60">Installation</li>
+                <li className="text-white/60">Installation &amp; Replacement</li>
               </ol>
             </nav>
 
             <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.2em] text-[#D42027] mb-5">
-              Commercial HVAC Installation
+              Commercial HVAC Installation &amp; Replacement
             </p>
 
             <h1
@@ -279,15 +365,15 @@ export default function InstallationPage() {
                 fontSize: "clamp(2.25rem, 5.5vw, 4.5rem)",
               }}
             >
-              Commercial HVAC installation,{" "}
+              Installation and replacement,{" "}
               <br className="hidden lg:block" />
-              <span className="text-[#D42027]">engineered to spec.</span>
+              <span className="text-[#D42027]">engineered, not improvised.</span>
             </h1>
 
             <p className="text-white/65 text-base lg:text-lg leading-relaxed max-w-xl mb-10">
-              Load-calculated design, factory-precision workmanship, and
-              documented commissioning for commercial and industrial
-              facilities across Southern California.
+              New commercial systems and end-of-life changeouts across
+              Southern California — load-calculated design, right-sized
+              equipment, and documented commissioning on every project.
             </p>
 
             <Link
@@ -295,7 +381,7 @@ export default function InstallationPage() {
               className="inline-flex items-center gap-3 h-14 px-8 rounded-xl text-sm font-bold bg-[#D42027] text-white hover:bg-[#B01C22] shadow-[0_4px_20px_rgba(212,32,39,0.40)] hover:shadow-[0_6px_24px_rgba(212,32,39,0.55)] transition-all duration-200 min-h-[44px] self-start"
               style={{ fontFamily: "var(--font-dm-sans)" }}
             >
-              Request an Installation Proposal
+              Request a Project Proposal
               <ArrowRight size={16} aria-hidden="true" />
             </Link>
           </div>
@@ -371,22 +457,24 @@ export default function InstallationPage() {
                     fontSize: "clamp(2rem, 4vw, 3rem)",
                   }}
                 >
-                  Installations Sized to the Building, Not to a Rule of Thumb
+                  Sized to the Building — Whether It&rsquo;s New or a Changeout
                 </h2>
                 <div className="flex flex-col gap-6 text-base lg:text-lg text-[#6B7280] leading-relaxed">
                   <p>
                     Most of the operating cost, comfort issues, and
                     reliability problems a commercial HVAC system will ever
-                    have are decided at installation. Undersized ductwork,
+                    have are decided the day it goes in. Undersized ductwork,
                     oversized units, and short-circuited returns bake in
                     problems that no maintenance program can fully undo.
                   </p>
                   <p>
-                    Gardner Air installs commercial HVAC the way it should
-                    be installed — with a real load calc, right-sized
-                    equipment, and clean sheet-metal work — so the system
-                    performs to spec on day one and stays inside its
-                    warranty envelope for years after.
+                    So we treat both paths the same way. On a replacement, we
+                    run the numbers first — remaining life, refrigerant
+                    obsolescence, efficiency losses, repair history, and the
+                    cost of the next likely failure. On a new install, we
+                    start from a real load calc. Either way, the equipment
+                    that goes in is sized to your building — not to a rule of
+                    thumb, and not to whatever was up there last.
                   </p>
                 </div>
               </div>
@@ -402,26 +490,51 @@ export default function InstallationPage() {
                   />
                 </div>
 
-                <div className="rounded-xl border border-[#D8D4CC] bg-[#F7F6F3] px-6 py-5 flex items-center gap-5">
-                  <p
-                    className="tabular-nums font-bold text-[#D42027] leading-none flex-shrink-0"
-                    style={{
-                      fontFamily: "var(--font-dm-sans)",
-                      fontSize: "clamp(2rem, 3vw, 2.5rem)",
-                    }}
-                  >
-                    5+
-                  </p>
-                  <div className="border-l border-[#D8D4CC] pl-5">
-                    <p className="font-mono text-[9px] uppercase tracking-[0.15em] text-[#6B7280] leading-snug">
-                      Factory brand training
-                    </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="rounded-xl border border-[#D8D4CC] bg-[#F7F6F3] px-6 py-5 flex items-center gap-5">
                     <p
-                      className="font-bold text-[#111318] text-sm mt-1"
-                      style={{ fontFamily: "var(--font-dm-sans)" }}
+                      className="tabular-nums font-bold text-[#D42027] leading-none flex-shrink-0"
+                      style={{
+                        fontFamily: "var(--font-dm-sans)",
+                        fontSize: "clamp(1.75rem, 2.5vw, 2.25rem)",
+                      }}
                     >
-                      York · Carrier · Trane · more
+                      25T
                     </p>
+                    <div className="border-l border-[#D8D4CC] pl-5">
+                      <p className="font-mono text-[9px] uppercase tracking-[0.15em] text-[#6B7280] leading-snug">
+                        Package unit range
+                      </p>
+                      <p
+                        className="font-bold text-[#111318] text-sm mt-1"
+                        style={{ fontFamily: "var(--font-dm-sans)" }}
+                      >
+                        5-ton through 25-ton+
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="rounded-xl border border-[#D8D4CC] bg-[#F7F6F3] px-6 py-5 flex items-center gap-5">
+                    <p
+                      className="tabular-nums font-bold text-[#D42027] leading-none flex-shrink-0"
+                      style={{
+                        fontFamily: "var(--font-dm-sans)",
+                        fontSize: "clamp(1.75rem, 2.5vw, 2.25rem)",
+                      }}
+                    >
+                      5+
+                    </p>
+                    <div className="border-l border-[#D8D4CC] pl-5">
+                      <p className="font-mono text-[9px] uppercase tracking-[0.15em] text-[#6B7280] leading-snug">
+                        Factory brand training
+                      </p>
+                      <p
+                        className="font-bold text-[#111318] text-sm mt-1"
+                        style={{ fontFamily: "var(--font-dm-sans)" }}
+                      >
+                        York · Carrier · Trane · more
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -430,18 +543,84 @@ export default function InstallationPage() {
           </div>
         </section>
 
+        {/* Two paths — replacement vs new install */}
+        <section
+          aria-labelledby="paths-heading"
+          style={{ background: "#F7F6F3" }}
+          className="border-t border-[#E5E7EB] py-16 lg:py-28"
+        >
+          <div className="mx-auto max-w-[1280px] px-5 sm:px-6 lg:px-8">
+            <div className="max-w-2xl mb-12 lg:mb-14">
+              <p className="font-mono text-[12px] font-semibold uppercase tracking-[0.15em] text-[#6B7280] mb-5">
+                Two Paths, One Standard
+              </p>
+              <h2
+                id="paths-heading"
+                className="font-bold text-[#111318] leading-[0.95] tracking-tight mb-6"
+                style={{
+                  fontFamily: "var(--font-dm-sans)",
+                  fontSize: "clamp(2rem, 4vw, 3rem)",
+                }}
+              >
+                Replacing Old Equipment or Installing New — Same Crew, Same Scope
+              </h2>
+              <p className="text-base lg:text-lg text-[#6B7280] leading-relaxed">
+                Most projects start as one of two conversations. Both end the
+                same way: a right-sized system, commissioned and documented.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-6">
+              {PATHS.map((path) => (
+                <div
+                  key={path.title}
+                  className="rounded-2xl bg-white border border-[#D8D4CC] p-7 lg:p-9 flex flex-col gap-5"
+                >
+                  <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-[#D42027]">
+                    {path.eyebrow}
+                  </p>
+                  <h3
+                    className="font-bold text-[#111318] leading-tight tracking-[-0.01em]"
+                    style={{
+                      fontFamily: "var(--font-dm-sans)",
+                      fontSize: "clamp(1.25rem, 2vw, 1.5rem)",
+                    }}
+                  >
+                    {path.title}
+                  </h3>
+                  <p className="text-base text-[#6B7280] leading-relaxed">
+                    {path.body}
+                  </p>
+                  <ul className="flex flex-col gap-3 pt-2 border-t border-[#EDEEF0]" role="list">
+                    {path.items.map((item) => (
+                      <li key={item} className="flex items-start gap-3 pt-1">
+                        <Check
+                          size={14}
+                          className="shrink-0 mt-1 text-[#D42027]"
+                          aria-hidden="true"
+                          strokeWidth={2.5}
+                        />
+                        <span className="text-base text-[#6B7280] leading-snug">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Process + Scope Panel */}
         <section
           aria-labelledby="process-heading"
-          style={{ background: "#F7F6F3" }}
-          className="border-t border-[#E5E7EB] py-16 lg:py-28"
+          className="bg-white border-t border-[#E5E7EB] py-16 lg:py-28"
         >
           <div className="mx-auto max-w-[1280px] px-5 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-12 lg:gap-20 items-start">
 
               <div>
                 <p className="font-mono text-[12px] font-semibold uppercase tracking-[0.15em] text-[#6B7280] mb-5">
-                  Our Installation Process
+                  Our Process
                 </p>
                 <h2
                   id="process-heading"
@@ -451,12 +630,13 @@ export default function InstallationPage() {
                     fontSize: "clamp(2rem, 4vw, 3rem)",
                   }}
                 >
-                  A Three-Step Install That Ends in Verified Performance
+                  A Four-Step Project That Ends in Verified Performance
                 </h2>
                 <p className="text-base text-[#6B7280] leading-relaxed mb-10">
-                  Every installation runs through the same tight sequence:
-                  load-calc-backed design, factory-precision execution, and
-                  documented commissioning at handover.
+                  A commercial install or changeout is a project, not a truck
+                  roll. We plan the entire scope — analysis, design, permits,
+                  rigging, execution, commissioning — before we touch a single
+                  unit.
                 </p>
 
                 <div className="flex flex-col divide-y divide-[#D8D4CC] border-t border-b border-[#D8D4CC]">
@@ -494,18 +674,19 @@ export default function InstallationPage() {
                 </div>
 
                 <p className="mt-8 text-base text-[#6B7280] leading-relaxed">
-                  You receive a full commissioning packet, warranty
-                  registration, and as-built records at project close.
+                  Every project closes with commissioning data, warranty
+                  registration, and an as-built service record ready for your
+                  facility file.
                 </p>
               </div>
 
               <div
                 className="rounded-2xl p-7 lg:p-8 flex flex-col gap-0"
                 style={{ background: "linear-gradient(145deg, #2A2D33 0%, #3A3E45 100%)" }}
-                aria-label="Systems we install"
+                aria-label="Systems we install and replace"
               >
                 <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-[#D42027] mb-7">
-                  Systems We Install
+                  Systems We Install &amp; Replace
                 </p>
 
                 <div className="flex flex-col divide-y divide-white/8">
@@ -545,7 +726,8 @@ export default function InstallationPage() {
         {/* Outcomes */}
         <section
           aria-labelledby="outcomes-heading"
-          className="border-t border-[#E5E7EB] py-16 lg:py-28 bg-white"
+          style={{ background: "#F7F6F3" }}
+          className="border-t border-[#E5E7EB] py-16 lg:py-28"
         >
           <div className="mx-auto max-w-[1280px] px-5 sm:px-6 lg:px-8">
             <div className="max-w-2xl mb-12 lg:mb-16">
@@ -560,20 +742,20 @@ export default function InstallationPage() {
                   fontSize: "clamp(2rem, 4vw, 3rem)",
                 }}
               >
-                A New System That Performs the Way It Was Sold
+                A System Built for the Next Decade, Not the Last One
               </h2>
               <div className="flex flex-col gap-4 text-base lg:text-lg text-[#6B7280] leading-relaxed">
                 <p>
-                  A properly designed and installed system runs at its
-                  rated efficiency, holds delivered airflow to spec, and
-                  stays inside factory warranty — three things a hurried
-                  install almost never gets right.
+                  A properly designed and installed system runs at its rated
+                  efficiency, holds delivered airflow to spec, and stays
+                  inside factory warranty — three things a hurried install or
+                  a like-for-like swap almost never gets right.
                 </p>
                 <p>
-                  You get equipment that earns its capital cost back
-                  through years of predictable operation, not one that
-                  starts generating service tickets the week after
-                  startup.
+                  Paired with a preventative maintenance program, new
+                  equipment earns its capital cost back through years of
+                  predictable operation instead of generating service tickets
+                  the week after startup.
                 </p>
               </div>
             </div>
@@ -584,7 +766,7 @@ export default function InstallationPage() {
                 return (
                   <div
                     key={o.eyebrow}
-                    className="rounded-2xl bg-white border border-[#D8D4CC] p-7 lg:p-8 flex flex-col gap-4 hover:shadow-md hover:border-[#C4BFB6] transition-all duration-200"
+                    className="rounded-2xl bg-white border border-[#D8D4CC] p-7 lg:p-8 flex flex-col gap-4 hover:border-[#D42027]/30 hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-200"
                   >
                     <div className="w-10 h-10 rounded-xl bg-[#D42027]/8 flex items-center justify-center flex-shrink-0">
                       <Icon size={18} className="text-[#D42027]" aria-hidden="true" />
@@ -608,17 +790,16 @@ export default function InstallationPage() {
           </div>
         </section>
 
-        {/* Facilities & Equipment We Install */}
+        {/* Facilities & Equipment */}
         <section
           aria-labelledby="facilities-heading"
-          style={{ background: "#F7F6F3" }}
-          className="border-t border-[#E5E7EB] py-16 lg:py-28"
+          className="bg-white border-t border-[#E5E7EB] py-16 lg:py-28"
         >
           <div className="mx-auto max-w-[1280px] px-5 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-6 lg:gap-12 items-end mb-10 lg:mb-12">
               <div>
                 <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.2em] text-[#6B7280] mb-4">
-                  Systems We Install
+                  Equipment We Install &amp; Replace
                 </p>
                 <h2
                   id="facilities-heading"
@@ -632,7 +813,10 @@ export default function InstallationPage() {
                 </h2>
               </div>
               <p className="text-base text-[#6B7280] leading-relaxed lg:max-w-md">
-                Every system Gardner Air installs is load-calculated, code-compliant, and handed over with full commissioning documentation — from ductwork and package units to full facility integrations.
+                From 5-ton rooftop changeouts to large-tonnage package units,
+                full ducting systems, and precision cooling — every project is
+                load-calculated, code-compliant, and handed over with full
+                commissioning documentation.
               </p>
             </div>
 
@@ -676,7 +860,7 @@ export default function InstallationPage() {
 
         {/* Mid CTA */}
         <section
-          aria-label="Request an installation proposal"
+          aria-label="Request an installation or replacement proposal"
           className="relative overflow-hidden bg-[#1E2126] py-16 lg:py-24"
         >
           <Image
@@ -699,19 +883,19 @@ export default function InstallationPage() {
                   fontSize: "clamp(1.75rem, 3.5vw, 2.75rem)",
                 }}
               >
-                Planning a New Build, Tenant Improvement, or Facility Expansion?
+                Aging Equipment, a New Build, or a Tenant Improvement?
               </h2>
               <p className="text-white/65 text-base leading-relaxed mb-8">
-                Bring us in early. A short design conversation now saves
-                thousands of dollars — and years of maintenance headaches —
-                over the life of the system.
+                Gardner Air will walk the building, run the repair-versus-
+                replace math or the load calc, and provide a written proposal
+                that stands up to leadership review.
               </p>
               <Link
                 href="#installation-contact"
                 className="inline-flex items-center gap-3 h-14 px-8 rounded-xl text-sm font-bold bg-[#D42027] text-white hover:bg-[#B01C22] shadow-[0_4px_20px_-4px_rgba(212,32,39,0.4)] transition-all duration-200 min-h-[44px]"
                 style={{ fontFamily: "var(--font-dm-sans)" }}
               >
-                Request an Installation Proposal
+                Request a Project Proposal
                 <ArrowRight size={16} aria-hidden="true" />
               </Link>
             </div>
@@ -790,7 +974,7 @@ export default function InstallationPage() {
                   fontSize: "clamp(2rem, 4vw, 3rem)",
                 }}
               >
-                Frequently Asked Questions About Our Installation Services
+                Frequently Asked Questions About Installation &amp; Replacement
               </h2>
 
               <div className="flex flex-col gap-3 mb-12 lg:mb-16">
@@ -812,10 +996,10 @@ export default function InstallationPage() {
                       Don&rsquo;t see your question?
                     </p>
                     <p className="text-base text-[#6B7280] leading-relaxed">
-                      Every installation project has different building
-                      constraints, timelines, and equipment considerations.
-                      Our team responds within one business day to specific
-                      design, permitting, or phasing questions.
+                      Every project has its own equipment, access, timing, and
+                      permitting constraints. Our team responds within one
+                      business day to specific questions about design, scope,
+                      phasing, or utility rebates.
                     </p>
                   </div>
                   <div className="p-8 lg:p-10 flex flex-col justify-center gap-4">
@@ -853,9 +1037,9 @@ export default function InstallationPage() {
 
               <div className="bg-white rounded-2xl p-8 lg:p-10 border border-[#D8D4CC]">
                 <ContactForm
-                  headline="Tell Us About Your HVAC Installation Project"
-                  subhead="Share the building type, project timeline, and any engineered plans you already have. We&rsquo;ll follow up to scope a walkthrough."
-                  submitLabel="Request an Installation Proposal"
+                  headline="Tell Us About Your Installation or Replacement Project"
+                  subhead="Share the building type, the equipment you&rsquo;re installing or replacing, your target timing, and any engineered plans you already have. We&rsquo;ll follow up to scope a walkthrough."
+                  submitLabel="Request a Project Proposal"
                 />
               </div>
 
@@ -865,9 +1049,9 @@ export default function InstallationPage() {
                 </p>
                 <div className="flex flex-col divide-y divide-[#D8D4CC] border-t border-b border-[#D8D4CC] mb-8">
                   {[
-                    { num: "01", body: "We review the building and project scope" },
-                    { num: "02", body: "Our team completes load calc and design" },
-                    { num: "03", body: "You receive a written installation proposal" },
+                    { num: "01", body: "We walk the building and review the equipment" },
+                    { num: "02", body: "You get a load calc or repair-vs-replace analysis" },
+                    { num: "03", body: "We build a written project proposal" },
                   ].map((step) => (
                     <div key={step.num} className="grid grid-cols-[56px_1fr] gap-4 py-7 items-start">
                       <p

@@ -204,14 +204,9 @@ const SERVICES = [
     body: "When a dehumidification system is failing to maintain setpoints or generating alarms, Gardner Air diagnoses the root cause before recommending corrective action. Covers refrigerant leak detection and recovery (DX systems), compressor replacement, reactivation heater element replacement (desiccant units), desiccant wheel replacement, drive motor replacement, humidity controller fault analysis, and condensate system repair. Existing maintenance clients receive priority scheduling.",
   },
   {
-    title: "Replacement",
-    href: "/commercial-hvac-services/replacement/",
-    body: "When a desiccant wheel reaches end of life, a major mechanical component failure makes repair uneconomical, or facility humidity control requirements change, Gardner Air manages the replacement process from equipment specification through commissioning — including system sizing for current latent load conditions, manufacturer coordination on correct wheel media and reactivation temperature specification, installation, and startup documentation.",
-  },
-  {
-    title: "Installation and Startup",
+    title: "Installation and Replacement",
     href: "/commercial-hvac-services/installation/",
-    body: "New dehumidification system installation and startup requires humidity sensor calibration, reactivation temperature verification, airflow commissioning, and performance documentation at design operating conditions before Gardner Air considers a system accepted. The startup data becomes the baseline the maintenance program tracks from that point forward.",
+    body: "When a desiccant wheel reaches end of life or facility humidity requirements change, Gardner Air manages replacement from equipment specification through commissioning — sizing for current latent load, manufacturer coordination on wheel media and reactivation temperature, installation, and startup. New systems are commissioned with humidity sensor calibration, reactivation temperature verification, and airflow documentation at design conditions, which becomes the baseline the maintenance program tracks from that point forward.",
   },
 ];
 
@@ -980,15 +975,15 @@ Humidity control isn&rsquo;t a comfort feature.
                     Is Your Dehumidification System Beyond the Maintenance Stage?
                   </h2>
                   <p className="text-sm text-[#6B7280] leading-relaxed max-w-lg">
-                    Explore Gardner Air&rsquo;s replacement services to see how we manage the full decommission-to-startup process for aging or failed commercial dehumidification equipment.
+                    Explore Gardner Air&rsquo;s installation and replacement services to see how we manage the full decommission-to-startup process for aging or failed commercial dehumidification equipment.
                   </p>
                   <div>
                     <Link
-                      href="/commercial-hvac-services/replacement/"
+                      href="/commercial-hvac-services/installation/"
                       className="inline-flex items-center gap-2 h-12 px-6 rounded-xl text-sm font-bold border-2 border-[#111318] text-[#111318] hover:bg-[#111318] hover:text-white transition-colors duration-200 min-h-[44px]"
                       style={{ fontFamily: "var(--font-dm-sans)" }}
                     >
-                      Explore Replacement Services
+                      Explore Installation &amp; Replacement
                       <ArrowRight size={15} aria-hidden="true" />
                     </Link>
                   </div>

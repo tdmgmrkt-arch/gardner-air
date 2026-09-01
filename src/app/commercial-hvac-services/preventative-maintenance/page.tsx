@@ -923,16 +923,16 @@ export default function PreventativeMaintenancePage() {
                     Is Your Rooftop Unit Beyond the Maintenance Stage?
                   </h2>
                   <p className="text-sm text-[#6B7280] leading-relaxed max-w-lg">
-                    Explore Gardner Air&rsquo;s replacement services to see how we can
+                    Explore Gardner Air&rsquo;s installation and replacement services to see how we can
                     install a new unit that meets all your needs.
                   </p>
                   <div>
                     <Link
-                      href="/commercial-hvac-services/replacement/"
+                      href="/commercial-hvac-services/installation/"
                       className="inline-flex items-center gap-2 h-12 px-6 rounded-xl text-sm font-bold border-2 border-[#111318] text-[#111318] hover:bg-[#111318] hover:text-white transition-colors duration-200 min-h-[44px]"
                       style={{ fontFamily: "var(--font-dm-sans)" }}
                     >
-                      Explore Replacement Services
+                      Explore Installation &amp; Replacement
                       <ArrowRight size={15} aria-hidden="true" />
                     </Link>
                   </div>

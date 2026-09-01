@@ -204,14 +204,9 @@ const SERVICES = [
     body: "When a chiller is underperforming or offline, Gardner Air's technicians diagnose the root cause rather than replacing parts sequentially. Encompasses refrigerant leak detection and recovery, compressor evaluation, controls fault analysis, and oil system diagnostics. Existing maintenance clients receive priority scheduling.",
   },
   {
-    title: "Replacement",
-    href: "/commercial-hvac-services/replacement/",
-    body: "When a chiller reaches the end of its service life or a major component failure makes replacement the right financial decision, Gardner Air manages the full process — refrigerant recovery, rigging coordination, new-unit startup, and controls integration — documented in full.",
-  },
-  {
-    title: "Installation and Startup",
+    title: "Installation and Replacement",
     href: "/commercial-hvac-services/installation/",
-    body: "New chiller installation requires more than mechanical connection. Refrigerant charging, controls commissioning, flow verification, and performance baseline documentation all happen before Gardner Air considers a system accepted. Factory startup procedures are followed for each manufacturer's equipment.",
+    body: "When a chiller reaches the end of its service life, or a new one goes in, Gardner Air manages the full process from specification through startup — refrigerant recovery, rigging coordination, refrigerant charging, flow verification, controls commissioning, and performance baseline documentation, all recorded before a system is considered accepted.",
   },
 ];
 
@@ -981,15 +976,15 @@ The most expensive box in your building.
                     Is Your Chiller Beyond the Maintenance Stage?
                   </h2>
                   <p className="text-sm text-[#6B7280] leading-relaxed max-w-lg">
-                    Explore Gardner Air&rsquo;s replacement services to see how we manage the full decommission-to-startup process for aging or failed chiller equipment.
+                    Explore Gardner Air&rsquo;s installation and replacement services to see how we manage the full decommission-to-startup process for aging or failed chiller equipment.
                   </p>
                   <div>
                     <Link
-                      href="/commercial-hvac-services/replacement/"
+                      href="/commercial-hvac-services/installation/"
                       className="inline-flex items-center gap-2 h-12 px-6 rounded-xl text-sm font-bold border-2 border-[#111318] text-[#111318] hover:bg-[#111318] hover:text-white transition-colors duration-200 min-h-[44px]"
                       style={{ fontFamily: "var(--font-dm-sans)" }}
                     >
-                      Explore Replacement Services
+                      Explore Installation &amp; Replacement
                       <ArrowRight size={15} aria-hidden="true" />
                     </Link>
                   </div>

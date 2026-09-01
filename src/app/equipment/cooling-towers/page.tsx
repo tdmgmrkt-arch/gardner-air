@@ -204,14 +204,9 @@ const SERVICES = [
     body: "When a cooling tower is losing thermal capacity or generating alarms, Gardner Air diagnoses the root cause before recommending corrective action. Covers fan motor and gearbox replacement, fill media replacement, drift eliminator panel replacement, distribution nozzle cleaning or replacement, basin liner repair, and controls fault analysis. Existing maintenance clients receive priority scheduling.",
   },
   {
-    title: "Replacement",
-    href: "/commercial-hvac-services/replacement/",
-    body: "When fill media has reached end of life, structural deterioration makes repair uneconomical, or a chiller plant upgrade changes the thermal load the tower must reject, Gardner Air manages the replacement process from specification through commissioning — including manufacturer coordination, rigging support, basin preparation, and startup documentation.",
-  },
-  {
-    title: "Installation and Startup",
+    title: "Installation and Replacement",
     href: "/commercial-hvac-services/installation/",
-    body: "New cooling tower installation and startup requires proper verification of water flow rates, fan performance, approach temperature at design wet-bulb conditions, and water treatment system commissioning before Gardner Air considers a unit accepted. Factory startup procedures are followed for each manufacturer's equipment.",
+    body: "When fill media reaches end of life, structural deterioration makes repair uneconomical, or a plant upgrade changes the thermal load the tower must reject, Gardner Air manages replacement from specification through commissioning — manufacturer coordination, rigging support, basin preparation, and startup. New installations are verified for water flow rate, fan performance, approach temperature at design wet-bulb conditions, and water treatment commissioning before acceptance.",
   },
 ];
 

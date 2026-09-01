@@ -204,14 +204,9 @@ const SERVICES = [
     body: "When a rooftop unit's heating section fails to ignite, short-cycles, produces inadequate heat output, or trips a safety limit, Gardner Air diagnoses the root cause. Covers ignition module evaluation, flame sensor cleaning, gas valve assessment, heat exchanger inspection, inducer motor evaluation, and controls fault analysis. Existing maintenance clients receive priority scheduling.",
   },
   {
-    title: "Replacement",
-    href: "/commercial-hvac-services/replacement/",
-    body: "When a rooftop heating section reaches end of service life, or when a cracked heat exchanger makes full unit replacement the correct safety and financial decision, Gardner Air manages the replacement process from specification through startup — including gas line coordination, controls integration, combustion commissioning, and full startup documentation.",
-  },
-  {
-    title: "Installation and Startup",
+    title: "Installation and Replacement",
     href: "/commercial-hvac-services/installation/",
-    body: "New rooftop unit installation and startup on the heating side requires combustion commissioning, gas pressure verification, heat exchanger clearance inspection, controls sequencing verification, and a documented performance baseline before Gardner Air considers the system accepted. Factory startup procedures are followed for each manufacturer's equipment.",
+    body: "When a rooftop heating section reaches end of service life, or a cracked heat exchanger makes full unit replacement the correct safety and financial decision, Gardner Air manages the project from specification through startup — gas line coordination, combustion commissioning, gas pressure verification, heat exchanger clearance inspection, and controls sequencing. Factory startup procedures are followed for each manufacturer's equipment, with a documented performance baseline at acceptance.",
   },
 ];
 
@@ -974,15 +969,15 @@ Gas-fired heat that starts the first cold morning.
                     Is Your Rooftop Heating Equipment Beyond the Maintenance Stage?
                   </h2>
                   <p className="text-sm text-[#6B7280] leading-relaxed max-w-lg">
-                    Explore Gardner Air&rsquo;s replacement services to see how we manage the full specification-to-startup process for aging or failed rooftop heating equipment.
+                    Explore Gardner Air&rsquo;s installation and replacement services to see how we manage the full specification-to-startup process for aging or failed rooftop heating equipment.
                   </p>
                   <div>
                     <Link
-                      href="/commercial-hvac-services/replacement/"
+                      href="/commercial-hvac-services/installation/"
                       className="inline-flex items-center gap-2 h-12 px-6 rounded-xl text-sm font-bold border-2 border-[#111318] text-[#111318] hover:bg-[#111318] hover:text-white transition-colors duration-200 min-h-[44px]"
                       style={{ fontFamily: "var(--font-dm-sans)" }}
                     >
-                      Explore Replacement Services
+                      Explore Installation &amp; Replacement
                       <ArrowRight size={15} aria-hidden="true" />
                     </Link>
                   </div>

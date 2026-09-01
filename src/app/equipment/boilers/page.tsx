@@ -204,14 +204,9 @@ const SERVICES = [
     body: "When a boiler is performing outside specification or has gone offline, Gardner Air diagnoses the root cause before replacing components. Repair and troubleshooting covers combustion train evaluation, tube leak identification and assessment, controls fault analysis, flame safeguard system testing, feedwater pump evaluation, and safety device verification. Existing maintenance clients receive priority scheduling.",
   },
   {
-    title: "Replacement",
-    href: "/commercial-hvac-services/replacement/",
-    body: "When a boiler reaches end of service life or a major failure makes replacement the correct financial decision, Gardner Air manages the replacement process from equipment specification through commissioning — including coordination with California boiler inspection authorities, new-unit startup, combustion commissioning, and controls integration.",
-  },
-  {
-    title: "Installation and Startup",
+    title: "Installation and Replacement",
     href: "/commercial-hvac-services/installation/",
-    body: "New boiler installation and startup is a multi-discipline process. Combustion commissioning, pressure testing, safety device calibration, water chemistry baseline establishment, and controls integration all occur before Gardner Air considers a system accepted. Factory startup procedures are followed for each manufacturer's equipment.",
+    body: "Whether the boiler is new or at end of service life, Gardner Air manages the project from equipment specification through commissioning — including coordination with California boiler inspection authorities, combustion commissioning, pressure testing, safety device calibration, water chemistry baseline, and controls integration. Factory startup procedures are followed for each manufacturer's equipment.",
   },
 ];
 
@@ -983,15 +978,15 @@ Steam and hot water, before winter shows up.
                     Is Your Boiler Beyond the Maintenance Stage?
                   </h2>
                   <p className="text-sm text-[#6B7280] leading-relaxed max-w-lg">
-                    Explore Gardner Air&rsquo;s replacement services to see how we manage the full decommission-to-startup process for aging or failed boiler equipment.
+                    Explore Gardner Air&rsquo;s installation and replacement services to see how we manage the full decommission-to-startup process for aging or failed boiler equipment.
                   </p>
                   <div>
                     <Link
-                      href="/commercial-hvac-services/replacement/"
+                      href="/commercial-hvac-services/installation/"
                       className="inline-flex items-center gap-2 h-12 px-6 rounded-xl text-sm font-bold border-2 border-[#111318] text-[#111318] hover:bg-[#111318] hover:text-white transition-colors duration-200 min-h-[44px]"
                       style={{ fontFamily: "var(--font-dm-sans)" }}
                     >
-                      Explore Replacement Services
+                      Explore Installation &amp; Replacement
                       <ArrowRight size={15} aria-hidden="true" />
                     </Link>
                   </div>

@@ -16,8 +16,7 @@ const FOOTER_NAV = [
     links: [
       { label: "Preventative Maintenance", href: "/commercial-hvac-services/preventative-maintenance/" },
       { label: "Commercial HVAC Repair", href: "/commercial-hvac-services/repair/" },
-      { label: "Equipment Replacement", href: "/commercial-hvac-services/replacement/" },
-      { label: "Installation", href: "/commercial-hvac-services/installation/" },
+      { label: "Installation & Replacement", href: "/commercial-hvac-services/installation/" },
     ],
   },
   {

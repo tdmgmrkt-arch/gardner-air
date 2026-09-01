@@ -55,6 +55,19 @@ const nextConfig: NextConfig = {
     ],
   },
 
+  // /commercial-hvac-services/replacement/ was merged into
+  // /commercial-hvac-services/installation/ (2026-09-01). Permanent redirect
+  // preserves the old URL's link equity and any live inbound links.
+  async redirects() {
+    return [
+      {
+        source: "/commercial-hvac-services/replacement",
+        destination: "/commercial-hvac-services/installation/",
+        permanent: true,
+      },
+    ];
+  },
+
   async headers() {
     return [
       {

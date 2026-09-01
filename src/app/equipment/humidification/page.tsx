@@ -204,14 +204,9 @@ const SERVICES = [
     body: "When a humidification system is underperforming, cycling erratically, or producing RH readings that don't align with setpoints, Gardner Air diagnoses the root cause. Covers electrode and cylinder replacement, scaling removal and system flush, sensor recalibration, drain valve and flush cycle repair, and controls fault analysis. Existing maintenance clients receive priority scheduling.",
   },
   {
-    title: "Replacement",
-    href: "/commercial-hvac-services/replacement/",
-    body: "When a humidifier reaches end of service life, has scaled beyond the point of economical cleaning, or a facility's RH requirements have changed beyond what the existing equipment can deliver, Gardner Air manages the replacement process from specification through commissioning — including equipment selection matched to water quality conditions and controls compatibility.",
-  },
-  {
-    title: "Installation and Startup",
+    title: "Installation and Replacement",
     href: "/commercial-hvac-services/installation/",
-    body: "New humidification system installation and startup requires careful attention to distribution placement, absorption distance, controls integration, and initial water chemistry baseline. Gardner Air commissions each system to verify that RH output matches setpoints across the facility's operating range and that drain and flush cycles are correctly configured.",
+    body: "When a humidifier reaches end of service life, has scaled beyond economical cleaning, or the facility's RH requirements have outgrown it, Gardner Air manages replacement from specification through commissioning — with equipment selected for water quality conditions and controls compatibility. New installations get careful attention to distribution placement, absorption distance, controls integration, and water chemistry baseline, and are commissioned to verify RH output across the facility's operating range.",
   },
 ];
 
@@ -972,15 +967,15 @@ Humidification failures show up in your product.
                     Is Your Humidification System Beyond the Maintenance Stage?
                   </h2>
                   <p className="text-sm text-[#6B7280] leading-relaxed max-w-lg">
-                    Explore Gardner Air&rsquo;s replacement services to see how we manage the full specification-to-startup process for scaled-out or end-of-life humidification equipment.
+                    Explore Gardner Air&rsquo;s installation and replacement services to see how we manage the full specification-to-startup process for scaled-out or end-of-life humidification equipment.
                   </p>
                   <div>
                     <Link
-                      href="/commercial-hvac-services/replacement/"
+                      href="/commercial-hvac-services/installation/"
                       className="inline-flex items-center gap-2 h-12 px-6 rounded-xl text-sm font-bold border-2 border-[#111318] text-[#111318] hover:bg-[#111318] hover:text-white transition-colors duration-200 min-h-[44px]"
                       style={{ fontFamily: "var(--font-dm-sans)" }}
                     >
-                      Explore Replacement Services
+                      Explore Installation &amp; Replacement
                       <ArrowRight size={15} aria-hidden="true" />
                     </Link>
                   </div>
