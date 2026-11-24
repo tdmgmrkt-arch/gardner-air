@@ -63,6 +63,7 @@ const pmSchema = {
       { "@type": "County", name: "Riverside County" },
       { "@type": "County", name: "San Bernardino County" },
       { "@type": "County", name: "Orange County" },
+      { "@type": "County", name: "San Diego County" },
     ],
   },
   serviceType: "HVAC Preventative Maintenance",
@@ -194,7 +195,7 @@ const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "What regions do you serve?",
-    a: "Gardner Air provides commercial HVAC preventative maintenance across Southern California\u2019s Inland Empire and Orange County \u2014 including Riverside, San Bernardino, and Orange Counties. Our service radius extends roughly 50 miles from our Murrieta headquarters.",
+    a: "Gardner Air provides commercial HVAC preventative maintenance across Riverside, San Bernardino, Orange, and San Diego Counties from our Murrieta headquarters.",
   },
 ];
 

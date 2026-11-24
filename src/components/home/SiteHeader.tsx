@@ -156,12 +156,12 @@ const NAV: NavItem[] = [
     mega: {
       layout: "services",
       eyebrow: "The Company",
-      headline: "Built for commercial. Proven since 1985.",
+      headline: "Built for commercial. Proven since 2006.",
       intro:
         "Family-run, master-technician-led, and structured to serve Southern California's most demanding facilities.",
       services: [
-        { num: "01", title: "Areas We Serve", body: "Three-county coverage across Southern California — Riverside, San Bernardino, and Orange.", href: "/areas-we-serve" },
-        { num: "02", title: "Leadership Team", body: "Second-generation ownership. Master-technician-led operations. Long-tenured field crews.", href: "/about/leadership-team" },
+        { num: "01", title: "Areas We Serve", body: "Four-county coverage across Southern California — Riverside, San Bernardino, Orange, and San Diego.", href: "/areas-we-serve" },
+        { num: "02", title: "Leadership Team", body: "Master-technician-led operations and long-tenured field crews.", href: "/about/leadership-team" },
         { num: "03", title: "Insights & Field Notes", body: "Technical field notes and long-form commercial HVAC guidance from the Gardner Air team.", href: "/blog" },
       ],
       feature: {
@@ -232,11 +232,12 @@ export function SiteHeader() {
               <div className="flex items-center gap-6">
                 <span className="flex items-center gap-2">
                   <MapPin size={12} className="text-ga-red" />
-                  Serving Southern California &mdash; 3-County Coverage
+                  Serving Riverside · San Bernardino · Orange · San Diego
                 </span>
                 <span className="flex items-center gap-2 text-white/60">
                   <Clock size={12} />
-                  Mon&ndash;Fri 7a&ndash;5p &middot; Planned commercial service
+                  <span className="normal-case tracking-normal">Mon&ndash;Fri 7 a.m.&ndash;4 p.m.</span>
+                  <span>&middot; Planned commercial service</span>
                 </span>
               </div>
               <a

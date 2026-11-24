@@ -65,6 +65,7 @@ const installationSchema = {
       { "@type": "County", name: "Riverside County" },
       { "@type": "County", name: "San Bernardino County" },
       { "@type": "County", name: "Orange County" },
+      { "@type": "County", name: "San Diego County" },
     ],
   },
   serviceType: ["HVAC Installation", "HVAC Equipment Replacement"],

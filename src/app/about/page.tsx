@@ -58,6 +58,7 @@ const aboutSchema = {
       { "@type": "County", name: "Riverside County" },
       { "@type": "County", name: "San Bernardino County" },
       { "@type": "County", name: "Orange County" },
+      { "@type": "County", name: "San Diego County" },
     ],
     hasCredential: [
       { "@type": "EducationalOccupationalCredential", name: "California Contractors License #871464 — B (General Building)" },
@@ -178,7 +179,7 @@ const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "What areas of Southern California do you serve?",
-    a: "We serve commercial facilities across Southern California, with primary coverage of Riverside County, San Bernardino County, and Orange County from our Murrieta headquarters. If you're managing a commercial property in the region and aren't sure whether you fall inside our service area, call us at (951) 696-4495 and we'll tell you straight.",
+    a: "We serve commercial facilities across Southern California, with primary coverage of Riverside County, San Bernardino County, Orange County, and San Diego County from our Murrieta headquarters. If you're managing a commercial property in the region and aren't sure whether you fall inside our service area, call us at (951) 696-4495 and we'll tell you straight.",
   },
 ];
 

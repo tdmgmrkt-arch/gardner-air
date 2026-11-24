@@ -45,6 +45,7 @@ export function JsonLd() {
       { "@type": "AdministrativeArea", "name": "Riverside County" },
       { "@type": "AdministrativeArea", "name": "San Bernardino County" },
       { "@type": "AdministrativeArea", "name": "Orange County" },
+      { "@type": "AdministrativeArea", "name": "San Diego County" },
     ],
     "hasCredential": [
       { "@type": "EducationalOccupationalCredential", "name": "California Contractors License #871464 — B (General Building), C20 (HVAC), C4 (Boiler)" },
@@ -56,7 +57,7 @@ export function JsonLd() {
       {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "07:30",
+        "opens": "07:00",
         "closes": "16:00",
       },
     ],

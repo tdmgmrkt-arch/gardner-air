@@ -6,6 +6,7 @@ const COUNTIES = [
   { name: "Riverside County", abbr: "Temecula · Murrieta · Riverside", href: "/areas-we-serve/riverside/" },
   { name: "San Bernardino County", abbr: "Ontario · San Bernardino", href: "/areas-we-serve/san-bernardino-county-ca/" },
   { name: "Orange County", abbr: "Anaheim · Irvine · Santa Ana", href: "/areas-we-serve/orange-county/" },
+  { name: "San Diego County", abbr: "San Diego · Chula Vista · Oceanside", href: "/areas-we-serve/#san-diego-county" },
 ];
 
 export function ServiceArea() {
@@ -50,9 +51,9 @@ export function ServiceArea() {
                 fontSize: "clamp(2.25rem, 4vw, 3.25rem)",
               }}
             >
-              Inland Empire
+              Inland Empire,
               <br />
-              <span className="text-ga-red">&amp; Orange County.</span>
+              <span className="text-ga-red">Orange &amp; San Diego.</span>
             </h2>
           </div>
           <p className="text-ga-gray-600 text-base lg:text-lg leading-relaxed max-w-md">

@@ -10,9 +10,9 @@ const STATS = [
     sub: "Focused coverage — never overextended",
   },
   {
-    value: "3",
+    value: "4",
     label: "Counties served",
-    sub: "Riverside · San Bernardino · Orange",
+    sub: "Riverside · San Bernardino · Orange · San Diego",
   },
   {
     value: "5+",

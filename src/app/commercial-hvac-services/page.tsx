@@ -25,14 +25,14 @@ import { ContactForm } from "@/components/forms/ContactForm";
 export const metadata: Metadata = {
   title: "Commercial HVAC Services — Southern California",
   description:
-    "Preventative maintenance, repair, replacement, and installation for commercial HVAC systems across the Inland Empire and Orange County. Single-partner scope, full-visit coverage, factory-trained technicians.",
+    "Preventative maintenance, repair, replacement, and installation for commercial HVAC systems across Riverside, San Bernardino, Orange, and San Diego County. Single-partner scope, full-visit coverage, factory-trained technicians.",
   alternates: {
     canonical: "https://gardnerair.com/commercial-hvac-services/",
   },
   openGraph: {
     title: "Commercial HVAC Services — Southern California | Gardner Air",
     description:
-      "Preventative maintenance, repair, replacement, and installation for commercial HVAC systems across the Inland Empire and Orange County.",
+      "Preventative maintenance, repair, replacement, and installation for commercial HVAC systems across Riverside, San Bernardino, Orange, and San Diego County.",
     url: "https://gardnerair.com/commercial-hvac-services/",
   },
 };
@@ -230,7 +230,7 @@ const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "What areas of Southern California do you serve?",
-    a: "Riverside County, San Bernardino County, and Orange County — a roughly 50-mile radius from our Murrieta headquarters. We intentionally do not push into Los Angeles or San Diego so response times and quality stay tight.",
+    a: "Riverside County, San Bernardino County, Orange County, and San Diego County, from our Murrieta headquarters. We intentionally do not push into Los Angeles so response times and quality stay tight.",
   },
   {
     q: "Can Gardner Air help reduce long-term HVAC costs?",
@@ -339,7 +339,7 @@ export default function CommercialHvacServicesPage() {
 
             <p className="text-white/65 text-base lg:text-lg leading-relaxed max-w-xl mb-10">
               Preventative maintenance, repair, replacement, and installation for
-              commercial facilities across the Inland Empire and Orange County —
+              commercial facilities across Riverside, San Bernardino, Orange, and San Diego counties —
               handled by one factory-trained team, on one schedule, with one line
               of communication.
             </p>

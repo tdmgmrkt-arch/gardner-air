@@ -14,14 +14,14 @@ import { LazyMap } from "@/components/contact/LazyMap";
 export const metadata: Metadata = {
   title: { absolute: "Contact Gardner Air — Commercial HVAC Southern California" },
   description:
-    "Schedule a commercial HVAC maintenance proposal with Gardner Air. Serving Riverside, San Bernardino, and Orange County facilities.",
+    "Schedule a commercial HVAC maintenance proposal with Gardner Air. Serving Riverside, San Bernardino, Orange, and San Diego County facilities.",
   alternates: {
     canonical: "https://gardnerair.com/contact/",
   },
   openGraph: {
     title: "Contact Gardner Air — Commercial HVAC Southern California",
     description:
-      "Schedule a commercial HVAC maintenance proposal with Gardner Air. Serving Riverside, San Bernardino, and Orange County facilities.",
+      "Schedule a commercial HVAC maintenance proposal with Gardner Air. Serving Riverside, San Bernardino, Orange, and San Diego County facilities.",
     url: "https://gardnerair.com/contact/",
   },
 };
@@ -53,6 +53,7 @@ const contactPageSchema = {
       { "@type": "County", name: "Riverside County" },
       { "@type": "County", name: "San Bernardino County" },
       { "@type": "County", name: "Orange County" },
+      { "@type": "County", name: "San Diego County" },
     ],
   },
 };
@@ -91,7 +92,7 @@ const INFO_ITEMS = [
   {
     Icon: Clock,
     label: "Business Hours",
-    content: "Mon–Fri · 7:30 AM – 4:00 PM",
+    content: "Mon–Fri · 7 a.m.–4 p.m.",
     href: null,
   },
 ];

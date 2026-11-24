@@ -22,7 +22,7 @@ import { ContactForm } from "@/components/forms/ContactForm";
 export const metadata: Metadata = {
   title: { absolute: "Commercial HVAC Service Areas — Southern California | Gardner Air" },
   description:
-    "Gardner Air serves commercial HVAC clients across Riverside, San Bernardino, and Orange County — certified technicians, proactive maintenance, and rapid repairs.",
+    "Gardner Air serves commercial HVAC clients across Riverside, San Bernardino, Orange, and San Diego County — certified technicians, proactive maintenance, and rapid repairs.",
   alternates: {
     canonical: "https://gardnerair.com/areas-we-serve/",
   },
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     title:
       "Commercial HVAC Service Areas — Southern California | Gardner Air",
     description:
-      "Gardner Air serves commercial HVAC clients across Riverside, San Bernardino, and Orange County — certified technicians, proactive maintenance, and rapid repairs.",
+      "Gardner Air serves commercial HVAC clients across Riverside, San Bernardino, Orange, and San Diego County — certified technicians, proactive maintenance, and rapid repairs.",
     url: "https://gardnerair.com/areas-we-serve/",
   },
 };
@@ -43,7 +43,7 @@ const hubSchema = {
   "@type": "Service",
   name: "Commercial HVAC Services — Southern California",
   description:
-    "Gardner Air provides commercial HVAC preventative maintenance, repair, replacement, and installation across three Southern California counties.",
+    "Gardner Air provides commercial HVAC preventative maintenance, repair, replacement, and installation across four Southern California counties.",
   url: "https://gardnerair.com/areas-we-serve/",
   provider: {
     "@type": "HVACBusiness",
@@ -63,6 +63,7 @@ const hubSchema = {
     { "@type": "County", name: "Riverside County" },
     { "@type": "County", name: "San Bernardino County" },
     { "@type": "County", name: "Orange County" },
+    { "@type": "County", name: "San Diego County" },
   ],
 };
 
@@ -120,13 +121,23 @@ const REGIONS = [
       "Orange County's coastal humidity and dense commercial real estate demand HVAC partners who plan ahead. Gardner Air serves office parks, industrial campuses, and owner-occupied facilities from Anaheim to Irvine.",
     hasDark: false,
   },
+  {
+    name: "San Diego County",
+    slug: "san-diego-county",
+    href: "/areas-we-serve/#san-diego-county",
+    image: "/commercial-roof-overview.webp",
+    imageAlt: "Commercial HVAC service in San Diego County, California",
+    blurb:
+      "San Diego County commercial facilities are part of Gardner Air's Southern California coverage, served from our Murrieta headquarters alongside Riverside, San Bernardino, and Orange County.",
+    hasDark: false,
+  },
 ];
 
 const FEATURES = [
   {
     Icon: MapPin,
     title: "Regional Coverage Without Gaps",
-    body: "Three-county Southern California footprint — Riverside, San Bernardino, and Orange. One partner covers it all, with no handoff between vendors.",
+    body: "Four-county Southern California footprint — Riverside, San Bernardino, Orange, and San Diego. One partner covers it all, with no handoff between vendors.",
   },
   {
     Icon: Award,
@@ -146,7 +157,7 @@ const FEATURES = [
   {
     Icon: Clock,
     title: "Rapid Repair Response",
-    body: "Maintenance-agreement clients receive priority dispatch across all three counties. Arrival windows confirmed on every call so your facility team can plan.",
+    body: "Maintenance-agreement clients receive priority dispatch across all four counties. Arrival windows confirmed on every call so your facility team can plan.",
   },
 ];
 
@@ -304,8 +315,8 @@ export default function AreasWeServePage() {
                     equipment faces conditions that expose every maintenance gap.
                   </p>
                   <p>
-                    Gardner Air operates across Riverside County, San Bernardino County, and Orange
-                    County&mdash;a single-partner relationship that covers the full scope of your facilities without
+                    Gardner Air operates across Riverside County, San Bernardino County, Orange
+                    County, and San Diego County&mdash;a single-partner relationship that covers the full scope of your facilities without
                     handoffs between regional vendors.
                   </p>
                 </div>
@@ -329,7 +340,7 @@ export default function AreasWeServePage() {
                       fontSize: "clamp(2rem, 3vw, 2.5rem)",
                     }}
                   >
-                    3
+                    4
                   </p>
                   <div className="border-l border-[#D8D4CC] pl-5">
                     <p className="font-mono text-[9px] uppercase tracking-[0.15em] text-[#6B7280] leading-snug">
@@ -369,7 +380,7 @@ export default function AreasWeServePage() {
                   fontSize: "clamp(2rem, 4vw, 3rem)",
                 }}
               >
-                Three counties, one commercial HVAC partner.
+                Four counties, one commercial HVAC partner.
               </h2>
             </div>
 
@@ -377,6 +388,7 @@ export default function AreasWeServePage() {
               {REGIONS.map((region) => (
                 <Link
                   key={region.name}
+                  id={region.slug}
                   href={region.href}
                   className="group relative flex flex-col overflow-hidden rounded-2xl bg-white border border-[#D8D4CC] hover:border-[#D42027]/40 hover:shadow-[0_10px_40px_-12px_rgba(17,19,24,0.15)] hover:-translate-y-0.5 transition-all duration-300"
                 >
